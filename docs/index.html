@@ -1,19 +1,79 @@
-<style>
-dl { 
- 
-}
-dt {
-    float: left;
+<!doctype html>
+<html >
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+
+    <!-- <link rel="stylesheet" type="text/css" href="template.css" /> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/template.css" />
+
+    <link href="https://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <!-- <script type='text/javascript' src='menu/js/jquery.cookie.js'></script> -->
+    <!-- <script type='text/javascript' src='menu/js/jquery.hoverIntent.minified.js'></script> -->
+    <!-- <script type='text/javascript' src='menu/js/jquery.dcjqaccordion.2.7.min.js'></script> -->
+
+    <!-- <link href="menu/css/skins/blue.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <link href="menu/css/skins/graphite.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <link href="menu/css/skins/grey.css" rel="stylesheet" type="text/css" /> -->
   
+    <!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+        
+  
+    <!-- <script src="script.js"></script> -->
+  
+    <!-- <script src="jquery.sticky-kit.js "></script> -->
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.cookie.js'></script>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.hoverIntent.minified.js'></script>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/js/jquery.dcjqaccordion.2.7.min.js'></script>
 
-}
-dt,
-dd {
+    <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/blue.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/graphite.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/menu/css/skins/grey.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/ryangrose/easy-pandoc-templates@948e28e5/css/elegant_bootstrap.css" rel="stylesheet" type="text/css" />
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/script.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/jquery.sticky-kit.js"></script>
+    <meta name="generator" content="pandoc" />
+  <title>index</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
 
-}
+    
+    <div class="container">
+    <div class="row">
+            <div class="span12">
 
-
+      
+      <style>
+    dl { 
+     
+    }
+    dt {
+        float: left;
+      
+    
+    }
+    dt,
+    dd {
+    
+    }
+    
+    
 </style>
+<p>Status: This is a working draft which has been created by the below
+contributors.</p>
+<p>We will be collecting feedback until the end of June 2024</p>
 <h1
 id="protocols-for-implementing-long-term-archival-repositories-services-pilars">Protocols
 for Implementing Long-term Archival Repositories Services (PILARS)</h1>
@@ -55,8 +115,8 @@ ANU /0000-0002-2151-2190</p>
 sustainable Archival Repository services to achieve “CAREful FAIRness”;
 i.e. to support the CARE [1] and FAIR [2] principles.</p>
 <p>PILAR aims to guide the design and implementation of data storage
-services, referred to as Archival Repositories, for a range of purposes,
-including core use cases of:</p>
+services, referred to as [Archival Repositories], for a range of
+purposes, including core use cases of:</p>
 <ul>
 <li><p>supporting research that follows the FAIR [2] principles in any
 discipline, and</p></li>
@@ -110,184 +170,168 @@ preservation as long as they have access to some kind of commodity
 storage, by using a range of tools.</p>
 <h2 id="the-protocols">The Protocols</h2>
 <dl>
-<dt name="p-1">
+<dt id="1">
 1
-</dt>
-<dd>
+<dd >
 Data is Portable: assets are not locked-in to a particular mode of
 storage, interface or service
 <dl>
-<dt>
+<dt id="1.1">
 1.1
-</dt>
-<dd>
+<dd >
 Keep data in one or more general-purpose commodity IT storage systems
 <dl>
-<dt>
+<dt id="1.1.1">
 1.1.1
-</dt>
 <dd>
-The storage system has a method to store and retrieve file-like
-datastreams using hierarchical file-paths.
+The storage system has a method to store and retrieve <a href="#file"
+title="File">File</a>-like datastreams using hierarchical file-paths.
 </dd>
-<dt>
+<dt id="1.1.2">
 1.1.2
-</dt>
 <dd>
-The storage system has a method to list all the file-paths in the
+The storage system has a method to list all the File-paths in the
 storage system.
 </dd>
 </dl>
 </dd>
-<dt>
+<dt id="1.2">
 1.2
-</dt>
-<dd>
-Divide up data files into Storage Objects that form meaningful units, of
-smallest practical size.
+<dd >
+Divide up data files into [Storage Objects] that form meaningful units,
+of smallest practical size.
 <dl>
-<dt>
+<dt id="1.2.2">
 1.2.2
-</dt>
-<dd>
+<dd >
 <p>Each Storage Object is a directory (or storage object equivalent)
 containing the files including metadata and administrative files such as
 checksums that make up an Object.</p>
-<dt>
+<dt id="1.2.3">
 1.2.3
-</dt>
-<dd>
+<dd >
 <p>Storage Objects can be located by inspecting the contents of the
 storage hierarchy by listing the paths (1.1.2) for example by the
 presence of a file with a defined name in the hierarchy.</p>
 </dl>
-<dt>
+<dt id="1.3">
 1.3
-</dt>
-<dd>
+<dd >
 <p>Document and implement an ID resolution mapping system to map IDs to
 storage locations (FAIR-F1).</p>
-<dt>
+<dt id="1.4">
 1.4
-</dt>
-<dd>
+<dd >
 <p>Store documentation about the conventions and standards such as (1.3)
 used in a data store within the root of the storage service itself.</p>
-<dt>
+<dt id="1.5">
 1.5
-</dt>
-<dd>
+<dd >
 <p>Data storage of well described data objects is considered separately
 from the current uses to which the data is put.</p>
-<dt>
+<dt id="1.6">
 1.6
-</dt>
-<dd>
+<dd >
 <p>Data files use open or standard formats where possible, independent
 of particular software (FAIR-I).</p>
-<dt>
+<dt id="1.7">
 1.7
-</dt>
-<dd>
+<dd >
 If data resides in systems, such as content management systems or
 database applications which do not inherently support all of the
 protocols 1 &amp; 2 then put processes in place to export data to a
 system that does.
 </dl>
-<dt>
+<dt id="2">
 2
-<dd>
+<dd >
 Data is Annotated: contents, structure, provenance and access and reuse
 permissions are comprehensively described with metadata and licenses
 <dl>
-<dt>
+<dt id="2.1">
 2.1
-<dd>
+<dd >
 For each Storage Object, store metadata that describes (annotates) the
 object and (optionally) the files that make up the object. The metadata
 should be stored in a file or files with the data files.
-<dt>
+<dt id="2.2">
 2.2
-<dd>
-For 2.1 use interoperable general-purpose linked-data metadata stored in
+<dd >
+For <a href="./#2.1"
+title="For each Storage Object, store metadata that describes (annotates) the object and (optionally) the files that make up the object. The metadata should be stored in a file or files with the data files.">Protocol
+2.1</a> use interoperable general-purpose linked-data metadata stored in
 a file format which has an Open Specification. This may be extended with
 domain-specific or ad hoc metadata (which may be in non linked-data
 formats) (FAIR-F1,2) and may be stored in additional files.
-<dt>
+<dt id="2.3">
 2.3
-<dd>
+<dd >
 For each Storage Object, include at least one license document linked
 from the metadata using the appropriate property for a ‘license’ from
 the core vocabulary (eg http://schema.org/license), setting out in plain
 language how data may be used and/or redistributed and by whom (CARE
 (all) &amp; FAIR-R1.1.).
 <dl>
-<dt>
+<dt id="2.3.1">
 2.3.1
-<dd>
+<dd >
 <p>It is critical that data that does not have an Open Access or public
 domain license is not exposed via a portal without access controls and
 that confidential licenses themselves are not disseminated.Licensing may
 change, be withdrawn and new licenses added over time.</p>
-<dt>
+<dt id="2.3.2">
 2.3.2
-<dd>
+<dd >
 <p>Documentation about licenses for deposit and archive-wide accession
 policies may also be stored with an object</p>
 </dl>
-<dt>
+<dt id="2.4">
 2.4
-</dt>
-<dd>
+<dd >
 Store checksum-metadata in a documented standard format alongside data
 files to help ensure data integrity.
-<dt>
+<dt id="2.5">
 2.5
-</dt>
-<dd>
+<dd >
 Represent Repository Collections such as archival series or other
 organising entities as Storage Objects; either self-contained with their
 member data within the Storage Object or as metadata-only Storage
 Objects referencing or referenced by other Storage Objects.
 </dl>
-<dt>
+<dt id="3">
 3
-<dd>
-Governance is in place for each Archival Repository
+<dd >
+Governance is in place for each <a href="#archival-repository"
+title="Archival Repository">Archival Repository</a>
 <dl>
-<dt>
+<dt id="3.1">
 3.1
-</dt>
-<dd>
+<dd >
 The purpose of the Archival Repository holding the data is articulated
-<dt>
+<dt id="3.2">
 3.2
-</dt>
-<dd>
+<dd >
 Management systems are in place to sustain the Archival Repository
-<dt>
+<dt id="3.3">
 3.3
-</dt>
-<dd>
+<dd >
 Deposit agreements are in place and documented setting out the rights
 needed for the Archival Repository as an organization to manage data
-<dt>
+<dt id="3.3">
 3.3
-</dt>
-<dd>
+<dd >
 Processes are in place for ensuring data persistence for the defined
 periods that meet the repository purpose (including indefinitely)
-<dt>
+<dt id="3.4">
 3.4
-</dt>
-<dd>
+<dd >
 Processes are in place for disposal/deaccessioning if appropriate to the
 purpose.
 </dl>
 </dl>
 <h1 id="definitions-glossary">Definitions (glossary):</h1>
 <p>The following terms (used in capitalised form) are defined.</p>
-<p><a name="archival-repository" /></p>
+<p><a name="archival-repository"> </a></p>
 <h3 id="archival-repository">Archival Repository</h3>
 <p>Used to cover any system that is designed to keep data securely for a
 defined period of time (often forever) and to make it findable by and
@@ -295,21 +339,21 @@ available to appropriate parties. The terms Repository and Archive have
 different nuances and are used in a variety of ways in different
 communities, but here we want to emphasise the commonalities and focus
 on advice that is relevant to the audience of these protocols.</p>
-<p><a name="standard" /></p>
+<p><a name="standard"> </a></p>
 <h3 id="standard">Standard</h3>
 <p>A Specification published by a recognized standards body such as the
 ISO or W3C. Standards are not always Open Access, so may have barriers
 to adoption.</p>
-<p><a name="open-specification" /></p>
+<p><a name="open-specification"> </a></p>
 <h3 id="open-specification">Open Specification</h3>
 <p>A versioned, published, openly available description of a set of
 precise requirements (e.g., for a format, system or protocol) which may
 or may not be endorsed by a standards authority. .</p>
-<p><a name="open-source-software" /></p>
+<p><a name="open-source-software"> </a></p>
 <h3 id="open-source-software">Open Source Software</h3>
 <p>Freely distributable software according to the definition of the Open
 Software Foundation (OSF).</p>
-<p><a name="license" /></p>
+<p><a name="license"> </a></p>
 <h3 id="license">License</h3>
 <p>The term License is used here inclusively to refer to a document
 which captures the terms under which data in an Archival-Repository may
@@ -317,7 +361,7 @@ be shared, used, reused or deposited. This includes documents such as
 Data Sharing Agreements or other contracts which may be negotiated at
 various times which give certain parties licence to use data in defined
 ways.</p>
-<p><a name="repository-collection" /></p>
+<p><a name="repository-collection"> </a></p>
 <h3 id="repository-collection">Repository Collection</h3>
 <p>The term Repository Collection is used here to reference the
 Collection class from the Portland Common Data model[5] which was
@@ -325,7 +369,7 @@ conceived as an interchange format for repository and digital library
 interchange definition for a collection includes this:</p>
 <p>A Collection is a group of resources. Collections have descriptive
 metadata, access metadata, and may links (sic) to works and/or
-collections. <a name="repository-object" /></p>
+collections. <a name="repository-object"> </a></p>
 <h3 id="repository-object">Repository Object</h3>
 <p>The term Repository Object is used here in line with the Portland
 Common Data mode definition [5] which is refers to an abstract
@@ -335,29 +379,29 @@ object.</p>
 metadata, may contain files and other Objects as member “components”.
 Each level of a work is therefore represented by an Object instance, and
 is capable of standing on its own, being linked to from Collections and
-other Objects. <a name="storage-object" /></p>
+other Objects. <a name="storage-object"> </a></p>
 <h3 id="storage-object">Storage Object</h3>
 <p>A discrete unit in a physical storage service. This may represent,
 for example, a Repository Object or a Repository Collection which are
 abstract structural concepts. This concept is similar to an OCFL Object,
 and the concept of a Package in OAIS.</p>
-<p><a name="linked-data-metadata" /></p>
+<p><a name="linked-data-metadata"> </a></p>
 <h3 id="linked-data-metadata">Linked data metadata</h3>
 <p>Metadata is data that describes other metadata. Linked Data Metadata
 follows the principles set out by Tim Berners Lee for LInked data, so
 that all metedata and references to entities described are URIs (URLs).
 [6]</p>
-<p><a name="data-steward" /></p>
+<p><a name="data-steward"> </a></p>
 <h3 id="data-steward-or-custodian">Data Steward or Custodian</h3>
 <p>An individual or organisation with the authority to make decisions
 regarding data under management. This decision making process is assumed
 to take place with good governance, in line with the CARE
 principles.</p>
-<p><a name="file" /></p>
+<p><a name="file"> </a></p>
 <h3 id="file">File</h3>
 <p>A datastream which is addressable by name and a path within a
 filesystem (eg conforming to POSIX)</p>
-<p><a name="file-format" /></p>
+<p><a name="file-format"> </a></p>
 <h3 id="file-format">File Format</h3>
 <p>The organizational schema for a file – this may be formally defined
 in a specification or be ad-hoc. File formats may considered at various
@@ -384,3 +428,10 @@ al., “Packaging research artefacts with RO-Crate,” Data Sci., vol. 5,
 no. 2, pp. 97–138, Jan. 2022, doi: 10.3233/DS-210053. [8] Digital
 Preservation Coalition, “Digital Preservation Handbook.” [Online].
 Available: https://www.dpconline.org/handbook</p>
+            </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/5.4.4/video.js"></script>
+
+</body>
+</html>

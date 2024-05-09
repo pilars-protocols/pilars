@@ -31,11 +31,11 @@ The Oxford Common File Layout (OCFL) specification was developed to support a si
 OCFL is a compliant implementation solution for the data portability
 
 A simpler alternative based on different standards would be to:
-Use a directory hierarchy on a POSIX-compliant storage system
-Signal that directory is a Storage Object (1.2 Divide up data files into objects that form meaningful units …) by the presence of a Bagit manifest in a directory 
-Bagit files nested below this Storage Object would not be considered Storage Objects in their own right in the context of the repository
-Bagit provides checksums as per 2.4 Store checksum-metadata in a documented standard format alongside data to help ensure data integrity
-Use a documented and implementable algorithm to map object IDs to a path and store a summary in the root of the directory hierarchy
+-  Use a directory hierarchy on a POSIX-compliant storage system
+-  Signal that directory is a Storage Object (1.2 Divide up data files into objects that form meaningful units …) by the presence of a Bagit manifest in a directory 
+  -  Bagit files nested below this Storage Object would not be considered Storage Objects in their own right in the context of the repository
+  -  Bagit provides checksums as per 2.4 Store checksum-metadata in a documented standard format alongside data to help ensure data integrity
+-  Use a documented and implementable algorithm to map object IDs to a path and store a summary in the root of the directory hierarchy
 
 ### Storage Object notes
 
@@ -43,27 +43,31 @@ TODO: Reference OAIS concept of packages
 
 ### Applications notes
 
-Regarding 1.7	If  data resides in systems, such as content management systems or database applications which do not inherently support all of the protocols 1 & 2  then put processes in place to export data to a system that does.
-
-Ideally this something that should not be necessary, but if not then work to bring systems into line with PILARS:
+Regarding [Protocol 1.7]: Ideally this something that should not be necessary, but if not then work to bring systems into line with PILARS:
 Don’t design or build systems that don't have this exit pathway designed from the start, 
 Don't place data in systems that don't have this already, and 
 Work to add this straight away if existing systems don't have this.
-Metadata Standards and Specifications
-Why is Linked Data Metadata required?
+
+### Metadata Standards and Specifications
+
+
+#### Why is Linked Data Metadata required?
+
 Linked Data allows:
-Any conceivable data structure to be described in metadata, and there is no limit to the size and scope of the description.
-Extensibility: vocabularies to be mixed in as needed; from a core set for all data to domain-specific to project or even dataset-specific terms; this can be formalised using Profiles.
-Interoperability with contemporary global research information systems architectures, discovery services etc.
-Inter-object relationships to be expressed – so that the physical storage layout does not define the only way that resources can be explored.
+-  Any conceivable data structure to be described in metadata, and there is no limit to the size and scope of the description.
+-  Extensibility: vocabularies to be mixed in as needed; from a core set for all data to domain-specific to project or even dataset-specific terms; this can be formalised using Profiles.
+-  Interoperability with contemporary global research information systems architectures, discovery services etc.
+-  Inter-object relationships to be expressed – so that the physical storage layout does not define the only way that resources can be explored.
 
 NOTE: Linked data is often conflated with Open Access; the phrase Linked Open Data is very common. But the Linked Data principles can be applied to non-open access-controlled materials. Non-open materials have some impact on how catalogues and indexes are implemented; for example, using linked-data graphs such as triple stores that contain multiple items may make access-control-safe queries impossible to implement for reasons of complexity and performance; the reasoning to work out whether a particular metadata statement can be seen by a particular user could be very computationally expensive.
 
-Vocabularies and metadata profiles
+#### Vocabularies and metadata profiles
+
 Communities can maintain schemas/vocabularies for specific domains (FAIR-R1.3) and to document metadata profiles. 
 
 Documenting a profile can be as simple as writing a natural-language document to describe what is expected in a particular context, but can be further codified using Linked Data Schemas (or Ontologies or Vocabularies), from which documentation and validation services may be derived.
 
+### Licenses
 
 Licenses may be based on Copyright law, or rely on other mechanisms based on other rights (such as privacy or trade secrets). Licenses should reflect the will of rights holders, and will likely be administered, chosen or written by a data custodian or steward authorised to act on behalf of the rights holders, or by the rights holder themselves.
 
@@ -115,17 +119,9 @@ RO-CRATE supports Principle 2.5 Represent collections, archival series or other 
 
 RO-Crate is a compliant choice for the A (Annotated) in a PILAR implementation, and is used in both PARADISEC and LDaCA. 
 
-Software Implementation Approaches 
+## Software Implementation Approaches 
 
 There are two important implementation approaches to storing metadata in storage systems, which are discussed in this blog post: either the metadata in the store is treated as the source of truth (this is the approach implemented in the set of tools used by LDaCA) or a catalogue application maintains metadata which is the source of truth and exports data to the data store, the approach taken by PARADISEC.
 
-1.7 If data resides in systems, such as content management systems or database applications which do not inherently support all of the protocols 1 & 2  then put processes in place to export data to a system that does. discusses this - it is important for the overall goals of these protocols that there are systems in place to write well described (Annotated) data to commodity storage.
+[Protocol 1.7] deals with this; it is important for the overall goals of these protocols that there are systems in place to write well described (Annotated) data to commodity storage.
 
-
-
-
-TRUST?
-https://ardc.edu.au/resource/trust-principles/ 
-
-
-THe OAIS 

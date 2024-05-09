@@ -1,19 +1,26 @@
+
+
 <style>
-dl { 
- 
-}
-dt {
-    float: left;
-  
-
-}
-dt,
-dd {
-
-}
-
-
+    dl { 
+     
+    }
+    dt {
+        float: left;
+      
+    
+    }
+    dt,
+    dd {
+    
+    }
+    
+    
 </style>
+
+Status: This is a working draft which has been created by the below contributors.
+
+We will be collecting feedback until the end of June 2024
+
 
 # Protocols for Implementing Long-term Archival Repositories Services (PILARS)
 
@@ -56,7 +63,7 @@ Janet McDougall janet.mcdougall@anu.edu.au Australian Data Archive, ANU /0000-00
 
 This document sets out protocols for the design and implementation of sustainable Archival Repository services to achieve “CAREful FAIRness”; i.e. to support the CARE  [1] and FAIR [2] principles. 
 
-PILAR aims to guide the design and implementation of data storage services, referred to as Archival Repositories, for a range of purposes, including core use cases of:
+PILAR aims to guide the design and implementation of data storage services, referred to as [Archival Repositories], for a range of purposes, including core use cases of:
 
 -  supporting research that follows the FAIR [2] principles in any discipline, and 
 
@@ -99,64 +106,60 @@ These protocols could form the basis for design, evaluation or procurement of ar
 
 <dl> 
 
-<dt name ="p-1">1</dt>
-
-<dd>Data is Portable: assets are not locked-in to a particular mode of storage, interface or service
+<dt id="1">1<dd >Data is Portable: assets are not locked-in to a particular mode of storage, interface or service
 <dl>
-<dt>1.1</dt>
-<dd>
-Keep data in one or more general-purpose commodity IT storage systems
+<dt id="1.1">1.1<dd >Keep data in one or more general-purpose commodity IT storage systems
 <dl>
-<dt>1.1.1</dt><dd>The storage system has a method to store and retrieve file-like datastreams using hierarchical file-paths.</dd>
-<dt>1.1.2</dt><dd>The storage system has a method to list all the file-paths in the storage system.</dd>
+<dt id="1.1.1">1.1.1<dd >The storage system has a method to store and retrieve [File]-like datastreams using hierarchical file-paths.</dd>
+<dt id="1.1.2">1.1.2<dd >The storage system has a method to list all the File-paths in the storage system.</dd>
 </dl>
 </dd>
 
-<dt>1.2</dt><dd>Divide up data files into Storage Objects that form meaningful units, of smallest practical size.
+<dt id="1.2">1.2<dd >Divide up data files into [Storage Objects] that form meaningful units, of smallest practical size.
 <dl>
-<dt>1.2.2</dt><dd>Each Storage Object is a directory (or storage object equivalent) containing the files including metadata and administrative files such as checksums that make up an Object.
+<dt id="1.2.2">1.2.2<dd >Each Storage Object is a directory (or storage object equivalent) containing the files including metadata and administrative files such as checksums that make up an Object.
 
-<dt>1.2.3</dt><dd>Storage Objects can be located by inspecting the contents of the storage hierarchy by listing the paths (1.1.2) for example by the presence of a file with a defined name in the hierarchy.
+<dt id="1.2.3">1.2.3<dd >Storage Objects can be located by inspecting the contents of the storage hierarchy by listing the paths (1.1.2) for example by the presence of a file with a defined name in the hierarchy.
 
 </dl>
 
 
-<dt>1.3</dt><dd>Document and implement an ID resolution mapping system to map IDs to storage locations (FAIR-F1).
+<dt id="1.3">1.3<dd >Document and implement an ID resolution mapping system to map IDs to storage locations (FAIR-F1).
 
-<dt>1.4</dt><dd>Store documentation about the conventions and standards such as (1.3) used in a data store within the root of the storage service itself.
+<dt id="1.4">1.4<dd >Store documentation about the conventions and standards such as (1.3) used in a data store within the root of the storage service itself.
 
-<dt>1.5</dt><dd>Data storage of well described data objects is considered separately from the current uses to which the data is put.
+<dt id="1.5">1.5<dd >Data storage of well described data objects is considered separately from the current uses to which the data is put.
 
-<dt>1.6</dt><dd>Data files use open or standard formats where possible, independent of particular software (FAIR-I).
+<dt id="1.6">1.6<dd >Data files use open or standard formats where possible, independent of particular software (FAIR-I).
 
-<dt>1.7</dt><dd>If data resides in systems, such as content management systems or database applications which do not inherently support all of the protocols 1 & 2  then put processes in place to export data to a system that does.
+<dt id="1.7">1.7<dd >If data resides in systems, such as content management systems or database applications which do not inherently support all of the protocols 1 & 2  then put processes in place to export data to a system that does.
 </dl>
 
-<dt>2<dd> Data is Annotated:  contents, structure, provenance and access and reuse permissions are comprehensively described with metadata and licenses
+<dt id="2">2<dd >Data is Annotated:  contents, structure, provenance and access and reuse permissions are comprehensively described with metadata and licenses
 <dl>
-<dt>2.1<dd>For each Storage Object, store metadata that describes (annotates) the object and (optionally) the files that make up the object. The metadata should be stored in a file or files with the data files.
-<dt>2.2<dd>For 2.1 use interoperable general-purpose linked-data metadata stored in a file format which has an Open Specification. This may be extended with domain-specific or ad hoc metadata (which may be in non linked-data formats) (FAIR-F1,2) and may be stored in additional files.
-<dt>2.3<dd>For each Storage Object, include at least one license document linked from the metadata using the appropriate  property for a  ‘license’  from the core vocabulary (eg http://schema.org/license), setting out in plain language how data may be used and/or redistributed and by whom (CARE (all) & FAIR-R1.1.).
+<dt id="2.1">2.1<dd >For each Storage Object, store metadata that describes (annotates) the object and (optionally) the files that make up the object. The metadata should be stored in a file or files with the data files.
+<dt id="2.2">2.2<dd >For [Protocol 2.1] use interoperable general-purpose linked-data metadata stored in a file format which has an Open Specification. This may be extended with domain-specific or ad hoc metadata (which may be in non linked-data formats) (FAIR-F1,2) and may be stored in additional files.
+<dt id="2.3">2.3<dd >For each Storage Object, include at least one license document linked from the metadata using the appropriate  property for a  ‘license’  from the core vocabulary (eg http://schema.org/license), setting out in plain language how data may be used and/or redistributed and by whom (CARE (all) & FAIR-R1.1.).
 <dl>
-<dt>2.3.1<dd>It is critical that data that does not have an Open Access or public domain license is not exposed via a portal without access controls and that confidential licenses themselves are not disseminated.Licensing may change, be withdrawn and new licenses added over time.
+<dt id="2.3.1">2.3.1<dd >It is critical that data that does not have an Open Access or public domain license is not exposed via a portal without access controls and that confidential licenses themselves are not disseminated.Licensing may change, be withdrawn and new licenses added over time.
 
-<dt>2.3.2<dd>Documentation about licenses for deposit and archive-wide accession policies may also be stored with an object
+<dt id="2.3.2">2.3.2<dd >Documentation about licenses for deposit and archive-wide accession policies may also be stored with an object
 
 </dl>
-<dt>2.4</dt><dd>Store checksum-metadata in a documented standard format alongside data files to help ensure data integrity.
-<dt>2.5</dt><dd>Represent Repository Collections such as archival series or other organising entities as Storage Objects; either self-contained with their member data within the Storage Object or as metadata-only Storage Objects referencing or referenced by other Storage Objects.
+<dt id="2.4">2.4<dd >Store checksum-metadata in a documented standard format alongside data files to help ensure data integrity.
+<dt id="2.5">2.5<dd >Represent Repository Collections such as archival series or other organising entities as Storage Objects; either self-contained with their member data within the Storage Object or as metadata-only Storage Objects referencing or referenced by other Storage Objects.
 </dl>
 
 
 
 
-<dt>3<dd> Governance is in place for each Archival Repository
+<dt id="3">3<dd >Governance is in place for each [Archival Repository]
 <dl>
-<dt>3.1</dt><dd>The purpose of the Archival Repository holding the data is articulated
-<dt>3.2</dt><dd>Management systems are in place to sustain the Archival Repository
-<dt>3.3</dt><dd>Deposit agreements are in place and documented setting out the rights needed for the Archival Repository as an organization to manage data
-<dt>3.3</dt><dd>Processes are in place for ensuring data persistence for the defined periods that meet the repository purpose (including indefinitely) 
-<dt>3.4</dt><dd>Processes are in place for disposal/deaccessioning if appropriate to the purpose.
+<dt id="3.1">3.1<dd >The purpose of the Archival Repository holding the data is articulated
+<dt id="3.2">3.2<dd >Management systems are in place to sustain the Archival Repository
+<dt id="3.3">3.3<dd >Deposit agreements are in place and documented setting out the rights needed for the Archival Repository as an organization to manage data
+<dt id="3.3">3.3<dd >Processes are in place for ensuring data persistence for the defined periods that meet the repository purpose (including indefinitely) 
+<dt id="3.4">3.4<dd >Processes are in place for disposal/deaccessioning if appropriate to the purpose.
 </dl>
 
 </dl>
@@ -167,87 +170,99 @@ Keep data in one or more general-purpose commodity IT storage systems
 The following terms (used in capitalised form) are defined.
 
 
-<a name="archival-repository" />
+<a name="archival-repository"> </a>
 
+[Archival Repository]: #archival-repository "Archival Repository"
 ### Archival Repository
 
 Used to cover any system that is designed to keep data securely for a defined period of time (often forever) and to make it findable by and available to appropriate parties.  The terms Repository and Archive have different nuances and are used in a variety of ways in different communities, but here we want to emphasise the commonalities and focus on advice that is relevant to the audience of these protocols.
 
 
-<a name="standard" />
+<a name="standard"> </a>
 
+[Standard]: #standard "Standard"
 ### Standard
 
 A Specification published by a recognized standards body such as the ISO or W3C. Standards are not always Open Access, so may have barriers to adoption.
 
 
-<a name="open-specification" />
+<a name="open-specification"> </a>
 
+[Open Specification]: #open-specification "Open Specification"
 ### Open Specification
 
 A versioned, published, openly available description of a set of precise requirements (e.g., for a format, system or protocol) which may or may not be endorsed by a standards authority. .
 
 
-<a name="open-source-software" />
+<a name="open-source-software"> </a>
 
+[Open Source Software]: #open-source-software "Open Source Software"
 ### Open Source Software
 
 Freely distributable software according to the definition of the Open Software Foundation (OSF).
 
 
-<a name="license" />
+<a name="license"> </a>
 
+[License]: #license "License"
 ### License
 
 The term License is used here inclusively to refer to a document which captures the terms under which data in an Archival-Repository may be shared, used, reused or deposited. This includes documents such as Data Sharing Agreements or other contracts which may be negotiated at various times which  give certain parties licence to use data in defined ways. 
 
 
-<a name="repository-collection" />
+<a name="repository-collection"> </a>
 
+[Repository Collection]: #repository-collection "Repository Collection"
 ### Repository Collection
 
 The term Repository Collection is used here to reference the Collection class from the Portland Common Data model[5] which was conceived as an interchange format for repository and digital library interchange definition for a collection includes this:
 
 
 A Collection is a group of resources. Collections have descriptive metadata, access metadata, and may links (sic) to works and/or collections. 
-<a name="repository-object" />
+<a name="repository-object"> </a>
 
+[Repository Object]: #repository-object "Repository Object"
 ### Repository Object
 
 The term Repository Object is used here in line with the Portland Common Data mode definition [5] which is refers to an abstract object.
 
 
 An Object is an intellectual entity, sometimes called a "work", "digital object", etc. Objects have descriptive metadata, access metadata, may contain files and other Objects as member "components". Each level of a work is therefore represented by an Object instance, and is capable of standing on its own, being linked to from Collections and other Objects.
-<a name="storage-object" />
+<a name="storage-object"> </a>
 
+[Storage Object]: #storage-object "Storage Object"
 ### Storage Object
 
 A discrete unit in a physical storage service. This may represent, for example, a Repository Object or a Repository Collection which are abstract structural concepts. This concept is similar to an OCFL Object, and the concept of a Package in OAIS. 
 
 
-<a name="linked-data-metadata" />
+<a name="linked-data-metadata"> </a>
 
+[Linked data metadata]: #linked-data-metadata "Linked data metadata"
 ### Linked data metadata
 
 Metadata is data that describes other metadata. Linked Data Metadata follows the principles set out by Tim Berners Lee for LInked data, so that all metedata and references to entities described are URIs (URLs). [6] 
 
 
-<a name="data-steward" />
+<a name="data-steward"> </a>
 
+[Data Steward or Custodian]: #data-steward "Data Steward or Custodian"
 ### Data Steward or Custodian
 
 An individual or organisation with the authority to make decisions regarding data under management. This decision making process is assumed to take place with good governance, in line with the CARE principles.
 
 
-<a name="file" />
+<a name="file"> </a>
 
+[File]: #file "File"
 ### File
 
 A datastream which is addressable by name and a path within a filesystem (eg conforming to POSIX)  
 
 
-<a name="file-format" />
+<a name="file-format"> </a>
 
+[File Format]: #file-format "File Format"
 ### File Format
 
 The organizational schema for a file – this may be formally defined in a specification or be ad-hoc. File formats may considered at various layers of specificity -- for example a text file may be plain text with a specific encoding such as UTF-8 and also be an XML file conforming to a particular schema  
@@ -270,5 +285,9 @@ References
 [6]	T. Berners-Lee, Linked data, 2006. [Online]. Available: http://www.w3.org/DesignIssues/LinkedData.html
 [7]	S. Soiland-Reyes et al., “Packaging research artefacts with RO-Crate,” Data Sci., vol. 5, no. 2, pp. 97–138, Jan. 2022, doi: 10.3233/DS-210053.
 [8]	Digital Preservation Coalition, “Digital Preservation Handbook.” [Online]. Available: https://www.dpconline.org/handbook
+
+
+
+
 
 
