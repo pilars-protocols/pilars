@@ -256,6 +256,7 @@ The organizational schema for a file – this may be formally defined in a speci
 </dl>
 
 
+See the [notes](implementation-and-guidance.html) for more detail about implementing PILARS.
 
 
 

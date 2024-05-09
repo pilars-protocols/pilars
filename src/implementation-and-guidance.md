@@ -1,6 +1,11 @@
 # PILARS implementation and guidance
 
-### Storage layout 
+## About 
+
+This document contains implementation advice and notes on the [PILARS protocols](./).
+
+
+## Storage layout 
 
 
 Very sensitive data may need to be stored on physically secured storage such as hard drives stored in a safe or an air-gapped server, and a variety of storage systems may need to be combined for a large collection (e.g. public data stored in the cloud, access-controlled data kept locally). Encrypting sensitive data can allow technologists to work on the servers without being able to see the data, but the data may not be recoverable if the encryption keys are lost.
@@ -11,7 +16,7 @@ However, to avoid ambiguity in implementing 1.2.2 Each object is a directory (or
 
 Deciding on the granularity of objects  1.2 Divide up data files into objects that form meaningful units, of smallest practical size  involves considering a number of factors:
 
-### Licensing
+## Licensing
 
 files with the same licensing conditions for re-use should be grouped together
 
