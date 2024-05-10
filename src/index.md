@@ -266,20 +266,6 @@ See the [notes](implementation-and-guidance.html) for more detail about implemen
 
 
 
-References
-
-@carrollCAREPrinciplesIndigenous2020a
-	S. R. Carroll et al., “The CARE Principles for Indigenous Data Governance.,” 2020, doi: 10.5334/dsj-2020-043.
-@wilkinsonFAIRGuidingPrinciples2016	M. D. Wilkinson et al., “The FAIR Guiding Principles for scientific data management and stewardship,” Sci. Data, vol. 3, p. 160018, Mar. 2016.
-@OAISReferenceModel	“OAIS Reference Model (ISO 14721),” OAIS Reference Model (ISO 14721). Accessed: Apr. 17, 2024. [Online]. Available: http://www.oais.info/
-@harrisResearchRecordsResponsibility2015	A. Harris, N. Thieberger, and L. Barwick, Research, Records and Responsibility: Ten years of PARADISEC. Sydney University Press, 2015.
-[5]	“duraspace/pcdm,” GitHub. Accessed: May 17, 2016. [Online]. Available: https://github.com/duraspace/pcdm
-@berners-leeLinkedData2006	T. Berners-Lee, Linked data, 2006. [Online]. Available: http://www.w3.org/DesignIssues/LinkedData.html
-[7]	S. Soiland-Reyes et al., “Packaging research artefacts with RO-Crate,” Data Sci., vol. 5, no. 2, pp. 97–138, Jan. 2022, doi: 10.3233/DS-210053.
-[8]	Digital Preservation Coalition, “Digital Preservation Handbook.” [Online]. Available: https://www.dpconline.org/handbook
-
-
-
 
 
 
