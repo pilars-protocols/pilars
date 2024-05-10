@@ -1,6 +1,7 @@
 
 ---
 title: Protocols for Implementing Long-term Archival Repositories Services (PILARS)
+bibliography: ./src/PILARS.bib
 ---
 
 ## Status 
@@ -49,15 +50,17 @@ Janet McDougall janet.mcdougall@anu.edu.au Australian Data Archive, ANU /0000-00
 
 ## Overview
 
-This document sets out protocols for the design and implementation of sustainable [Archival Repository] services to achieve “CAREful FAIRness”; i.e. to support the CARE  [1] and FAIR [2] principles. 
+This document sets out protocols for the design and implementation of sustainable [Archival Repository] services to achieve “CAREful FAIRness”; i.e. to support the CARE  @carrollCAREPrinciplesIndigenous2020a
+ and FAIR @wilkinsonFAIRGuidingPrinciples2016 principles. 
 
 PILAR aims to guide the design and implementation of data storage services, referred to as Archival Repositories, for a range of purposes, including core use cases of:
 
--  supporting research that follows the FAIR [2] principles in any discipline, and 
+-  supporting research that follows the FAIR @wilkinsonFAIRGuidingPrinciples2016 principles in any discipline, and 
 
 -  archiving cultural-heritage. 
 
-These protocols are designed to work alongside the [CARE] principles [1] which operate at a governance level and the Reference Model for an Open Archival Information System (OAIS) [3] model.
+These protocols are designed to work alongside the [CARE] principles @carrollCAREPrinciplesIndigenous2020a
+ which operate at a governance level and the Reference Model for an Open Archival Information System (OAIS) @OAISReferenceModel model.
 
 The high-level aims of these PILAR protocols are to:
 
@@ -77,7 +80,7 @@ The technical goals to support the aims are:
 
 ## Background
 
-This set of protocols is inspired by the continuing success of the technical approach taken over two decades by the PARADISEC (Pacific and Regional Archive for Digital Sources in Endangered Cultures) [4] which houses cultural heritage material from more than 1360 languages with standard metadata with data stored in commodity services (initially files on disk, now objects in a cloud storage service), with metadata adjacent to the data, and work with the Language Data Commons of Australia to generalise the PARADISEC approach to other disciplines.
+This set of protocols is inspired by the continuing success of the technical approach taken over two decades by the PARADISEC (Pacific and Regional Archive for Digital Sources in Endangered Cultures) @harrisResearchRecordsResponsibility2015 which houses cultural heritage material from more than 1360 languages with standard metadata with data stored in commodity services (initially files on disk, now objects in a cloud storage service), with metadata adjacent to the data, and work with the Language Data Commons of Australia to generalise the PARADISEC approach to other disciplines.
 
 ## Audience
 
@@ -85,7 +88,7 @@ These protocols are aimed at IT practitioners, archivists, librarians, researche
 
 ## Rationale
 
-In a research context it is important to be able to support the FAIR principles [2], ensuring that data is well described by metadata, is identified with persistent identifiers and that shared services with good governance are in place to store interoperable data, to make it findable and provide appropriate access controls. 
+In a research context it is important to be able to support the FAIR principles @wilkinsonFAIRGuidingPrinciples2016, ensuring that data is well described by metadata, is identified with persistent identifiers and that shared services with good governance are in place to store interoperable data, to make it findable and provide appropriate access controls. 
 
 These protocols could form the basis for design, evaluation or procurement of archival repository-services, but also allow for data custodians to begin organising data in a format ready for archiving and preservation as long as they have access to some kind of commodity storage, by using a range of tools.
 
@@ -229,7 +232,7 @@ A discrete unit in a physical storage service. This may represent, for example, 
 [Linked data metadata]: #linked-data-metadata "Linked data metadata"
 ### Linked data metadata
 
-Metadata is data that describes other metadata. Linked Data Metadata follows the principles set out by Tim Berners Lee for LInked data, so that all metedata and references to entities described are URIs (URLs). [6] 
+Metadata is data that describes other metadata. Linked Data Metadata follows the principles set out by Tim Berners Lee for LInked data, so that all metedata and references to entities described are URIs (URLs). @berners-leeLinkedData2006 
 
 
 <a name="data-steward"> </a>
@@ -265,12 +268,13 @@ See the [notes](implementation-and-guidance.html) for more detail about implemen
 
 References
 
-[1]	S. R. Carroll et al., “The CARE Principles for Indigenous Data Governance.,” 2020, doi: 10.5334/dsj-2020-043.
-[2]	M. D. Wilkinson et al., “The FAIR Guiding Principles for scientific data management and stewardship,” Sci. Data, vol. 3, p. 160018, Mar. 2016.
-[3]	“OAIS Reference Model (ISO 14721),” OAIS Reference Model (ISO 14721). Accessed: Apr. 17, 2024. [Online]. Available: http://www.oais.info/
-[4]	A. Harris, N. Thieberger, and L. Barwick, Research, Records and Responsibility: Ten years of PARADISEC. Sydney University Press, 2015.
+@carrollCAREPrinciplesIndigenous2020a
+	S. R. Carroll et al., “The CARE Principles for Indigenous Data Governance.,” 2020, doi: 10.5334/dsj-2020-043.
+@wilkinsonFAIRGuidingPrinciples2016	M. D. Wilkinson et al., “The FAIR Guiding Principles for scientific data management and stewardship,” Sci. Data, vol. 3, p. 160018, Mar. 2016.
+@OAISReferenceModel	“OAIS Reference Model (ISO 14721),” OAIS Reference Model (ISO 14721). Accessed: Apr. 17, 2024. [Online]. Available: http://www.oais.info/
+@harrisResearchRecordsResponsibility2015	A. Harris, N. Thieberger, and L. Barwick, Research, Records and Responsibility: Ten years of PARADISEC. Sydney University Press, 2015.
 [5]	“duraspace/pcdm,” GitHub. Accessed: May 17, 2016. [Online]. Available: https://github.com/duraspace/pcdm
-[6]	T. Berners-Lee, Linked data, 2006. [Online]. Available: http://www.w3.org/DesignIssues/LinkedData.html
+@berners-leeLinkedData2006	T. Berners-Lee, Linked data, 2006. [Online]. Available: http://www.w3.org/DesignIssues/LinkedData.html
 [7]	S. Soiland-Reyes et al., “Packaging research artefacts with RO-Crate,” Data Sci., vol. 5, no. 2, pp. 97–138, Jan. 2022, doi: 10.3233/DS-210053.
 [8]	Digital Preservation Coalition, “Digital Preservation Handbook.” [Online]. Available: https://www.dpconline.org/handbook
 

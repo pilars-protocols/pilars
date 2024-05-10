@@ -1,6 +1,7 @@
 
 ---
 title: PILARS implementation and guidance
+bibliography: ./src/PILARS.bib
 
 ---
 ## About 
@@ -8,7 +9,7 @@ title: PILARS implementation and guidance
 This document contains implementation advice and notes on the [PILARS Protocols](./).
 
 
-## Storage layout 
+## Storage layout for [Protocol 1]
 
 
 Very sensitive data may need to be stored on physically secured storage such as hard drives stored in a safe or an air-gapped server, and a variety of storage systems may need to be combined for a large collection (e.g. public data stored in the cloud, access-controlled data kept locally). Encrypting sensitive data can allow technologists to work on the servers without being able to see the data, but the data may not be recoverable if the encryption keys are lost.
@@ -17,7 +18,7 @@ Storage directory-like hierarchies may group data together in collections or by 
 
 However, to avoid ambiguity in implementing [Protocol 1.2.2] a specification, for example OCFL, may require that object paths on the storage root must not be nested within each other.
 
-Deciding on the granularity of objects  [Protocol 1.2involves considering a number of factors:
+Deciding on the granularity of objects  [Protocol 1.2] involves considering a number of factors:
 
 - Files with the same licensing conditions for re-use should be grouped together
 
@@ -25,18 +26,7 @@ Deciding on the granularity of objects  [Protocol 1.2involves considering a numb
 
 -  The Size of [Storage Objects] – considerthe practicality of managing content and users who may be downloading [Storage Objects], if the size of the objects is likely to be probalematic, consider breakingn them into smaller 
 
-[Protocol 1.3] (that an ID resolution method is in place and documented) ensures that data can be referenced remotely and inter-object relationships within a repository are supported (this supports [Protocol 2.5] this means a Storage Object can be located without requiring the repository to be indexed using the ID-to-path algorithm.
 
-The Oxford Common File Layout (OCFL) specification was developed to support a similar set of requirements to [Protocol 1] and is being widely implemented in repository and digital library systems. LDaCA uses OCFL and has demonstrated that it works at the scale of tens of thousands of objects and millions of files. 
-
-*OCFL is a compliant implementation solution for the data portability*
-
-A simpler alternative storage based on different standards would be to:
--  Use a directory hierarchy on a POSIX-compliant storage system
--  Signal that directory is a Storage Object [Protocol 1.2] by the presence of a [Bagit] manifest in a directory 
-  -  Bagit files nested below this Storage Object would not be considered Storage Objects in their own right in the context of the repository
-  -  Bagit provides checksums as per 2.4 Store checksum-metadata in a documented standard format alongside data to help ensure data integrity
--  Use a documented and implementable algorithm to map object IDs to a path and store a summary in the root of the directory hierarchy
 
 ### Storage Object notes
 
@@ -49,10 +39,26 @@ Regarding [Protocol 1.7]: Ideally this something that should not be necessary, b
 -  Don't place data in systems that don't have this already, and 
 -  Work to add this straight away if existing systems don't have this.
 
-### Metadata Standards and Specifications
+
+[Protocol 1.3] (that an ID resolution method is in place and documented) ensures that data can be referenced remotely and inter-object relationships within a repository are supported (this supports [Protocol 2.5] this means a Storage Object can be located without requiring the repository to be indexed using the ID-to-path algorithm.
+
+The Oxford Common File Layout (OCFL) specification was developed to support a similar set of requirements to [Protocol 1] and is being widely implemented in repository and digital library systems. LDaCA uses OCFL and has demonstrated that it works at the scale of tens of thousands of objects and millions of files. 
+
+*OCFL is a compliant implementation solution for [Protocol 1] to ensure data portability*
+
+A simpler alternative storage based on different standards would be to:
+-  Use a directory hierarchy on a POSIX-compliant storage system
+-  Signal that directory is a Storage Object [Protocol 1.2] by the presence of a [Bagit] manifest in a directory 
+  -  Bagit files nested below this Storage Object would not be considered Storage Objects in their own right in the context of the repository
+  -  Bagit provides checksums as per 2.4 Store checksum-metadata in a documented standard format alongside data to help ensure data integrity
+-  Use a documented and implementable algorithm to map object IDs to a path and store a summary in the root of the directory hierarchy
+
+Note that neither this example using BagIt nor OCFL implement [Protocol 2]
+
+## Metadata Standards and Specifications - [Protocol 2]
 
 
-#### Why is Linked Data Metadata required?
+### Why is Linked Data Metadata required?
 
 Linked Data allows:
 -  Any conceivable data structure to be described in metadata, and there is no limit to the size and scope of the description.
@@ -62,34 +68,45 @@ Linked Data allows:
 
 NOTE: Linked data is often conflated with Open Access; the phrase Linked Open Data is very common. But the Linked Data principles can be applied to non-open access-controlled materials. Non-open materials have some impact on how catalogues and indexes are implemented; for example, using linked-data graphs such as triple stores that contain multiple items may make access-control-safe queries impossible to implement for reasons of complexity and performance; the reasoning to work out whether a particular metadata statement can be seen by a particular user could be very computationally expensive.
 
-#### Vocabularies and metadata profiles
+### Vocabularies and metadata profiles
 
 Communities can maintain schemas/vocabularies for specific domains (FAIR-R1.3) and to document metadata profiles. 
 
 Documenting a profile can be as simple as writing a natural-language document to describe what is expected in a particular context, but can be further codified using Linked Data Schemas (or Ontologies or Vocabularies), from which documentation and validation services may be derived.
 
-### Licenses
+## Licenses
+The FAIR principles mandate a license for data [FAIR-R1.1]
 
 Licenses may be based on Copyright law, or rely on other mechanisms based on other rights (such as privacy or trade secrets). Licenses should reflect the will of rights holders, and will likely be administered, chosen or written by a data custodian or steward authorised to act on behalf of the rights holders, or by the rights holder themselves.
 
-It is important to have a license document independent of algorithms or configuration file(s) and independently of a particular authorization system that may be built into a software application. Implemented processes are, of course, needed to make data available, and may include some automation. But to make data truly portable across systems and time, it is essential that human-readable documentation is available in case authorization processes need to be rebuilt or redesigned
+It is important to have a license document independent of algorithms or configuration file(s) and independently of a particular authorization system that may be built into a software application. Implemented processes are, of course, needed to make data available, and may include some automation. But to make data truly portable across systems and time, it is essential that human-readable documentation is available in case authorization processes need to be rebuilt or redesigned.
+
+For [Protocol 2.3.1] an access-control system may need to be put in place if there is non-open license data in the [Archival Repository]. An individual data access system may implement a range of solutions:
+
+- Lists of approved data licensees associated with logins local to the systen
+
+- A separate license management system or systems where more than one data access system can consult to see if a user holds a particular license.
+
+- Manual offline access, with direct transfer of data to approved applicants
+
+
 
 ### Logical Structure: Collections
 
 The concept of a Collection is very commonly used in repositories and digital archives to represent the ‘backbone’ of the way resources including sub-collections and Objects are organised.
 
-The choice of whether to store Collections as a single Storage Objects (eg directories)  in a storage system or as a number of Storage Objects may be influenced by the several factors:
+The choice of whether to store Collections as a single Storage Object (eg  a directory  or directory-like node in a file heirarchy) in a or as a number of [Storage Object]s may be influenced by the several factors:
 
 -  The size of the object, finer granularity may be preferred to keep Storage Objects at a manageable size.
 
 -  How likely the content is to change or be withdrawn, for example because a participant wishes to have content by or about them removed from an Archival Repository, a granularity of on object per participant/creator or cohort may make withdrawing access more manageable, by updating a license
 
--  Whether there is a separation made between Archival and dissemination-ready copies of files as per OAIS [3]
+-  Whether there is a separation made between Archival and dissemination-ready copies of files as per OAIS @OAISReferenceModel,
 
 -  Whether files are stored with or separately from annotations on those files (such as transcripts)
 Licensing of objects; from an implementation point of view it is much simpler to have a single reuse license per object than to try to administer very granular permissions.
 
-To comply with  2.5 Represent Collections such as archival series or other organising entities as Storage Objects … as metadata-only Storage Objects referencing or referenced by other Storage Objects. Collection / Object relationships may be described using either exhaustive lists of members with a property such as the Portland Common Data Model  hasMember property or by referencing the containing Collection from another Collection or Repository Object
+To comply with  [Protocol 2.5] [Repository Collection] / [Repostory Object] relationships may be described using either exhaustive lists of members with a property such as the Portland Common Data Model  `pcdm:hasMember` property or by referencing the containing Collection from another Collection or Repository Object using the equivalent `pcdm:memberOf`.
 
 Fragmented objects can be linked back together using the for presentation and access (this is one of the strengths of Linked Data), for example, a recording and verbatim transcript may be stored together in an object available to a very limited cohort, while anonymised transcripts and audio may be in another object made broadly available – but these can be cross-linked and presented as a single entity to authorised users.
 
@@ -112,12 +129,12 @@ Other repository software solutions such as Fedora which uses OCFL as a storage 
 
 ## Compliant Metadata Specifications
 
-Research Object Crate (RO-Crate) [7] is a linked-data metadata specification based on widely used Linked Data Open Specifications. RO-Crate was developed as a packaging method for describing datasets and their contents – which is a good match for describing Storage Objects, and is now being widely adopted in various research contexts. RO-Crate has been demonstrated to work at scale in the Language Data Commons of Australia and PARADISEC as the basis for archival-repositories.
+Research Object Crate (RO-Crate) @soiland-reyesPackagingResearchArtefacts2022 is a linked-data metadata specification based on widely used Linked Data Open Specifications. RO-Crate was developed as a packaging method for describing datasets and their contents – which is a good match for describing Storage Objects, and is now being widely adopted in various research contexts. RO-Crate has been demonstrated to work at scale in the Language Data Commons of Australia and PARADISEC as the basis for archival-repositories.
 
-RO-CRATE supports Principle 2.5 Represent collections, archival series or other organising entities as storage-level objects ... via the inclusion of the Portland Common Data model; a schema for describing repositories with classes for Collections, Objects and Files [5].
+RO-CRATE supports Principle 2.5 Represent collections, archival series or other organising entities as storage-level objects ... via the inclusion of the Portland Common Data model; a schema for describing repositories with classes for Collections, Objects and Files @DuraspacePcdm.
 
 
-RO-Crate is a compliant choice for the A (Annotated) in a PILAR implementation, and is used in both PARADISEC and LDaCA. 
+*RO-Crate is a compliant choice for the [Protocol 2] in a PILAR implementation, and is used in both PARADISEC and LDaCA*
 
 ## Software Implementation Approaches 
 

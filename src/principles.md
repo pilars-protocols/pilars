@@ -1,10 +1,10 @@
 ---
 title: CARE and FAIR principles (Annotated for PILARS)
+bibliography: ./src/PILARS.bib
+
 ---
 
-
-
-The [FAIR](https://www.nature.com/articles/sdata201618) and/or [CARE](https://static1.squarespace.com/static/5d3799de845604000199cd24/t/6397b363b502ff481fce6baf/1670886246948/CARE%2BPrinciples_One%2BPagers%2BFINAL_Oct_17_2019.pdf) principles are frequently mandated in various contexts around the world, inclduing for outputs of the Australian Research Data Commons (ARDC).
+The [FAIR](https://www.nature.com/articles/sdata201618) @wilkinsonFAIRGuidingPrinciples2016  and/or [CARE](https://static1.squarespace.com/static/5d3799de845604000199cd24/t/6397b363b502ff481fce6baf/1670886246948/CARE%2BPrinciples_One%2BPagers%2BFINAL_Oct_17_2019.pdf) @carrollCAREPrinciplesIndigenous2020a principles are frequently mandated in various contexts around the world, inclduing for outputs of the Australian Research Data Commons (ARDC).
 
 These principles are not a DIY manual that can be simply adopted by researchers - to implement a system that supports CARE and FAIR research requires development of infrastructure and a governance frameworks. The RRKive principles and website are aimed at those undertaking these substantials tasks.
 
@@ -165,9 +165,13 @@ To be Accessible:
 
 -  FAIR-A1: (meta)data are retrievable by their identifier using a standardized communications protocol
 
-  - FAIR-A1:1 the protocol is open, free, and universally implementable
+<a name="FAIR-A1.1"> </a>
 
-  - FAIR-A1:2 the protocol allows for *an authentication and authorization procedure, where necessary*
+  - FAIR-A1.1 the protocol is open, free, and universally implementable
+
+<a name="FAIR-A1.2"> </a>
+
+  - FAIR-A1.2 the protocol allows for *an authentication and authorization procedure, where necessary*
 
 
 <a name="FAIR-A2"> </a>
@@ -176,7 +180,7 @@ To be Accessible:
 
 #### Notes
 
-If we're going to observe the CARE principles then *an authentication and authorization procedure* is DEFINITELY needed -- but this is not a trivial undertaking, particularly in observing the *standardized communications protocol* 
+If we're going to observe the CARE principles then *an authentication and authorization procedure* is DEFINITELY needed -- but this is not a trivial undertaking, particularly in observing the *standardized communications protocol* this is covered in 
 
 
 
@@ -202,31 +206,28 @@ To be Interoperable:
 
 -  FAIR-I3: (meta)data include qualified references to other (meta)data (see [Protocol 2.5])
 
-#### Notes
 
-Progress has been made on this on in the 
 
 
 ### FAIR Principles - R
 
 To be Reusable:
 
-
 <a name="FAIR-R1"> </a>
 
 -  FAIR-R1: meta(data) are richly described with a plurality of accurate and relevant attributes
 
-<a name="FAIR-R1:1"> </a>
+<a name="FAIR-R1.1"> </a>
 
-  -  FAIR-R1:1: (meta)data are released with a clear and accessible data usage license (see [Protocol 2.3])
+  -  FAIR-R1.1: (meta)data are released with a clear and accessible data usage license (see [Protocol 2.3])
 
-<a name="FAIR-R1:2"> </a>
+<a name="FAIR-R1.2"> </a>
 
   -  FAIR-R1:2: (meta)data are associated with detailed provenance
 
-<a name="FAIR-R1:3"> </a>
+<a name="FAIR-R1.3"> </a>
 
-  -  FAIR-R1:3: (meta)data meet domain-relevant community standards
+  -  FAIR-R1.3: (meta)data meet domain-relevant community standards
 
 
 
