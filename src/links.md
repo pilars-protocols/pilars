@@ -51,7 +51,7 @@
 [Protocol 2.3]: ./#2.3 "For each Storage Object, include at least one license document linked from the metadata using the appropriate  property for a  ‘license’  from the core vocabulary (eg http://schema.org/license), setting out in plain language how data may be used and/or redistributed and by whom (CARE (all) & FAIR-R1.1.)."
 
 
-[Protocol 2.3.1]: ./#2.3.1 "It is critical that data that does not have an Open Access or public domain license is not exposed via a portal without access controls and that confidential licenses themselves are not disseminated.Licensing may change, be withdrawn and new licenses added over time."
+[Protocol 2.3.1]: ./#2.3.1 "It is critical that data that does not have an Open Access or public domain license is not exposed via a portal without access controls and that confidential licenses themselves are not disseminated. Licensing may change, be withdrawn and new licenses added over time."
 
 
 [Protocol 2.3.2]: ./#2.3.2 "Documentation about licenses for deposit and archive-wide accession policies may also be stored with an object"
@@ -75,3 +75,74 @@
 [Protocol 3.3]: ./#3.3 "Deposit agreements are in place and documented setting out the rights needed for the Archival Repository as an organization to manage data"
 
 [Protocol 3.4]: ./#3.4 "Processes are in place for disposal/deaccessioning if appropriate to the purpose."
+
+
+
+
+
+[CARE-C]: ./principles.html#CARE-C "Collective Benefit "
+
+[CARE-C1]: 	./principles.html#CARE-C1 "For inclusive development and innovation" 
+
+[CARE-C2]: 	./principles.html#CARE-C2 	"For improved governance and citizen engagement"
+
+
+[CARE-C3]: 	./principles.html#CARE-C3  "For equitable outcomes" 
+
+[CARE-A]: ./principles.html#CARE-A "Authority to Control"
+
+[CARE-A1]: ./principles.html#CARE-A1 "Recognizing rights and interests"
+
+[CARE-A2]: ./principles.html#CARE-A2 "Data for governance Indigenous "
+
+[CARE-A3]: ./principles.html#CARE-A3 "Governance of data "
+
+[CARE-R]: ./principles.html#CARE-R "Responsibility "
+
+[CARE-R1]: ./principles.html#CARE-R1 "For positive relationships"
+
+[CARE-R2]: ./principles.html#CARE-R2 "For expanding capability and capacity "
+
+[CARE-R3]: ./principles.html#CARE-R3 "For Indigenous languages and worldviews"
+
+[CARE-E]: ./principles.html#CARE-E "Ethics"
+
+[CARE-E1]: ./principles.html#CARE-E1 "For minimizing harm and maximizing benefit "
+
+[CARE-E2]: ./principles.html#CARE-E2 "For justice "
+
+[CARE-E3]: ./principles.html#CARE-E3 "For future use"
+
+[FAIR-F]: ./principles.html#FAIR-F "Findable"
+
+[FAIR-F1]: ./principles.html#FAIR-F1 "(meta)data are assigned a globally unique and *persistent* identifier"
+
+[FAIR-F2]: ./principles.html#FAIR-F2 "data are described with rich metadata (defined by R1 below)"
+
+[FAIR-F3]: ./principles.html#FAIR-F3 "metadata clearly and explicitly include the identifier of the data it describes"
+
+[FAIR-F4]: ./principles.html#FAIR-F4 "(meta)data are registered or indexed in a searchable resource"
+
+[FAIR-A]: ./principles.html#FAIR-A "Accessible"
+
+[FAIR-A1]: ./principles.html#FAIR-A1 "(meta)data are retrievable by their identifier using a standardized communications protocol"
+
+[FAIR-A2]: ./principles.html#FAIR-A2 "metadata are accessible, even when the data are no longer available"
+
+[FAIR-I]: ./principles.html#FAIR-I "Interoperable"
+
+[FAIR-I1]: ./principles.html#FAIR-I1 "(meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation. (See )"
+
+[FAIR-I2]: ./principles.html#FAIR-I2 "(meta)data use vocabularies that follow FAIR principles"
+
+[FAIR-I3]: ./principles.html#FAIR-I3 "(meta)data include qualified references to other (meta)data"
+
+[FAIR-R1]: ./principles.html#FAIR-R1 "meta(data) are richly described with a plurality of accurate and relevant attributes"
+
+[FAIR-R1:1]: ./principles.html#FAIR-R1:1 "(meta)data are released with a clear and accessible data usage license"
+
+[FAIR-R1:2]: ./principles.html#FAIR-R1:2 "(meta)data are associated with detailed provenance"
+
+[FAIR-R1:3]: ./principles.html#FAIR-R1:3 "(meta)data meet domain-relevant community standards"
+
+[Bagit]: https://en.wikipedia.org/wiki/BagIt

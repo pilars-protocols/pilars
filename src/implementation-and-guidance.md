@@ -1,8 +1,11 @@
-# PILARS implementation and guidance
 
+---
+title: PILARS implementation and guidance
+
+---
 ## About 
 
-This document contains implementation advice and notes on the [PILARS protocols](./).
+This document contains implementation advice and notes on the [PILARS Protocols](./).
 
 
 ## Storage layout 
@@ -12,27 +15,25 @@ Very sensitive data may need to be stored on physically secured storage such as 
 
 Storage directory-like hierarchies may group data together in collections or by rights-holder on similar paths; to aid in moving data between services using file-system tools (unlike approaches which completely obscure all meaning in paths using hash algorithms, for reasons such as optimising the storage address space). 
 
-However, to avoid ambiguity in implementing 1.2.2 Each object is a directory (or storage object equivalent) a specification, for example OCFL, may require that object paths on the storage root must not be nested within each other.
+However, to avoid ambiguity in implementing [Protocol 1.2.2] a specification, for example OCFL, may require that object paths on the storage root must not be nested within each other.
 
-Deciding on the granularity of objects  1.2 Divide up data files into objects that form meaningful units, of smallest practical size  involves considering a number of factors:
+Deciding on the granularity of objects  [Protocol 1.2involves considering a number of factors:
 
-## Licensing
+- Files with the same licensing conditions for re-use should be grouped together
 
-files with the same licensing conditions for re-use should be grouped together
+-  If some content may need to be withdrawn or withheld for cultural, ethical or legal reasons, then objects should be packaged so that this can be done without having create new versions of objects
 
-If some content may need to be withdrawn or withheld for cultural, ethical or legal reasons, then objects should be packaged so that this can be done without having create new versions of objects
+-  The Size of [Storage Objects] – considerthe practicality of managing content and users who may be downloading [Storage Objects], if the size of the objects is likely to be probalematic, consider breakingn them into smaller 
 
-Size of objects – TODO 
+[Protocol 1.3] (that an ID resolution method is in place and documented) ensures that data can be referenced remotely and inter-object relationships within a repository are supported (this supports [Protocol 2.5] this means a Storage Object can be located without requiring the repository to be indexed using the ID-to-path algorithm.
 
-Principle 1.3 (that an ID resolution method is in place and documented) ensures that data can be referenced remotely and inter-object relationships within a repository are supported (this supports 2.5 Represent collections, archival series or other organising entities as storage-level objects); a Storage Object can be located without requiring the repository to be indexed.
+The Oxford Common File Layout (OCFL) specification was developed to support a similar set of requirements to [Protocol 1] and is being widely implemented in repository and digital library systems. LDaCA uses OCFL and has demonstrated that it works at the scale of tens of thousands of objects and millions of files. 
 
-The Oxford Common File Layout (OCFL) specification was developed to support a similar set of requirements to 1 Data is portable: assets are not locked in to a particular mode of storage or interface, and is being widely implemented in repository and digital library systems. LDaCA uses OCFL and has demonstrated that it works at the scale of tens of thousands of objects and millions of files. 
+*OCFL is a compliant implementation solution for the data portability*
 
-OCFL is a compliant implementation solution for the data portability
-
-A simpler alternative based on different standards would be to:
+A simpler alternative storage based on different standards would be to:
 -  Use a directory hierarchy on a POSIX-compliant storage system
--  Signal that directory is a Storage Object (1.2 Divide up data files into objects that form meaningful units …) by the presence of a Bagit manifest in a directory 
+-  Signal that directory is a Storage Object [Protocol 1.2] by the presence of a [Bagit] manifest in a directory 
   -  Bagit files nested below this Storage Object would not be considered Storage Objects in their own right in the context of the repository
   -  Bagit provides checksums as per 2.4 Store checksum-metadata in a documented standard format alongside data to help ensure data integrity
 -  Use a documented and implementable algorithm to map object IDs to a path and store a summary in the root of the directory hierarchy
@@ -44,9 +45,9 @@ TODO: Reference OAIS concept of packages
 ### Applications notes
 
 Regarding [Protocol 1.7]: Ideally this something that should not be necessary, but if not then work to bring systems into line with PILARS:
-Don’t design or build systems that don't have this exit pathway designed from the start, 
-Don't place data in systems that don't have this already, and 
-Work to add this straight away if existing systems don't have this.
+-  Don’t design or build systems that don't have this exit pathway designed from the start 
+-  Don't place data in systems that don't have this already, and 
+-  Work to add this straight away if existing systems don't have this.
 
 ### Metadata Standards and Specifications
 
@@ -98,7 +99,7 @@ A variety of virtual collection-like aggregations of objects can be created via 
 
 The specifics of good governance are out of scope for these protocols, so we confine ourselves to some notes:
 
-3.3 Processes are in place for ensuring data persistence for the defined periods that meet the repository purpose (including indefinitely) and 3.4 	Processes are in place for disposal/deaccessioning if appropriate to the purpose means (at least) two things: robust appraisal or sentencing practices, and robust preservation processes have been established.
+[Protocol 3.3] and [Protocol 3.4] together means (at least) two things: robust appraisal or sentencing practices, and robust preservation processes have been established.
 
 The Digital Preservation Handbook [8] has detailed practical advice about preservation-focussed archival practice.
 
@@ -107,7 +108,6 @@ The Digital Preservation Handbook [8] has detailed practical advice about preser
 
 the Oni software stack used by LDaCA is based on these protocols 
 Other repository software solutions such as Fedora which uses OCFL as a storage layer and its own Linked Data standards for describing collections and objects would also be considered PILAR compliant.
-
 
 
 ## Compliant Metadata Specifications

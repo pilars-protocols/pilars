@@ -44,18 +44,12 @@
   
     <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/jquery.sticky-kit.js"></script>
     <meta name="generator" content="pandoc" />
-  <title>index</title>
+  <title>Protocols for Implementing Long-term Archival Repositories Services (PILARS)</title>
   <style type="text/css">code{white-space: pre;}</style>
-</head>
-<body>
 
-    
-    <div class="container">
-    <div class="row">
-            <div class="span12">
 
-      
-      <style>
+
+<style>
     dl { 
      
     }
@@ -71,15 +65,43 @@
     
     
 </style>
-<p>Status: This is a working draft which has been created by the below
+
+</head>
+<body>
+
+    
+    <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <div class="doc-title"><h1>Protocols for Implementing Long-term
+Archival Repositories Services (PILARS)</h1></div>
+        <ul class="nav pull-right doc-info">
+                            </ul>
+      </div>
+      <div>
+        <ul class="nav center">
+          <li><a href="index.html">PILARS Protocols</a></li>
+          <li><a href="principles.html">CARE and FAIR Principles (annotated)</a></li>
+          <li><a href="implementation-and-guidance.html">PILARS Implementation Notes and Gudance</a></li>
+        </ul>
+  
+      </div>
+    </div>
+   
+  </div>
+    <div class="container">
+    <div class="row">
+            <div class="span12">
+
+      
+      <h2 id="status">Status</h2>
+<p>This is a working draft which has been created by the below
 contributors.</p>
 <p>We will be collecting feedback until the end of June 2024</p>
-<h1
-id="protocols-for-implementing-long-term-archival-repositories-services-pilars">Protocols
-for Implementing Long-term Archival Repositories Services (PILARS)</h1>
-<p>Editor: Peter Sefton p.sefton@uq.edu.au University of Queensland
+<h2 id="editor">Editor</h2>
+<p>Peter Sefton p.sefton@uq.edu.au University of Queensland
 https://orcid.org/0000-0002-3545-944X</p>
-<p>Contributors:</p>
+<h2 id="contributors">Contributors</h2>
 <p>Moises Sacal Bonequi -University of Queensland-
 m.sacalbonequi@uq.edu.au https://orcid.org/0000-0002-4438-2755</p>
 <p>Alex Ip alex.ip@aarnet.edu.au AARNet
@@ -112,17 +134,19 @@ ID: 0000-0001-8797-1018</p>
 ANU /0000-0002-2151-2190</p>
 <h2 id="overview">Overview</h2>
 <p>This document sets out protocols for the design and implementation of
-sustainable Archival Repository services to achieve “CAREful FAIRness”;
-i.e. to support the CARE [1] and FAIR [2] principles.</p>
+sustainable <a href="#archival-repository"
+title="Archival Repository">Archival Repository</a> services to achieve
+“CAREful FAIRness”; i.e. to support the CARE [1] and FAIR [2]
+principles.</p>
 <p>PILAR aims to guide the design and implementation of data storage
-services, referred to as [Archival Repositories], for a range of
-purposes, including core use cases of:</p>
+services, referred to as Archival Repositories, for a range of purposes,
+including core use cases of:</p>
 <ul>
 <li><p>supporting research that follows the FAIR [2] principles in any
 discipline, and</p></li>
 <li><p>archiving cultural-heritage.</p></li>
 </ul>
-<p>These protocols are designed to work alongside the CARE principles
+<p>These protocols are designed to work alongside the [CARE] principles
 [1] which operate at a governance level and the Reference Model for an
 Open Archival Information System (OAIS) [3] model.</p>
 <p>The high-level aims of these PILAR protocols are to:</p>
@@ -218,7 +242,8 @@ presence of a file with a defined name in the hierarchy.</p>
 1.3
 <dd >
 <p>Document and implement an ID resolution mapping system to map IDs to
-storage locations (FAIR-F1).</p>
+storage locations <a href="./principles.html#FAIR-F1"
+title="(meta)data are assigned a globally unique and *persistent* identifier">FAIR-F1</a>.</p>
 <dt id="1.4">
 1.4
 <dd >
@@ -233,7 +258,8 @@ from the current uses to which the data is put.</p>
 1.6
 <dd >
 <p>Data files use open or standard formats where possible, independent
-of particular software (FAIR-I).</p>
+of particular software <a href="./principles.html#FAIR-I"
+title="Interoperable">FAIR-I</a>.</p>
 <dt id="1.7">
 1.7
 <dd >
@@ -262,23 +288,27 @@ title="For each Storage Object, store metadata that describes (annotates) the ob
 2.1</a> use interoperable general-purpose linked-data metadata stored in
 a file format which has an Open Specification. This may be extended with
 domain-specific or ad hoc metadata (which may be in non linked-data
-formats) (FAIR-F1,2) and may be stored in additional files.
+formats) <a href="./principles.html#FAIR-F1"
+title="(meta)data are assigned a globally unique and *persistent* identifier">FAIR-F1</a>
+<a href="./principles.html#FAIR-F2"
+title="data are described with rich metadata (defined by R1 below)">FAIR-F2</a>
+and may be stored in additional files.
 <dt id="2.3">
 2.3
 <dd >
 For each Storage Object, include at least one license document linked
 from the metadata using the appropriate property for a ‘license’ from
 the core vocabulary (eg http://schema.org/license), setting out in plain
-language how data may be used and/or redistributed and by whom (CARE
-(all) &amp; FAIR-R1.1.).
+language how data may be used and/or redistributed and by whom ([CARE]
+&amp; [FAIR-R1.1]).
 <dl>
 <dt id="2.3.1">
 2.3.1
 <dd >
 <p>It is critical that data that does not have an Open Access or public
 domain license is not exposed via a portal without access controls and
-that confidential licenses themselves are not disseminated.Licensing may
-change, be withdrawn and new licenses added over time.</p>
+that confidential licenses themselves are not disseminated. Licensing
+may change, be withdrawn and new licenses added over time.</p>
 <dt id="2.3.2">
 2.3.2
 <dd >

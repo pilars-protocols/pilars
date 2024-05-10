@@ -44,22 +44,59 @@
   
     <script src="https://cdn.jsdelivr.net/gh/diversen/pandoc-bootstrap-adaptive-template@959c3622/jquery.sticky-kit.js"></script>
     <meta name="generator" content="pandoc" />
-  <title>implementation-and-guidance</title>
+  <title>PILARS implementation and guidance</title>
   <style type="text/css">code{white-space: pre;}</style>
+
+
+
+<style>
+    dl { 
+     
+    }
+    dt {
+        float: left;
+      
+    
+    }
+    dt,
+    dd {
+    
+    }
+    
+    
+</style>
+
 </head>
 <body>
 
     
+    <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <div class="doc-title"><h1>PILARS implementation and
+guidance</h1></div>
+        <ul class="nav pull-right doc-info">
+                            </ul>
+      </div>
+      <div>
+        <ul class="nav center">
+          <li><a href="index.html">PILARS Protocols</a></li>
+          <li><a href="principles.html">CARE and FAIR Principles (annotated)</a></li>
+          <li><a href="implementation-and-guidance.html">PILARS Implementation Notes and Gudance</a></li>
+        </ul>
+  
+      </div>
+    </div>
+   
+  </div>
     <div class="container">
     <div class="row">
             <div class="span12">
 
       
-      <h1 id="pilars-implementation-and-guidance">PILARS implementation
-and guidance</h1>
-<h2 id="about">About</h2>
+      <h2 id="about">About</h2>
 <p>This document contains implementation advice and notes on the <a
-href="./">PILARS protocols</a>.</p>
+href="./">PILARS Protocols</a>.</p>
 <h2 id="storage-layout">Storage layout</h2>
 <p>Very sensitive data may need to be stored on physically secured
 storage such as hard drives stored in a safe or an air-gapped server,
@@ -73,38 +110,47 @@ collections or by rights-holder on similar paths; to aid in moving data
 between services using file-system tools (unlike approaches which
 completely obscure all meaning in paths using hash algorithms, for
 reasons such as optimising the storage address space).</p>
-<p>However, to avoid ambiguity in implementing 1.2.2 Each object is a
-directory (or storage object equivalent) a specification, for example
-OCFL, may require that object paths on the storage root must not be
-nested within each other.</p>
-<p>Deciding on the granularity of objects 1.2 Divide up data files into
-objects that form meaningful units, of smallest practical size involves
+<p>However, to avoid ambiguity in implementing <a href="./#1.2.2"
+title="Each Storage Object is a directory (or storage object equivalent) containing the files including metadata and administrative files such as checksums that make up an Object.">Protocol
+1.2.2</a> a specification, for example OCFL, may require that object
+paths on the storage root must not be nested within each other.</p>
+<p>Deciding on the granularity of objects [Protocol 1.2involves
 considering a number of factors:</p>
-<h2 id="licensing">Licensing</h2>
-<p>files with the same licensing conditions for re-use should be grouped
-together</p>
-<p>If some content may need to be withdrawn or withheld for cultural,
-ethical or legal reasons, then objects should be packaged so that this
-can be done without having create new versions of objects</p>
-<p>Size of objects – TODO</p>
-<p>Principle 1.3 (that an ID resolution method is in place and
-documented) ensures that data can be referenced remotely and
-inter-object relationships within a repository are supported (this
-supports 2.5 Represent collections, archival series or other organising
-entities as storage-level objects); a Storage Object can be located
-without requiring the repository to be indexed.</p>
+<ul>
+<li><p>Files with the same licensing conditions for re-use should be
+grouped together</p></li>
+<li><p>If some content may need to be withdrawn or withheld for
+cultural, ethical or legal reasons, then objects should be packaged so
+that this can be done without having create new versions of
+objects</p></li>
+<li><p>The Size of [Storage Objects] – considerthe practicality of
+managing content and users who may be downloading [Storage Objects], if
+the size of the objects is likely to be probalematic, consider breakingn
+them into smaller</p></li>
+</ul>
+<p><a href="./#1.3"
+title="Document and implement an ID resolution mapping system to map IDs to storage locations (FAIR-F1).">Protocol
+1.3</a> (that an ID resolution method is in place and documented)
+ensures that data can be referenced remotely and inter-object
+relationships within a repository are supported (this supports <a
+href="./#2.5"
+title="Represent Repository Collections such as archival series or other organising entities as Storage Objects; either self-contained with their member data within the Storage Object or as metadata-only Storage Objects referencing or referenced by other Storage Objects.">Protocol
+2.5</a> this means a Storage Object can be located without requiring the
+repository to be indexed using the ID-to-path algorithm.</p>
 <p>The Oxford Common File Layout (OCFL) specification was developed to
-support a similar set of requirements to 1 Data is portable: assets are
-not locked in to a particular mode of storage or interface, and is being
-widely implemented in repository and digital library systems. LDaCA uses
-OCFL and has demonstrated that it works at the scale of tens of
-thousands of objects and millions of files.</p>
-<p>OCFL is a compliant implementation solution for the data
-portability</p>
-<p>A simpler alternative based on different standards would be to: - Use
-a directory hierarchy on a POSIX-compliant storage system - Signal that
-directory is a Storage Object (1.2 Divide up data files into objects
-that form meaningful units …) by the presence of a Bagit manifest in a
+support a similar set of requirements to <a href="./#1"
+title="Data is Portable: assets are not locked-in to a particular mode of storage, interface or service">Protocol
+1</a> and is being widely implemented in repository and digital library
+systems. LDaCA uses OCFL and has demonstrated that it works at the scale
+of tens of thousands of objects and millions of files.</p>
+<p><em>OCFL is a compliant implementation solution for the data
+portability</em></p>
+<p>A simpler alternative storage based on different standards would be
+to: - Use a directory hierarchy on a POSIX-compliant storage system -
+Signal that directory is a Storage Object <a href="./#1.2"
+title="Divide up data files into [Storage Objects] that form meaningful units, of smallest practical size.">Protocol
+1.2</a> by the presence of a <a
+href="https://en.wikipedia.org/wiki/BagIt">Bagit</a> manifest in a
 directory - Bagit files nested below this Storage Object would not be
 considered Storage Objects in their own right in the context of the
 repository - Bagit provides checksums as per 2.4 Store checksum-metadata
@@ -118,10 +164,10 @@ hierarchy</p>
 <p>Regarding <a href="./#1.7"
 title="If data resides in systems, such as content management systems or database applications which do not inherently support all of the protocols 1 &amp; 2 then put processes in place to export data to a system that does.">Protocol
 1.7</a>: Ideally this something that should not be necessary, but if not
-then work to bring systems into line with PILARS: Don’t design or build
-systems that don’t have this exit pathway designed from the start, Don’t
-place data in systems that don’t have this already, and Work to add this
-straight away if existing systems don’t have this.</p>
+then work to bring systems into line with PILARS: - Don’t design or
+build systems that don’t have this exit pathway designed from the start
+- Don’t place data in systems that don’t have this already, and - Work
+to add this straight away if existing systems don’t have this.</p>
 <h3 id="metadata-standards-and-specifications">Metadata Standards and
 Specifications</h3>
 <h4 id="why-is-linked-data-metadata-required">Why is Linked Data
@@ -214,12 +260,13 @@ environment.</p>
 <h3 id="governance">Governance</h3>
 <p>The specifics of good governance are out of scope for these
 protocols, so we confine ourselves to some notes:</p>
-<p>3.3 Processes are in place for ensuring data persistence for the
-defined periods that meet the repository purpose (including
-indefinitely) and 3.4 Processes are in place for disposal/deaccessioning
-if appropriate to the purpose means (at least) two things: robust
-appraisal or sentencing practices, and robust preservation processes
-have been established.</p>
+<p><a href="./#3.3"
+title="Deposit agreements are in place and documented setting out the rights needed for the Archival Repository as an organization to manage data">Protocol
+3.3</a> and <a href="./#3.4"
+title="Processes are in place for disposal/deaccessioning if appropriate to the purpose.">Protocol
+3.4</a> together means (at least) two things: robust appraisal or
+sentencing practices, and robust preservation processes have been
+established.</p>
 <p>The Digital Preservation Handbook [8] has detailed practical advice
 about preservation-focussed archival practice.</p>
 <h2

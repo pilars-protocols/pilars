@@ -1,33 +1,21 @@
 
+---
+title: Protocols for Implementing Long-term Archival Repositories Services (PILARS)
+---
 
-<style>
-    dl { 
-     
-    }
-    dt {
-        float: left;
-      
-    
-    }
-    dt,
-    dd {
-    
-    }
-    
-    
-</style>
+## Status 
 
-Status: This is a working draft which has been created by the below contributors.
+This is a working draft which has been created by the below contributors.
 
 We will be collecting feedback until the end of June 2024
 
 
-# Protocols for Implementing Long-term Archival Repositories Services (PILARS)
 
+## Editor
 
-Editor: Peter Sefton p.sefton@uq.edu.au University of Queensland https://orcid.org/0000-0002-3545-944X 
+Peter Sefton p.sefton@uq.edu.au University of Queensland https://orcid.org/0000-0002-3545-944X 
 
-Contributors: 
+## Contributors
 
 Moises Sacal Bonequi -University of Queensland- m.sacalbonequi@uq.edu.au https://orcid.org/0000-0002-4438-2755
 
@@ -61,15 +49,15 @@ Janet McDougall janet.mcdougall@anu.edu.au Australian Data Archive, ANU /0000-00
 
 ## Overview
 
-This document sets out protocols for the design and implementation of sustainable Archival Repository services to achieve “CAREful FAIRness”; i.e. to support the CARE  [1] and FAIR [2] principles. 
+This document sets out protocols for the design and implementation of sustainable [Archival Repository] services to achieve “CAREful FAIRness”; i.e. to support the CARE  [1] and FAIR [2] principles. 
 
-PILAR aims to guide the design and implementation of data storage services, referred to as [Archival Repositories], for a range of purposes, including core use cases of:
+PILAR aims to guide the design and implementation of data storage services, referred to as Archival Repositories, for a range of purposes, including core use cases of:
 
 -  supporting research that follows the FAIR [2] principles in any discipline, and 
 
 -  archiving cultural-heritage. 
 
-These protocols are designed to work alongside the CARE principles [1] which operate at a governance level and the Reference Model for an Open Archival Information System (OAIS) [3] model.
+These protocols are designed to work alongside the [CARE] principles [1] which operate at a governance level and the Reference Model for an Open Archival Information System (OAIS) [3] model.
 
 The high-level aims of these PILAR protocols are to:
 
@@ -124,13 +112,13 @@ These protocols could form the basis for design, evaluation or procurement of ar
 </dl>
 
 
-<dt id="1.3">1.3<dd >Document and implement an ID resolution mapping system to map IDs to storage locations (FAIR-F1).
+<dt id="1.3">1.3<dd >Document and implement an ID resolution mapping system to map IDs to storage locations [FAIR-F1].
 
 <dt id="1.4">1.4<dd >Store documentation about the conventions and standards such as (1.3) used in a data store within the root of the storage service itself.
 
 <dt id="1.5">1.5<dd >Data storage of well described data objects is considered separately from the current uses to which the data is put.
 
-<dt id="1.6">1.6<dd >Data files use open or standard formats where possible, independent of particular software (FAIR-I).
+<dt id="1.6">1.6<dd >Data files use open or standard formats where possible, independent of particular software [FAIR-I].
 
 <dt id="1.7">1.7<dd >If data resides in systems, such as content management systems or database applications which do not inherently support all of the protocols 1 & 2  then put processes in place to export data to a system that does.
 </dl>
@@ -138,10 +126,10 @@ These protocols could form the basis for design, evaluation or procurement of ar
 <dt id="2">2<dd >Data is Annotated:  contents, structure, provenance and access and reuse permissions are comprehensively described with metadata and licenses
 <dl>
 <dt id="2.1">2.1<dd >For each Storage Object, store metadata that describes (annotates) the object and (optionally) the files that make up the object. The metadata should be stored in a file or files with the data files.
-<dt id="2.2">2.2<dd >For [Protocol 2.1] use interoperable general-purpose linked-data metadata stored in a file format which has an Open Specification. This may be extended with domain-specific or ad hoc metadata (which may be in non linked-data formats) (FAIR-F1,2) and may be stored in additional files.
-<dt id="2.3">2.3<dd >For each Storage Object, include at least one license document linked from the metadata using the appropriate  property for a  ‘license’  from the core vocabulary (eg http://schema.org/license), setting out in plain language how data may be used and/or redistributed and by whom (CARE (all) & FAIR-R1.1.).
+<dt id="2.2">2.2<dd >For [Protocol 2.1] use interoperable general-purpose linked-data metadata stored in a file format which has an Open Specification. This may be extended with domain-specific or ad hoc metadata (which may be in non linked-data formats) [FAIR-F1] [FAIR-F2] and may be stored in additional files.
+<dt id="2.3">2.3<dd >For each Storage Object, include at least one license document linked from the metadata using the appropriate  property for a  ‘license’  from the core vocabulary (eg http://schema.org/license), setting out in plain language how data may be used and/or redistributed and by whom ([CARE] & [FAIR-R1.1]).
 <dl>
-<dt id="2.3.1">2.3.1<dd >It is critical that data that does not have an Open Access or public domain license is not exposed via a portal without access controls and that confidential licenses themselves are not disseminated.Licensing may change, be withdrawn and new licenses added over time.
+<dt id="2.3.1">2.3.1<dd >It is critical that data that does not have an Open Access or public domain license is not exposed via a portal without access controls and that confidential licenses themselves are not disseminated. Licensing may change, be withdrawn and new licenses added over time.
 
 <dt id="2.3.2">2.3.2<dd >Documentation about licenses for deposit and archive-wide accession policies may also be stored with an object
 
