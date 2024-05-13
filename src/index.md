@@ -174,13 +174,41 @@ The following terms (used in capitalised form) are defined.
 
 Used to cover any system that is designed to keep data securely for a defined period of time (often forever) and to make it findable by and available to appropriate parties.  The terms Repository and Archive have different nuances and are used in a variety of ways in different communities, but here we want to emphasise the commonalities and focus on advice that is relevant to the audience of these protocols.
 
+<a name="data-steward"> </a>
 
-<a name="standard"> </a>
+[Data Steward or Custodian]: #data-steward "Data Steward or Custodian"
+### Data Steward or Custodian
 
-[Standard]: #standard "Standard"
-### Standard
+An individual or organisation with the authority to make decisions regarding data under management. This decision making process is assumed to take place with good governance, in line with the CARE principles.
 
-A Specification published by a recognized standards body such as the ISO or W3C. Standards are not always Open Access, so may have barriers to adoption.
+
+
+
+<a name="file"> </a>
+
+[File]: #file "File"
+### File
+
+A datastream which is addressable by name and a path within a filesystem (eg conforming to POSIX)  
+
+
+<a name="file-format"> </a>
+
+[File Format]: #file-format "File Format"
+### File Format
+
+The organizational schema for a file – this may be formally defined in a specification or be ad-hoc. File formats may considered at various layers of specificity -- for example a text file may be plain text with a specific encoding such as UTF-8 and also be an XML file conforming to a particular schema  
+
+
+
+<a name="linked-data-metadata"> </a>
+
+[Linked data metadata]: #linked-data-metadata "Linked data metadata"
+### Linked data metadata
+
+Metadata is data that describes other metadata. Linked Data Metadata follows the principles set out by Tim Berners Lee for LInked data, so that all metedata and references to entities described are URIs (URLs). @berners-leeLinkedData2006 
+
+
 
 
 <a name="open-specification"> </a>
@@ -197,6 +225,8 @@ A versioned, published, openly available description of a set of precise require
 ### Open Source Software
 
 Freely distributable software according to the definition of the Open Software Foundation (OSF).
+
+
 
 
 <a name="license"> </a>
@@ -225,6 +255,15 @@ The term Repository Object is used here in line with the Portland Common Data mo
 
 
 An Object is an intellectual entity, sometimes called a "work", "digital object", etc. Objects have descriptive metadata, access metadata, may contain files and other Objects as member "components". Each level of a work is therefore represented by an Object instance, and is capable of standing on its own, being linked to from Collections and other Objects.
+
+<a name="standard"> </a>
+
+[Standard]: #standard "Standard"
+### Standard
+
+A Specification published by a recognized standards body such as the ISO or W3C. Standards are not always Open Access, so may have barriers to adoption.
+
+
 <a name="storage-object"> </a>
 
 [Storage Object]: #storage-object "Storage Object"
@@ -233,39 +272,7 @@ An Object is an intellectual entity, sometimes called a "work", "digital object"
 A discrete unit in a physical storage service. This may represent, for example, a Repository Object or a Repository Collection which are abstract structural concepts. This concept is similar to an OCFL Object, and the concept of a Package in OAIS. 
 
 
-<a name="linked-data-metadata"> </a>
 
-[Linked data metadata]: #linked-data-metadata "Linked data metadata"
-### Linked data metadata
-
-Metadata is data that describes other metadata. Linked Data Metadata follows the principles set out by Tim Berners Lee for LInked data, so that all metedata and references to entities described are URIs (URLs). @berners-leeLinkedData2006 
-
-
-<a name="data-steward"> </a>
-
-[Data Steward or Custodian]: #data-steward "Data Steward or Custodian"
-### Data Steward or Custodian
-
-An individual or organisation with the authority to make decisions regarding data under management. This decision making process is assumed to take place with good governance, in line with the CARE principles.
-
-
-<a name="file"> </a>
-
-[File]: #file "File"
-### File
-
-A datastream which is addressable by name and a path within a filesystem (eg conforming to POSIX)  
-
-
-<a name="file-format"> </a>
-
-[File Format]: #file-format "File Format"
-### File Format
-
-The organizational schema for a file – this may be formally defined in a specification or be ad-hoc. File formats may considered at various layers of specificity -- for example a text file may be plain text with a specific encoding such as UTF-8 and also be an XML file conforming to a particular schema  
-
-
-</dl>
 
 
 See the [notes](implementation-and-guidance.html) for more detail about implementing PILARS.
