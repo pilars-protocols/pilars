@@ -84,10 +84,16 @@ Services (PILARS)</h1>
                             </ul>
       </div>
       <div>
+        <ul class="nav pull-left">
+          <li><a href="https://github.com/Language-Research-Technology/pilars">Contribute at Github</a>
+            <li><a href="https://rrkive.org">More info (RRKive.org)</a></li>
+
+        </ul>
         <ul class="nav pull-right">
           <li><a href="index.html">PILARS Protocols</a></li>
           <li><a href="principles.html">CARE and FAIR Principles (annotated)</a></li>
           <li><a href="implementation-and-guidance.html">PILARS Implementation Notes and Guidance</a></li>
+
         </ul>
   
       </div>
@@ -101,7 +107,7 @@ Services (PILARS)</h1>
       
       <h2 id="status">Status</h2>
 <p>Persistent ID (will always link to the latest version):
-<a href="http://w3id.org/ldac/pilars">http://w3id.org/ldac/pilars</a>&gt;</p>
+&lt;<a href="http://w3id.org/ldac/pilars">http://w3id.org/ldac/pilars</a>&gt;</p>
 <p>This is a working draft which has been created by the below
 contributors.</p>
 <p>We will be collecting feedback until the end of June 2024</p>
@@ -153,28 +159,28 @@ ANU /0000-0002-2151-2190</p>
 <p>This document sets out protocols for the design and implementation of
 sustainable <a href="#archival-repository"
 title="Archival Repository">Archival Repository</a> services to achieve
-“CAREful FAIRness”; i.e. to support the CARE <span class="citation"
+“CAREful FAIRness”; i.e. to support the CARE (<span class="citation"
 data-cites="carrollCAREPrinciplesIndigenous2020a">Carroll et al.
-(2020)</span> and FAIR <span class="citation"
+(2020)</span>) and FAIR (<span class="citation"
 data-cites="wilkinsonFAIRGuidingPrinciples2016">Wilkinson et al.
-(2016)</span> principles.</p>
+(2016)</span> principles).</p>
 <p>PILAR aims to guide the design and implementation of data storage
 services, referred to as Archival Repositories, for a range of purposes,
 including core use cases of:</p>
 <ul>
-<li><p>supporting research that follows the FAIR <span class="citation"
+<li><p>supporting research that follows the FAIR (<span class="citation"
 data-cites="wilkinsonFAIRGuidingPrinciples2016">Wilkinson et al.
-(2016)</span> principles in any discipline, and</p></li>
+(2016)</span>) principles in any discipline, and</p></li>
 <li><p>archiving cultural-heritage.</p></li>
 </ul>
 <p>These protocols are designed to work alongside the [CARE] principles
-<span class="citation"
+(<span class="citation"
 data-cites="carrollCAREPrinciplesIndigenous2020a">Carroll et al.
-(2020)</span> which operate at a governance level and the Reference
-Model for an Open Archival Information System (OAIS) <span
+(2020)</span>)) which operate at a governance level and the Reference
+Model for an Open Archival Information System (OAIS) (<span
 class="citation" data-cites="OAISReferenceModel"><span>“<span>OAIS
 Reference Model</span> (<span>ISO</span> 14721)”</span> (n.d.)</span>
-model.</p>
+model.)</p>
 <p>The high-level aims of these PILAR protocols are to:</p>
 <ul>
 <li><p>Maximise autonomy for data custodians/stewards</p></li>
@@ -196,7 +202,7 @@ using Open Source Software solutions, services and tools.</p></li>
 <h2 id="background">Background</h2>
 <p>This set of protocols is inspired by the continuing success of the
 technical approach taken over two decades by the PARADISEC (Pacific and
-Regional Archive for Digital Sources in Endangered Cultures) <span
+Regional Archive for Digital Sources in Endangered Cultures) (<span
 class="citation"
 data-cites="harrisResearchRecordsResponsibility2015">Harris, Thieberger,
 and Barwick (2015)</span> which houses cultural heritage material from
@@ -204,7 +210,7 @@ more than 1360 languages with standard metadata with data stored in
 commodity services (initially files on disk, now objects in a cloud
 storage service), with metadata adjacent to the data, and work with the
 Language Data Commons of Australia to generalise the PARADISEC approach
-to other disciplines.</p>
+to other disciplines.)</p>
 <h2 id="audience">Audience</h2>
 <p>These protocols are aimed at IT practitioners, archivists,
 librarians, researchers and infrastructure managers involved in
@@ -212,12 +218,12 @@ long-term data management and are intended to be complementary to the
 existing practices and principles of those disciplines.</p>
 <h2 id="rationale">Rationale</h2>
 <p>In a research context it is important to be able to support the FAIR
-principles <span class="citation"
+principles (<span class="citation"
 data-cites="wilkinsonFAIRGuidingPrinciples2016">Wilkinson et al.
 (2016)</span>, ensuring that data is well described by metadata, is
 identified with persistent identifiers and that shared services with
 good governance are in place to store interoperable data, to make it
-findable and provide appropriate access controls.</p>
+findable and provide appropriate access controls. )</p>
 <p>These protocols could form the basis for design, evaluation or
 procurement of archival repository-services, but also allow for data
 custodians to begin organising data in a format ready for archiving and
@@ -422,8 +428,8 @@ particular schema</p>
 <p>Metadata is data that describes other metadata. Linked Data Metadata
 follows the principles set out by Tim Berners Lee for LInked data, so
 that all metedata and references to entities described are URIs (URLs).
-<span class="citation"
-data-cites="berners-leeLinkedData2006">Berners-Lee (n.d.)</span></p>
+(<span class="citation"
+data-cites="berners-leeLinkedData2006">Berners-Lee (n.d.)</span>)</p>
 <p><a name="open-specification"> </a></p>
 <h3 id="open-specification">Open Specification</h3>
 <p>A versioned, published, openly available description of a set of

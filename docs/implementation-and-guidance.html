@@ -83,10 +83,16 @@
                             </ul>
       </div>
       <div>
+        <ul class="nav pull-left">
+          <li><a href="https://github.com/Language-Research-Technology/pilars">Contribute at Github</a>
+            <li><a href="https://rrkive.org">More info (RRKive.org)</a></li>
+
+        </ul>
         <ul class="nav pull-right">
           <li><a href="index.html">PILARS Protocols</a></li>
           <li><a href="principles.html">CARE and FAIR Principles (annotated)</a></li>
           <li><a href="implementation-and-guidance.html">PILARS Implementation Notes and Guidance</a></li>
+
         </ul>
   
       </div>
@@ -139,10 +145,11 @@ grouped together</p></li>
 cultural, ethical or legal reasons, then objects should be packaged so
 that this can be done without having create new versions of
 objects</p></li>
-<li><p>The Size of [Storage Objects] – considerthe practicality of
+<li><p>The Size of [Storage Objects] – consider the practicality of
 managing content and users who may be downloading [Storage Objects], if
-the size of the objects is likely to be probalematic, consider breakingn
-them into smaller</p></li>
+the size of the objects is likely to be problematic then break them into
+smaller chunks and use linked data metadata to reference the
+parts</p></li>
 </ul>
 <h3 id="storage-object-notes">Storage Object notes</h3>
 <p>TODO: Reference OAIS concept of packages</p>
@@ -269,9 +276,9 @@ from an Archival Repository, a granularity of on object per
 participant/creator or cohort may make withdrawing access more
 manageable, by updating a license</p></li>
 <li><p>Whether there is a separation made between Archival and
-dissemination-ready copies of files as per OAIS <span class="citation"
+dissemination-ready copies of files as per OAIS (<span class="citation"
 data-cites="OAISReferenceModel"><span>“<span>OAIS Reference Model</span>
-(<span>ISO</span> 14721)”</span> (n.d.)</span>,</p></li>
+(<span>ISO</span> 14721)”</span> (n.d.)</span>,)</p></li>
 <li><p>Whether files are stored with or separately from annotations on
 those files (such as transcripts) Licensing of objects; from an
 implementation point of view it is much simpler to have a single reuse
@@ -311,17 +318,9 @@ sentencing practices, and robust preservation processes have been
 established.</p>
 <p>The Digital Preservation Handbook [8] has detailed practical advice
 about preservation-focussed archival practice.</p>
-<h2
-id="compliant-pilar-software-todo---make-into-a-separate-page-on-the-rrkive-site">Compliant
-PILAR software (TODO - make into a separate page on the RRKive
-site)</h2>
-<p>the Oni software stack used by LDaCA is based on these protocols
-Other repository software solutions such as Fedora which uses OCFL as a
-storage layer and its own Linked Data standards for describing
-collections and objects would also be considered PILAR compliant.</p>
 <h2 id="compliant-metadata-specifications">Compliant Metadata
 Specifications</h2>
-<p>Research Object Crate (RO-Crate) <span class="citation"
+<p>Research Object Crate (RO-Crate) (<span class="citation"
 data-cites="soiland-reyesPackagingResearchArtefacts2022">Soiland-Reyes
 et al. (2022)</span> is a linked-data metadata specification based on
 widely used Linked Data Open Specifications. RO-Crate was developed as a
@@ -329,14 +328,14 @@ packaging method for describing datasets and their contents – which is a
 good match for describing Storage Objects, and is now being widely
 adopted in various research contexts. RO-Crate has been demonstrated to
 work at scale in the Language Data Commons of Australia and PARADISEC as
-the basis for archival-repositories.</p>
+the basis for archival-repositories.)</p>
 <p>RO-CRATE supports Principle 2.5 Represent collections, archival
 series or other organising entities as storage-level objects … via the
 inclusion of the Portland Common Data model; a schema for describing
-repositories with classes for Collections, Objects and Files <span
+repositories with classes for Collections, Objects and Files (<span
 class="citation"
 data-cites="DuraspacePcdm"><span>“Duraspace/Pcdm”</span>
-(n.d.)</span>.</p>
+(n.d.)</span>.)</p>
 <p><em>RO-Crate is a compliant choice for the <a href="./#2"
 title="Data is Annotated: contents, structure, provenance and access and reuse permissions are comprehensively described with metadata and licenses">Protocol
 2</a> in a PILAR implementation, and is used in both PARADISEC and
@@ -344,22 +343,35 @@ LDaCA</em></p>
 <h2 id="software-implementation-approaches">Software Implementation
 Approaches</h2>
 <p>There are two important implementation approaches to storing metadata
-in storage systems, which are discussed in this blog post: either the
-metadata in the store is treated as the source of truth (this is the
-approach implemented in the set of tools used by LDaCA) or a catalogue
-application maintains metadata which is the source of truth and exports
-data to the data store, the approach taken by PARADISEC.</p>
+in storage systems, which are discussed in this <a
+href="https://bibwild.wordpress.com/2023/03/21/ocfl-and-source-of-truth-two-options/">blog
+post</a> (<span class="citation"
+data-cites="jrochkindOCFLSourceTruth2023">jrochkind (2023)</span>):
+either the metadata in the store is treated as the source of truth (this
+is the approach implemented in the set of tools used by LDaCA) or a
+catalogue application maintains metadata which is the source of truth
+and exports data to the data store, the approach taken by PARADISEC.</p>
 <p><a href="./#1.7"
 title="If data resides in systems, such as content management systems or database applications which do not inherently support all of the protocols 1 &amp; 2 then put processes in place to export data to a system that does.">Protocol
 1.7</a> deals with this; it is important for the overall goals of these
 protocols that there are systems in place to write well described
 (Annotated) data to commodity storage.</p>
+<p>See the <a href="https://rkive.org/implementations">RRKive
+Implementations page</a> for a list of compliant software that
+implements the PILARS.</p>
 <div id="refs" class="references csl-bib-body hanging-indent"
 data-entry-spacing="0" role="list">
 <div id="ref-DuraspacePcdm" class="csl-entry" role="listitem">
 <span>“Duraspace/Pcdm.”</span> n.d. <em>GitHub</em>. Accessed May 16,
 2016. <a
 href="https://github.com/duraspace/pcdm">https://github.com/duraspace/pcdm</a>.
+</div>
+<div id="ref-jrochkindOCFLSourceTruth2023" class="csl-entry"
+role="listitem">
+jrochkind. 2023. <span>“<span>OCFL</span> and <span>‘Source of
+Truth’</span> — Two Options.”</span> <em>Bibliographic Wilderness</em>.
+<a
+href="https://bibwild.wordpress.com/2023/03/21/ocfl-and-source-of-truth-two-options/">https://bibwild.wordpress.com/2023/03/21/ocfl-and-source-of-truth-two-options/</a>.
 </div>
 <div id="ref-OAISReferenceModel" class="csl-entry" role="listitem">
 <span>“<span>OAIS Reference Model</span> (<span>ISO</span>

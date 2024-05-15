@@ -26,7 +26,7 @@ Deciding on the granularity of objects  [Protocol 1.2] involves considering a nu
 
 -  If some content may need to be withdrawn or withheld for cultural, ethical or legal reasons, then objects should be packaged so that this can be done without having create new versions of objects
 
--  The Size of [Storage Objects] – considerthe practicality of managing content and users who may be downloading [Storage Objects], if the size of the objects is likely to be probalematic, consider breakingn them into smaller 
+-  The Size of [Storage Objects] – consider the practicality of managing content and users who may be downloading [Storage Objects], if the size of the objects is likely to be problematic then break them into smaller chunks and use linked data metadata to reference the parts
 
 
 
@@ -103,7 +103,7 @@ The choice of whether to store Collections as a single Storage Object (eg  a dir
 
 -  How likely the content is to change or be withdrawn, for example because a participant wishes to have content by or about them removed from an Archival Repository, a granularity of on object per participant/creator or cohort may make withdrawing access more manageable, by updating a license
 
--  Whether there is a separation made between Archival and dissemination-ready copies of files as per OAIS @OAISReferenceModel,
+-  Whether there is a separation made between Archival and dissemination-ready copies of files as per OAIS (@OAISReferenceModel,)
 
 -  Whether files are stored with or separately from annotations on those files (such as transcripts)
 Licensing of objects; from an implementation point of view it is much simpler to have a single reuse license per object than to try to administer very granular permissions.
@@ -123,24 +123,20 @@ The specifics of good governance are out of scope for these protocols, so we con
 The Digital Preservation Handbook [8] has detailed practical advice about preservation-focussed archival practice.
 
 
-## Compliant PILAR software (TODO - make into a separate page on the RRKive site)
-
-the Oni software stack used by LDaCA is based on these protocols 
-Other repository software solutions such as Fedora which uses OCFL as a storage layer and its own Linked Data standards for describing collections and objects would also be considered PILAR compliant.
-
-
 ## Compliant Metadata Specifications
 
-Research Object Crate (RO-Crate) @soiland-reyesPackagingResearchArtefacts2022 is a linked-data metadata specification based on widely used Linked Data Open Specifications. RO-Crate was developed as a packaging method for describing datasets and their contents – which is a good match for describing Storage Objects, and is now being widely adopted in various research contexts. RO-Crate has been demonstrated to work at scale in the Language Data Commons of Australia and PARADISEC as the basis for archival-repositories.
+Research Object Crate (RO-Crate) (@soiland-reyesPackagingResearchArtefacts2022 is a linked-data metadata specification based on widely used Linked Data Open Specifications. RO-Crate was developed as a packaging method for describing datasets and their contents – which is a good match for describing Storage Objects, and is now being widely adopted in various research contexts. RO-Crate has been demonstrated to work at scale in the Language Data Commons of Australia and PARADISEC as the basis for archival-repositories.)
 
-RO-CRATE supports Principle 2.5 Represent collections, archival series or other organising entities as storage-level objects ... via the inclusion of the Portland Common Data model; a schema for describing repositories with classes for Collections, Objects and Files @DuraspacePcdm.
+RO-CRATE supports Principle 2.5 Represent collections, archival series or other organising entities as storage-level objects ... via the inclusion of the Portland Common Data model; a schema for describing repositories with classes for Collections, Objects and Files (@DuraspacePcdm.)
 
 
 *RO-Crate is a compliant choice for the [Protocol 2] in a PILAR implementation, and is used in both PARADISEC and LDaCA*
 
 ## Software Implementation Approaches 
 
-There are two important implementation approaches to storing metadata in storage systems, which are discussed in this blog post: either the metadata in the store is treated as the source of truth (this is the approach implemented in the set of tools used by LDaCA) or a catalogue application maintains metadata which is the source of truth and exports data to the data store, the approach taken by PARADISEC.
+There are two important implementation approaches to storing metadata in storage systems, which are discussed in this [blog post](https://bibwild.wordpress.com/2023/03/21/ocfl-and-source-of-truth-two-options/) (@jrochkindOCFLSourceTruth2023): either the metadata in the store is treated as the source of truth (this is the approach implemented in the set of tools used by LDaCA) or a catalogue application maintains metadata which is the source of truth and exports data to the data store, the approach taken by PARADISEC.
 
 [Protocol 1.7] deals with this; it is important for the overall goals of these protocols that there are systems in place to write well described (Annotated) data to commodity storage.
+
+See the [RRKive Implementations page](https://rkive.org/implementations) for a list of compliant software that implements the PILARS.
 

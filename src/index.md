@@ -6,7 +6,7 @@ bibliography: ./src/PILARS.bib
 
 ## Status
 
-Persistent ID (will always link to the latest version): <a href="http://w3id.org/ldac/pilars">http://w3id.org/ldac/pilars</a>>
+Persistent ID (will always link to the latest version): &lt;<a href="http://w3id.org/ldac/pilars">http://w3id.org/ldac/pilars</a>>
 
 
 
@@ -56,17 +56,17 @@ Janet McDougall janet.mcdougall@anu.edu.au Australian Data Archive, ANU /0000-00
 
 ## Overview
 
-This document sets out protocols for the design and implementation of sustainable [Archival Repository] services to achieve “CAREful FAIRness”; i.e. to support the CARE  @carrollCAREPrinciplesIndigenous2020a
- and FAIR @wilkinsonFAIRGuidingPrinciples2016 principles. 
+This document sets out protocols for the design and implementation of sustainable [Archival Repository] services to achieve “CAREful FAIRness”; i.e. to support the CARE  (@carrollCAREPrinciplesIndigenous2020a)
+ and FAIR (@wilkinsonFAIRGuidingPrinciples2016 principles). 
 
 PILAR aims to guide the design and implementation of data storage services, referred to as Archival Repositories, for a range of purposes, including core use cases of:
 
--  supporting research that follows the FAIR @wilkinsonFAIRGuidingPrinciples2016 principles in any discipline, and 
+-  supporting research that follows the FAIR (@wilkinsonFAIRGuidingPrinciples2016) principles in any discipline, and 
 
 -  archiving cultural-heritage. 
 
-These protocols are designed to work alongside the [CARE] principles @carrollCAREPrinciplesIndigenous2020a
- which operate at a governance level and the Reference Model for an Open Archival Information System (OAIS) @OAISReferenceModel model.
+These protocols are designed to work alongside the [CARE] principles (@carrollCAREPrinciplesIndigenous2020a))
+ which operate at a governance level and the Reference Model for an Open Archival Information System (OAIS) (@OAISReferenceModel model.)
 
 The high-level aims of these PILAR protocols are to:
 
@@ -86,7 +86,7 @@ The technical goals to support the aims are:
 
 ## Background
 
-This set of protocols is inspired by the continuing success of the technical approach taken over two decades by the PARADISEC (Pacific and Regional Archive for Digital Sources in Endangered Cultures) @harrisResearchRecordsResponsibility2015 which houses cultural heritage material from more than 1360 languages with standard metadata with data stored in commodity services (initially files on disk, now objects in a cloud storage service), with metadata adjacent to the data, and work with the Language Data Commons of Australia to generalise the PARADISEC approach to other disciplines.
+This set of protocols is inspired by the continuing success of the technical approach taken over two decades by the PARADISEC (Pacific and Regional Archive for Digital Sources in Endangered Cultures) (@harrisResearchRecordsResponsibility2015 which houses cultural heritage material from more than 1360 languages with standard metadata with data stored in commodity services (initially files on disk, now objects in a cloud storage service), with metadata adjacent to the data, and work with the Language Data Commons of Australia to generalise the PARADISEC approach to other disciplines.)
 
 ## Audience
 
@@ -94,7 +94,7 @@ These protocols are aimed at IT practitioners, archivists, librarians, researche
 
 ## Rationale
 
-In a research context it is important to be able to support the FAIR principles @wilkinsonFAIRGuidingPrinciples2016, ensuring that data is well described by metadata, is identified with persistent identifiers and that shared services with good governance are in place to store interoperable data, to make it findable and provide appropriate access controls. 
+In a research context it is important to be able to support the FAIR principles (@wilkinsonFAIRGuidingPrinciples2016, ensuring that data is well described by metadata, is identified with persistent identifiers and that shared services with good governance are in place to store interoperable data, to make it findable and provide appropriate access controls. )
 
 These protocols could form the basis for design, evaluation or procurement of archival repository-services, but also allow for data custodians to begin organising data in a format ready for archiving and preservation as long as they have access to some kind of commodity storage, by using a range of tools.
 
@@ -206,7 +206,7 @@ The organizational schema for a file – this may be formally defined in a speci
 [Linked data metadata]: #linked-data-metadata "Linked data metadata"
 ### Linked data metadata
 
-Metadata is data that describes other metadata. Linked Data Metadata follows the principles set out by Tim Berners Lee for LInked data, so that all metedata and references to entities described are URIs (URLs). @berners-leeLinkedData2006 
+Metadata is data that describes other metadata. Linked Data Metadata follows the principles set out by Tim Berners Lee for LInked data, so that all metedata and references to entities described are URIs (URLs). (@berners-leeLinkedData2006)
 
 
 
