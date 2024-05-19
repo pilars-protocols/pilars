@@ -78,9 +78,10 @@
 
 
 
+[CARE]: ./principles.html#CARE "CARE Principles"
 
 
-[CARE-C]: ./principles.html#CARE-C "Collective Benefit "
+[CARE-C]: ./principles.html#CARE-C "Collective Benefit"
 
 [CARE-C1]: 	./principles.html#CARE-C1 "For inclusive development and innovation" 
 
@@ -113,6 +114,9 @@
 
 [CARE-E3]: ./principles.html#CARE-E3 "For future use"
 
+
+[FAIR]: ./principles.html#FAIR "FAIR Principles"
+
 [FAIR-F]: ./principles.html#FAIR-F "Findable"
 
 [FAIR-F1]: ./principles.html#FAIR-F1 "(meta)data are assigned a globally unique and *persistent* identifier"
@@ -139,10 +143,10 @@
 
 [FAIR-R1]: ./principles.html#FAIR-R1 "meta(data) are richly described with a plurality of accurate and relevant attributes"
 
-[FAIR-R1:1]: ./principles.html#FAIR-R1:1 "(meta)data are released with a clear and accessible data usage license"
+[FAIR-R1.1]: ./principles.html#FAIR-R1:1 "(meta)data are released with a clear and accessible data usage license"
 
-[FAIR-R1:2]: ./principles.html#FAIR-R1:2 "(meta)data are associated with detailed provenance"
+[FAIR-R1.2]: ./principles.html#FAIR-R1:2 "(meta)data are associated with detailed provenance"
 
-[FAIR-R1:3]: ./principles.html#FAIR-R1:3 "(meta)data meet domain-relevant community standards"
+[FAIR-R1.3]: ./principles.html#FAIR-R1:3 "(meta)data meet domain-relevant community standards"
 
-[Bagit]: https://en.wikipedia.org/wiki/BagIt
+[BagIt]: https://en.wikipedia.org/wiki/BagIt

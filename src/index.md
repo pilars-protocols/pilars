@@ -16,52 +16,52 @@ We will be collecting feedback until the end of June 2024. <a href="https://gith
 
 More information and background is available at <a href="https://rrkive.org">(RRKive.org)</a>
 
- <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://w3id.org/ldac/pilars">Protocols for Implementing Long-term Archival Repositories Services (PILARS)</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://orcid.org/0000-0002-3545-944X ">Sefton et al</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p> 
+ <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://w3id.org/ldac/pilars">Protocols for Implementing Long-term Archival Repositories Services (PILARS)</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="[0000-0002-3545-944X](https://orcid.org/0000-0002-3545-944X) ">Sefton et al</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p> 
 
 
 
 ## Editor
 
-Peter Sefton p.sefton@uq.edu.au University of Queensland https://orcid.org/0000-0002-3545-944X 
+Peter Sefton p.sefton@uq.edu.au, University of Queensland, [0000-0002-3545-944X](https://orcid.org/0000-0002-3545-944X) 
 
 ## Contributors
 
-Moises Sacal Bonequi -University of Queensland- m.sacalbonequi@uq.edu.au https://orcid.org/0000-0002-4438-2755
+Moises Sacal Bonequi m.sacalbonequi@uq.edu.au, University of Queensland  [0000-0002-4438-2755](https://orcid.org/0000-0002-4438-2755)
 
-Alex Ip alex.ip@aarnet.edu.au AARNet https://orcid.org/0000-0001-8937-8904 
+Alex Ip, alex.ip@aarnet.edu.au, AARNet [0000-0001-8937-8904](https://orcid.org/0000-0001-8937-8904) 
 
-Michael Lynch m.lynch@sydney.edu.au University of Sydney https://orcid.org/0000-0001-5152-5307
+Michael Lynch, m.lynch@sydney.edu.au, University of Sydney [0000-0001-5152-5307](https://orcid.org/0000-0001-5152-5307)
 
-Amanda Lawrence, ADM+S/RMIT, amanda.lawrence@rmit.edu.au, Orcid 0000-0003-2194-8178 
+Amanda Lawrence, amanda.lawrence@rmit.edu.au, RMIT   [0000-0003-2194-8178](https://orcid.org/0000-0003-2194-8178) 
 
-Julia Colleen Miller julia.miller@anu.edu.au PARADISEC | LDaCA, The Australian National University http://orcid.org/0000-0002-8827-3825 
+Julia Colleen Miller, julia.miller@anu.edu.au, The Australian National University http://orcid.org/[0000-0002-8827-3825](https://orcid.org/0000-0002-8827-3825) 
 
-Sam Hames s.hames@uq.edu.au, University of Queensland | LDaCA, https://orcid.org/0000-0002-1824-2361 
+Sam Hames, s.hames@uq.edu.au, University of Queensland [0000-0002-1824-2361](https://orcid.org/0000-0002-1824-2361) 
 
-Marissa Takahashi marissa.takahashi@qut.edu.au Queensland University of Technology, Australian Digital Observatory (ADO), https://orcid.org/0000-0002-6695-7660 
+Marissa Takahashi, marissa.takahashi@qut.edu.au, Queensland University of Technology [0000-0002-6695-7660](https://orcid.org/0000-0002-6695-7660) 
 
-Salome Harris (ARDS Aboriginal Corporation) salome.harris@ards.com.au
+Salome Harris, ARDS Aboriginal Corporation. salome.harris@ards.com.au
 
-River Tae Smith river.smith@monash.edu Monash University https://orcid.org/0000-0002-2118-3147
+River Tae Smith, river.smith@monash.edu, Monash University [0000-0002-2118-3147](https://orcid.org/0000-0002-2118-3147)
 
-Annie Cameron, anniec@wangkamaya.org.au Wangka Maya PALC https://orcid.org/0009-0007-5522-7121 
+Annie Cameron, anniec@wangkamaya.org.au, Wangka Maya PALC [0009-0007-5522-7121](https://orcid.org/0009-0007-5522-7121) 
 
-Mark Raadgever m.raadgever@uq.edu.au University of Queensland
+Mark Raadgever, m.raadgever@uq.edu.au, University of Queensland
 
-Nick Thieberger thien@unimelb.edu.au University of Melbourne ORCID ID: 0000-0001-8797-1018
+Nick Thieberger, thien@unimelb.edu.au, University of Melbourne[0000-0001-8797-1018](https://orcid.org/0000-0001-8797-1018)
 
-Ben Foley b.foley@uq.edu.au University of Queensland, ORCID 0000-0003-0879-9251
+Ben Foley, b.foley@uq.edu.au, University of Queensland [0000-0003-0879-9251](https://orcid.org/0000-0003-0879-9251)
 
-Adam Bell adam.bell@aarnet.edu.au AARNet, ORCID 0000-0003-2129-4776
+Adam Bell, adam.bell@aarnet.edu.au AARNet, [0000-0003-2129-4776](https://orcid.org/0000-0003-2129-4776)
 
-Janet McDougall janet.mcdougall@anu.edu.au Australian Data Archive, ANU /0000-0002-2151-2190
+Janet McDougall, janet.mcdougall@anu.edu.au, The Australian National University [0000-0002-2151-2190](https://orcid.org/0000-0002-2151-2190)
 
 ## Overview
 
 This document sets out protocols for the design and implementation of sustainable [Archival Repository] services to achieve “CAREful FAIRness”; i.e. to support the CARE  (@carrollCAREPrinciplesIndigenous2020a)
  and FAIR (@wilkinsonFAIRGuidingPrinciples2016 principles). 
 
-PILAR aims to guide the design and implementation of data storage services, referred to as Archival Repositories, for a range of purposes, including core use cases of:
+PILARS aims to guide the design and implementation of data storage services, referred to as Archival Repositories, for a range of purposes, including core use cases of:
 
 -  supporting research that follows the FAIR (@wilkinsonFAIRGuidingPrinciples2016) principles in any discipline, and 
 
@@ -98,7 +98,7 @@ These protocols are aimed at IT practitioners, archivists, librarians, researche
 
 In a research context it is important to be able to support the FAIR principles (@wilkinsonFAIRGuidingPrinciples2016, ensuring that data is well described by metadata, is identified with persistent identifiers and that shared services with good governance are in place to store interoperable data, to make it findable and provide appropriate access controls. )
 
-These protocols could form the basis for design, evaluation or procurement of archival repository-services, but also allow for data custodians to begin organising data in a format ready for archiving and preservation as long as they have access to some kind of commodity storage, by using a range of tools.
+These protocols could form the basis for design, evaluation or procurement of archival repository-services, but also allow for data custodians to begin organising data in a format ready for archiving and digital preservation as long as they have access to some kind of commodity storage, by using a range of tools.
 
 ## The Protocols
 
@@ -183,16 +183,26 @@ Used to cover any system that is designed to keep data securely for a defined pe
 
 An individual or organisation with the authority to make decisions regarding data under management. This decision making process is assumed to take place with good governance, in line with the CARE principles.
 
+<a name="digital-preservation"> </a>
+
+### Digital Preservation
+
+The Digital Preservation Coalition page [What is digital preservation?](https://www.dpconline.org/digipres/what-is-digipres) defines Digital Preservation as:
+
+The series of managed activities necessary to ensure continued access to digital materials for as long as necessary, refers to all of the actions required to maintain access to digital materials beyond the limits of media failure or technological and organisational change.
 
 
+
+[Digital Preservation]: #digital-preservation "Data Steward or Custodian"
 
 <a name="file"> </a>
 
 [File]: #file "File"
 ### File
 
-A datastream which is addressable by name and a path within a filesystem (eg conforming to POSIX)  
+A computer file is an aggregation of data on a storage device, identified by a name.
 
+(This definition comes from a discussion thread on wikidepdia (TalkComputerFile2024))
 
 <a name="file-format"> </a>
 
@@ -272,8 +282,6 @@ A Specification published by a recognized standards body such as the ISO or W3C.
 ### Storage Object
 
 A discrete unit in a physical storage service. This may represent, for example, a Repository Object or a Repository Collection which are abstract structural concepts. This concept is similar to an OCFL Object, and the concept of a Package in OAIS. 
-
-
 
 
 

@@ -145,14 +145,7 @@ grouped together</p></li>
 cultural, ethical or legal reasons, then objects should be packaged so
 that this can be done without having create new versions of
 objects</p></li>
-<li><p>The Size of [Storage Objects] – consider the practicality of
-managing content and users who may be downloading [Storage Objects], if
-the size of the objects is likely to be problematic then break them into
-smaller chunks and use linked data metadata to reference the
-parts</p></li>
 </ul>
-<h3 id="storage-object-notes">Storage Object notes</h3>
-<p>TODO: Reference OAIS concept of packages</p>
 <h3 id="applications-notes">Applications notes</h3>
 <p>Regarding <a href="./#1.7"
 title="If data resides in systems, such as content management systems or database applications which do not inherently support all of the protocols 1 &amp; 2 then put processes in place to export data to a system that does.">Protocol
@@ -180,18 +173,23 @@ of tens of thousands of objects and millions of files.</p>
 title="Data is Portable: assets are not locked-in to a particular mode of storage, interface or service">Protocol
 1</a> to ensure data portability</em></p>
 <p>A simpler alternative storage based on different standards would be
-to: - Use a directory hierarchy on a POSIX-compliant storage system -
-Signal that directory is a Storage Object <a href="./#1.2"
+to: - Use a directory hierarchy on a POSIX-compliant storage system</p>
+<ul>
+<li><p>Signal that directory is a Storage Object <a href="./#1.2"
 title="Divide up data files into [Storage Objects] that form meaningful units, of smallest practical size.">Protocol
 1.2</a> by the presence of a <a
-href="https://en.wikipedia.org/wiki/BagIt">Bagit</a> manifest in a
-directory - Bagit files nested below this Storage Object would not be
+href="https://en.wikipedia.org/wiki/BagIt">BagIt</a> manifest in a
+directory</p></li>
+<li><p>BagIt files nested below this Storage Object would not be
 considered Storage Objects in their own right in the context of the
-repository - Bagit provides checksums as per 2.4 Store checksum-metadata
-in a documented standard format alongside data to help ensure data
-integrity - Use a documented and implementable algorithm to map object
-IDs to a path and store a summary in the root of the directory
-hierarchy</p>
+repository</p></li>
+<li><p>BagIt provides checksums as per 2.4 Store checksum-metadata in a
+documented standard format alongside data to help ensure data
+integrity</p></li>
+<li><p>Use a documented and implementable algorithm to map object IDs to
+a path and store a summary in the root of the directory
+hierarchy</p></li>
+</ul>
 <p>Note that neither this example using BagIt nor OCFL implement <a
 href="./#2"
 title="Data is Annotated: contents, structure, provenance and access and reuse permissions are comprehensively described with metadata and licenses">Protocol
@@ -202,15 +200,19 @@ title="Data is Annotated: contents, structure, provenance and access and reuse p
 2</a></h2>
 <h3 id="why-is-linked-data-metadata-required">Why is Linked Data
 Metadata required?</h3>
-<p>Linked Data allows: - Any conceivable data structure to be described
-in metadata, and there is no limit to the size and scope of the
-description. - Extensibility: vocabularies to be mixed in as needed;
-from a core set for all data to domain-specific to project or even
-dataset-specific terms; this can be formalised using Profiles. -
-Interoperability with contemporary global research information systems
-architectures, discovery services etc. - Inter-object relationships to
-be expressed – so that the physical storage layout does not define the
-only way that resources can be explored.</p>
+<p>Linked Data allows:</p>
+<ul>
+<li><p>Any conceivable data structure to be described in metadata, and
+there is no limit to the size and scope of the description.</p></li>
+<li><p>Extensibility: vocabularies to be mixed in as needed; from a core
+set for all data to domain-specific to project or even dataset-specific
+terms; this can be formalised using Profiles.</p></li>
+<li><p>Interoperability with contemporary global research information
+systems architectures, discovery services etc.</p></li>
+<li><p>Inter-object relationships to be expressed – so that the physical
+storage layout does not define the only way that resources can be
+explored.</p></li>
+</ul>
 <p>NOTE: Linked data is often conflated with Open Access; the phrase
 Linked Open Data is very common. But the Linked Data principles can be
 applied to non-open access-controlled materials. Non-open materials have
@@ -230,7 +232,9 @@ be further codified using Linked Data Schemas (or Ontologies or
 Vocabularies), from which documentation and validation services may be
 derived.</p>
 <h2 id="licenses">Licenses</h2>
-<p>The FAIR principles mandate a license for data [FAIR-R1.1]</p>
+<p>The FAIR principles mandate a license for data <a
+href="./principles.html#FAIR-R1:1"
+title="(meta)data are released with a clear and accessible data usage license">FAIR-R1.1</a></p>
 <p>Licenses may be based on Copyright law, or rely on other mechanisms
 based on other rights (such as privacy or trade secrets). Licenses
 should reflect the will of rights holders, and will likely be

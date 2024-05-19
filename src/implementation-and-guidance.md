@@ -26,13 +26,7 @@ Deciding on the granularity of objects  [Protocol 1.2] involves considering a nu
 
 -  If some content may need to be withdrawn or withheld for cultural, ethical or legal reasons, then objects should be packaged so that this can be done without having create new versions of objects
 
--  The Size of [Storage Objects] – consider the practicality of managing content and users who may be downloading [Storage Objects], if the size of the objects is likely to be problematic then break them into smaller chunks and use linked data metadata to reference the parts
 
-
-
-### Storage Object notes
-
-TODO: Reference OAIS concept of packages
 
 ### Applications notes
 
@@ -50,9 +44,13 @@ The Oxford Common File Layout (OCFL) specification was developed to support a si
 
 A simpler alternative storage based on different standards would be to:
 -  Use a directory hierarchy on a POSIX-compliant storage system
--  Signal that directory is a Storage Object [Protocol 1.2] by the presence of a [Bagit] manifest in a directory 
-  -  Bagit files nested below this Storage Object would not be considered Storage Objects in their own right in the context of the repository
-  -  Bagit provides checksums as per 2.4 Store checksum-metadata in a documented standard format alongside data to help ensure data integrity
+
+-  Signal that directory is a Storage Object [Protocol 1.2] by the presence of a [BagIt] manifest in a directory 
+
+  -  BagIt files nested below this Storage Object would not be considered Storage Objects in their own right in the context of the repository
+
+  -  BagIt provides checksums as per 2.4 Store checksum-metadata in a documented standard format alongside data to help ensure data integrity
+
 -  Use a documented and implementable algorithm to map object IDs to a path and store a summary in the root of the directory hierarchy
 
 Note that neither this example using BagIt nor OCFL implement [Protocol 2]
@@ -63,9 +61,13 @@ Note that neither this example using BagIt nor OCFL implement [Protocol 2]
 ### Why is Linked Data Metadata required?
 
 Linked Data allows:
+
 -  Any conceivable data structure to be described in metadata, and there is no limit to the size and scope of the description.
+
 -  Extensibility: vocabularies to be mixed in as needed; from a core set for all data to domain-specific to project or even dataset-specific terms; this can be formalised using Profiles.
+
 -  Interoperability with contemporary global research information systems architectures, discovery services etc.
+
 -  Inter-object relationships to be expressed – so that the physical storage layout does not define the only way that resources can be explored.
 
 NOTE: Linked data is often conflated with Open Access; the phrase Linked Open Data is very common. But the Linked Data principles can be applied to non-open access-controlled materials. Non-open materials have some impact on how catalogues and indexes are implemented; for example, using linked-data graphs such as triple stores that contain multiple items may make access-control-safe queries impossible to implement for reasons of complexity and performance; the reasoning to work out whether a particular metadata statement can be seen by a particular user could be very computationally expensive.
