@@ -13,7 +13,7 @@ Others may comment or contribute using Github Issues
 The organization of the is repository is as follows:
 
 - [`src/`](./src) contains the source from which the repository is generated
-  - `src/index.md` -- the protocols document -- this has a persistent identifier <https://w3id.org/ldac/pillars>
+  - `src/index.md` -- the protocols document -- this has a persistent identifier <https://w3id.org/ldac/pilars>
   - `src/principles.md` 
   - `src/implementation-and-guidance.md`
   - `src/PILARS.bib` -- Refernces in bibtex format (Peter Sefton has a)
