@@ -35,11 +35,11 @@ To edit this website you will need:
 
 The source documents use Pandoc Markdown format. 
 
-To add a reference, add it to the bibtex file `src/PILARS.bib` and use an @referene
+To add a reference, add it to the bibtex file `src/PILARS.bib` and use an @reference in the text
 
 - To build the documents, type: `make doc`
 
-  This will run pandoc and prduce the HTML website in `docs` from the markdown source files
+  This will run pandoc and produce the HTML website in `docs` from the markdown source files
 
 -  To preview the site view it from your local file system in a web browser
 
