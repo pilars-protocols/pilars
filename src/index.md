@@ -8,8 +8,10 @@ bibliography: ./src/PILARS.bib
 
 Persistent ID (will always link to the latest version): &lt;<a href="http://w3id.org/ldac/pilars">http://w3id.org/ldac/pilars</a>>
 
+To cite this document:  (pending a publication) please use this:
 
-
+Sefton, P., et al. (2024). Protocols for Implementing Long-term Archival Repositories Services (PILARS). Retrieved from <a href="http://w3id.org/ldac/pilars">http://w3id.org/ldac/pilars</a>
+  
 This is a working draft which has been created by the below contributors.
 
 We will be collecting feedback until the end of June 2024. <a href="https://github.com/Language-Research-Technology/pilars">Contribute at Github</a>
