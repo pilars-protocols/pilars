@@ -122,7 +122,10 @@ This document contains a copy of each set of principles with notes about how PIL
 >   Data governance should take into account the potential future use and future harm based on ethical frameworks grounded in the values and principles of the relevant Indigenous community. Metadata should acknowledge the provenance and purpose and any limitations or obligations in secondary use inclusive of issues of consent.
 
 <a name="FAIR">
->## FAIR Principles
+
+## FAIR Principles
+
+
 >
 >
 ><a name="FAIR-F"> </a>
@@ -154,7 +157,7 @@ This document contains a copy of each set of principles with notes about how PIL
 
 ### Notes
 
-It's easy to say the meta(data) should be assigned PIDs (Persistent IDs) but there are a lot of requirements that follow from this. Peersistent identifiers require persistent storage of the (meta)data, governance 
+Yes data and metadata should be assigned PIDs (Persistent IDs) but there are a lot of requirements that follow from this. Persistent identifiers require persistent availability, via Archival Repository infrastructure for storing well described data. It is not a given that suitable Archival Repository infrastructure exists; hense the PILARS protocols for aimed at those creating or procuring it. It is critical that discussions of FAIR implementations include discussions of these underlying implications, otherwise there is a risk on focussing on easily measured things like "which persistent ID scheme is used" or "how many persistent IDs have you issued", rather than first asking "where's the data and how are you making sure it is available over the long term".
 
 >
 >
@@ -186,7 +189,7 @@ It's easy to say the meta(data) should be assigned PIDs (Persistent IDs) but the
 
 #### Notes
 
-If we're going to observe the CARE principles then *an authentication and authorization procedure* is DEFINITELY needed -- but this is not a trivial undertaking, particularly in observing the *standardized communications protocol* this is covered in 
+If we're going to observe the CARE principles then A1.2 *an authentication and authorization procedure* is DEFINITELY needed -- but this is not a trivial undertaking. While A1 can be implemented by using standard web protocols (chiefly HTTPS) and protocols and standards built on top it (lined data, metadata harvesting protocols such as OAI-PMH), there is a lack of web-scale standardization in mediating access to resources. 
 
 >
 ><a name="FAIR-I"> </a>
@@ -235,5 +238,3 @@ If we're going to observe the CARE principles then *an authentication and author
 >  -  FAIR-R1.3: (meta)data meet domain-relevant community standards
 
 
-#### Notes
-TODO
