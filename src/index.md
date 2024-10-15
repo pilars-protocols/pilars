@@ -40,7 +40,6 @@ Sam Hames, s.hames@uq.edu.au, University of Queensland [0000-0002-1824-2361](htt
 
 Marissa Takahashi, marissa.takahashi@qut.edu.au, Queensland University of Technology [0000-0002-6695-7660](https://orcid.org/0000-0002-6695-7660) 
 
-Salome Harris, ARDS Aboriginal Corporation. salome.harris@ards.com.au
 
 River Tae Smith, river.smith@monash.edu, Monash University [0000-0002-2118-3147](https://orcid.org/0000-0002-2118-3147)
 
