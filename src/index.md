@@ -104,7 +104,7 @@ In a research context, it is important to be able to support the [FAIR] principl
 
 - Shared services with good governance are in place to store interoperable data, to make it findable and provide appropriate access controls.
 
-These protocols could form the basis for design, evaluation or procurement of archival repository-services, but also allow for data custodians to begin organising data in a format ready for archiving and digital preservation by using a range of tools, as long as they have access to some kind of commodity storage.
+These protocols could form the basis for design, evaluation or procurement of archival repository services, but also allow for data custodians to begin organising data in a format ready for archiving and digital preservation by using a range of tools, as long as they have access to some kind of commodity storage.
 
 <br>
 
