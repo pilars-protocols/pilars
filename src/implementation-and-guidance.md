@@ -80,6 +80,8 @@ Communities can maintain schemas/vocabularies for specific domains ([FAIR-R1.3])
 
 Documenting a profile can be as simple as writing a natural-language document to describe what is expected in a particular context, but can be further codified using Linked Data Schemas (or Ontologies or Vocabularies), from which documentation and validation services might be derived.
 
+<br>
+
 ## Licenses
 
 The [FAIR] principles mandate a license for data [FAIR-R1.1]
@@ -130,6 +132,8 @@ The specifics of good governance are out of scope for these protocols, so we con
 
 The Digital Preservation Handbook (@digitalpreservationcoalitionDigitalPreservationHandbook2015) has detailed practical advice about preservation-focussed archival practice.
 
+<br>
+
 ## Compliant Metadata Specifications
 
 Research Object Crate (RO-Crate) (@soiland-reyesPackagingResearchArtefacts2022) is a linked-data metadata specification based on widely used Linked Data Open Specifications. RO-Crate was developed as a packaging method for describing datasets and their contents – which is a good match for describing Storage Objects, and is now being widely adopted in various research contexts. RO-Crate has been demonstrated to work at scale in the Language Data Commons of Australia and PARADISEC as the basis for archival-repositories.
@@ -137,6 +141,8 @@ Research Object Crate (RO-Crate) (@soiland-reyesPackagingResearchArtefacts2022) 
 RO-CRATE supports [Protocol 2.5] via the inclusion of the Portland Common Data model, a schema for describing repositories with classes for Collections, Objects and Files (@DuraspacePcdm).
 
 *RO-Crate is a compliant choice for the [Protocol 2] in a PILARS implementation, and is used in both PARADISEC and LDaCA.*
+
+<br>
 
 ## Software Implementation Approaches 
 
