@@ -111,89 +111,100 @@ href="./">PILARS Protocols</a>.</p>
 <a property="dct:title" rel="cc:attributionURL" href="https://w3id.org/ldac/pilars">PILARS
 implementation and guidance</a> by
 <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://orcid.org/0000-0002-3545-944X ">Sefton
-et al</a> is licensed under
+et al.</a> is licensed under
 <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC
 BY
 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a>
 </p>
+<p><br></p>
 <h2 id="storage-layout-for-protocol-1">Storage layout for <a href="./#1"
 title="Data is Portable: assets are not locked-in to a particular mode of storage, interface or service">Protocol
 1</a></h2>
-<p>Very sensitive data may need to be stored on physically secured
-storage such as hard drives stored in a safe or an air-gapped server,
-and a variety of storage systems may need to be combined for a large
+<p>Very sensitive data might need to be stored on physically secured
+storage, such as hard drives stored in a safe or an air-gapped server,
+and a variety of storage systems might need to be combined for a large
 collection (e.g. public data stored in the cloud, access-controlled data
 kept locally). Encrypting sensitive data can allow technologists to work
-on the servers without being able to see the data, but the data may not
-be recoverable if the encryption keys are lost.</p>
-<p>Storage directory-like hierarchies may group data together in
-collections or by rights-holder on similar paths; to aid in moving data
+on the servers without being able to see the data, but the data might
+not be recoverable if the encryption keys are lost.</p>
+<p>Storage directory-like hierarchies might group data together in
+collections or by rights-holder on similar paths, to aid in moving data
 between services using file-system tools (unlike approaches which
 completely obscure all meaning in paths using hash algorithms, for
 reasons such as optimising the storage address space).</p>
 <p>However, to avoid ambiguity in implementing <a href="./#1.2.2"
 title="Each Storage Object is a directory (or storage object equivalent) containing the files including metadata and administrative files such as checksums that make up an Object.">Protocol
-1.2.2</a> a specification, for example OCFL, may require that object
+1.2.2</a>, a specification, for example, OCFL, might require that object
 paths on the storage root must not be nested within each other.</p>
-<p>Deciding on the granularity of objects <a href="./#1.2"
+<p>Deciding on the granularity of objects, <a href="./#1.2"
 title="Divide up data files into [Storage Objects] that form meaningful units, of smallest practical size.">Protocol
 1.2</a> involves considering a number of factors:</p>
 <ul>
 <li><p>Files with the same licensing conditions for re-use should be
-grouped together</p></li>
-<li><p>If some content may need to be withdrawn or withheld for
+grouped together.</p></li>
+<li><p>If some content might need to be withdrawn or withheld for
 cultural, ethical or legal reasons, then objects should be packaged so
-that this can be done without having create new versions of
-objects</p></li>
+that this can be done without having to create new versions of
+objects.</p></li>
 </ul>
 <h3 id="applications-notes">Applications notes</h3>
 <p>Regarding <a href="./#1.7"
 title="If data resides in systems, such as content management systems or database applications which do not inherently support all of the protocols 1 &amp; 2 then put processes in place to export data to a system that does.">Protocol
-1.7</a>: Ideally this something that should not be necessary, but if not
-then work to bring systems into line with PILARS: - Don’t design or
-build systems that don’t have this exit pathway designed from the start
-- Don’t place data in systems that don’t have this already, and - Work
-to add this straight away if existing systems don’t have this.</p>
+1.7</a>: Ideally, this is something that should not be necessary, but if
+not, then work to bring systems into line with PILARS:</p>
+<ul>
+<li><p>Don’t design or build systems that don’t have this exit pathway
+designed from the start.</p></li>
+<li><p>Don’t place data in systems that don’t have this
+already.</p></li>
+<li><p>Work to add this straight away if existing systems don’t have
+this.</p></li>
+</ul>
 <p><a href="./#1.3"
 title="Document and implement an ID resolution mapping system to map IDs to storage locations (FAIR-F1).">Protocol
 1.3</a> (that an ID resolution method is in place and documented)
 ensures that data can be referenced remotely and inter-object
-relationships within a repository are supported (this supports <a
+relationships within a repository are supported. This supports <a
 href="./#2.5"
 title="Represent Repository Collections such as archival series or other organising entities as Storage Objects; either self-contained with their member data within the Storage Object or as metadata-only Storage Objects referencing or referenced by other Storage Objects.">Protocol
-2.5</a> this means a Storage Object can be located without requiring the
-repository to be indexed using the ID-to-path algorithm.</p>
+2.5</a>, which means a Storage Object can be located without requiring
+the repository to be indexed using the ID-to-path algorithm.</p>
 <p>The Oxford Common File Layout (OCFL) specification was developed to
 support a similar set of requirements to <a href="./#1"
 title="Data is Portable: assets are not locked-in to a particular mode of storage, interface or service">Protocol
-1</a> and is being widely implemented in repository and digital library
+1</a>, and is being widely implemented in repository and digital library
 systems. LDaCA uses OCFL and has demonstrated that it works at the scale
 of tens of thousands of objects and millions of files.</p>
 <p><em>OCFL is a compliant implementation solution for <a href="./#1"
 title="Data is Portable: assets are not locked-in to a particular mode of storage, interface or service">Protocol
-1</a> to ensure data portability</em></p>
+1</a> to ensure data portability.</em></p>
 <p>A simpler alternative storage based on different standards would be
-to: - Use a directory hierarchy on a POSIX-compliant storage system</p>
+to:</p>
 <ul>
-<li><p>Signal that directory is a Storage Object <a href="./#1.2"
+<li><p>Use a directory hierarchy on a POSIX-compliant storage
+system.</p></li>
+<li><p>Signal that directory is a Storage Object (<a href="./#1.2"
 title="Divide up data files into [Storage Objects] that form meaningful units, of smallest practical size.">Protocol
-1.2</a> by the presence of a <a
+1.2</a>) by the presence of a <a
 href="https://en.wikipedia.org/wiki/BagIt">BagIt</a> manifest in a
-directory</p></li>
+directory.</p>
+<ul>
 <li><p>BagIt files nested below this Storage Object would not be
 considered Storage Objects in their own right in the context of the
-repository</p></li>
-<li><p>BagIt provides checksums as per 2.4 Store checksum-metadata in a
-documented standard format alongside data to help ensure data
-integrity</p></li>
+repository.</p></li>
+<li><p>BagIt provides checksums as per <a href="./#2.4"
+title="Store checksum-metadata in a documented standard format alongside data files to help ensure data integrity.">Protocol
+2.4</a>.</p></li>
+</ul></li>
 <li><p>Use a documented and implementable algorithm to map object IDs to
 a path and store a summary in the root of the directory
-hierarchy</p></li>
+hierarchy.</p></li>
 </ul>
 <p>Note that neither this example using BagIt nor OCFL implement <a
 href="./#2"
 title="Data is Annotated: contents, structure, provenance and access and reuse permissions are comprehensively described with metadata and licenses">Protocol
-2</a></p>
+2</a>.</p>
+<p><br></p>
 <h2 id="metadata-standards-and-specifications---protocol-2">Metadata
 Standards and Specifications - <a href="./#2"
 title="Data is Annotated: contents, structure, provenance and access and reuse permissions are comprehensively described with metadata and licenses">Protocol
@@ -202,114 +213,121 @@ title="Data is Annotated: contents, structure, provenance and access and reuse p
 Metadata required?</h3>
 <p>Linked Data allows:</p>
 <ul>
-<li><p>Any conceivable data structure to be described in metadata, and
-there is no limit to the size and scope of the description.</p></li>
-<li><p>Extensibility: vocabularies to be mixed in as needed; from a core
+<li><p>any conceivable data structure to be described in metadata, and
+there is no limit to the size and scope of the description</p></li>
+<li><p>extensibility: vocabularies to be mixed in as needed; from a core
 set for all data to domain-specific to project or even dataset-specific
-terms; this can be formalised using Profiles.</p></li>
-<li><p>Interoperability with contemporary global research information
-systems architectures, discovery services etc.</p></li>
-<li><p>Inter-object relationships to be expressed – so that the physical
+terms; this can be formalised using Profiles</p></li>
+<li><p>interoperability with contemporary global research information
+systems architectures, discovery services, etc.</p></li>
+<li><p>inter-object relationships to be expressed – so that the physical
 storage layout does not define the only way that resources can be
 explored.</p></li>
 </ul>
-<p>NOTE: Linked data is often conflated with Open Access; the phrase
-Linked Open Data is very common. But the Linked Data principles can be
-applied to non-open access-controlled materials. Non-open materials have
-some impact on how catalogues and indexes are implemented; for example,
-using linked-data graphs such as triple stores that contain multiple
-items may make access-control-safe queries impossible to implement for
-reasons of complexity and performance; the reasoning to work out whether
-a particular metadata statement can be seen by a particular user could
-be very computationally expensive.</p>
+<p><strong>Note:</strong> Linked data is often conflated with Open
+Access; the phrase Linked Open Data is very common. But the Linked Data
+principles can be applied to non-open access-controlled materials.
+Non-open materials have some impact on how catalogues and indexes are
+implemented; for example, using linked-data graphs such as triple stores
+that contain multiple items might make access-control-safe queries
+impossible to implement for reasons of complexity and performance; the
+reasoning to work out whether a particular metadata statement can be
+seen by a particular user could be very computationally expensive.</p>
 <h3 id="vocabularies-and-metadata-profiles">Vocabularies and metadata
 profiles</h3>
 <p>Communities can maintain schemas/vocabularies for specific domains
-(FAIR-R1.3) and to document metadata profiles.</p>
+(<a href="./principles.html#FAIR-R1:3"
+title="(meta)data meet domain-relevant community standards">FAIR-R1.3</a>)
+and to document metadata profiles.</p>
 <p>Documenting a profile can be as simple as writing a natural-language
 document to describe what is expected in a particular context, but can
 be further codified using Linked Data Schemas (or Ontologies or
-Vocabularies), from which documentation and validation services may be
+Vocabularies), from which documentation and validation services might be
 derived.</p>
 <h2 id="licenses">Licenses</h2>
-<p>The FAIR principles mandate a license for data <a
+<p>The <a href="./principles.html#FAIR" title="FAIR Principles">FAIR</a>
+principles mandate a license for data <a
 href="./principles.html#FAIR-R1:1"
 title="(meta)data are released with a clear and accessible data usage license">FAIR-R1.1</a></p>
-<p>Licenses may be based on Copyright law, or rely on other mechanisms
+<p>Licenses might be based on copyright law, or rely on other mechanisms
 based on other rights (such as privacy or trade secrets). Licenses
 should reflect the will of rights holders, and will likely be
 administered, chosen or written by a data custodian or steward
 authorised to act on behalf of the rights holders, or by the rights
 holder themselves.</p>
 <p>It is important to have a license document independent of algorithms
-or configuration file(s) and independently of a particular authorization
-system that may be built into a software application. Implemented
-processes are, of course, needed to make data available, and may include
-some automation. But to make data truly portable across systems and
-time, it is essential that human-readable documentation is available in
-case authorization processes need to be rebuilt or redesigned.</p>
+or configuration file(s), and independently of a particular
+authorisation system that might be built into a software application.
+Implemented processes are, of course, needed to make data available, and
+might include some automation. But to make data truly portable across
+systems and time, it is essential that human-readable documentation is
+available in case authorisation processes need to be rebuilt or
+redesigned.</p>
 <p>For <a href="./#2.3.1"
 title="It is critical that data that does not have an Open Access or public domain license is not exposed via a portal without access controls and that confidential licenses themselves are not disseminated. Licensing may change, be withdrawn and new licenses added over time.">Protocol
-2.3.1</a> an access-control system may need to be put in place if there
-is non-open license data in the [Archival Repository]. An individual
-data access system may implement a range of solutions:</p>
+2.3.1</a>, an access-control system might need to be put in place if
+there is non-open license data in the [Archival Repository]. An
+individual data access system might implement a range of solutions:</p>
 <ul>
-<li><p>Lists of approved data licensees associated with logins local to
-the systen</p></li>
-<li><p>A separate license management system or systems where more than
+<li><p>lists of approved data licensees associated with logins local to
+the system</p></li>
+<li><p>a separate license management system or systems, where more than
 one data access system can consult to see if a user holds a particular
 license.</p></li>
-<li><p>Manual offline access, with direct transfer of data to approved
-applicants</p></li>
+<li><p>manual offline access, with direct transfer of data to approved
+applicants.</p></li>
 </ul>
 <h3 id="logical-structure-collections">Logical Structure:
 Collections</h3>
 <p>The concept of a Collection is very commonly used in repositories and
-digital archives to represent the ‘backbone’ of the way resources
-including sub-collections and Objects are organised.</p>
+digital archives to represent the ‘backbone’ of the way resources,
+including sub-collections and Objects, are organised.</p>
 <p>The choice of whether to store Collections as a single Storage Object
-(eg a directory or directory-like node in a file heirarchy) in a or as a
-number of [Storage Object]s may be influenced by the several
+(e.g. a directory or directory-like node in a file hierarchy) in a, or
+as a number of, [Storage Object]s might be influenced by several
 factors:</p>
 <ul>
-<li><p>The size of the object, finer granularity may be preferred to
-keep Storage Objects at a manageable size.</p></li>
-<li><p>How likely the content is to change or be withdrawn, for example
+<li><p>the size of the object; finer granularity might be preferred to
+keep Storage Objects at a manageable size</p></li>
+<li><p>how likely the content is to change or be withdrawn, for example,
 because a participant wishes to have content by or about them removed
-from an Archival Repository, a granularity of on object per
-participant/creator or cohort may make withdrawing access more
+from an [Archival Repository]; a granularity of an object per
+participant/creator or cohort might make withdrawing access more
 manageable, by updating a license</p></li>
-<li><p>Whether there is a separation made between Archival and
-dissemination-ready copies of files as per OAIS (<span class="citation"
+<li><p>whether there is a separation made between Archival and
+dissemination-ready copies of files, as per OAIS (<span class="citation"
 data-cites="OAISReferenceModel"><span>“<span>OAIS Reference Model</span>
-(<span>ISO</span> 14721)”</span> (n.d.)</span>,)</p></li>
-<li><p>Whether files are stored with or separately from annotations on
-those files (such as transcripts) Licensing of objects; from an
-implementation point of view it is much simpler to have a single reuse
-license per object than to try to administer very granular
-permissions.</p></li>
+(<span>ISO</span> 14721)”</span> (n.d.)</span>)</p></li>
+<li><p>whether files are stored with or separately from annotations on
+those files (such as transcripts)</p></li>
+<li><p>licensing of objects; from an implementation point of view, it is
+much simpler to have a single reuse license per object than to try to
+administer very granular permissions.</p></li>
 </ul>
 <p>To comply with <a href="./#2.5"
 title="Represent Repository Collections such as archival series or other organising entities as Storage Objects; either self-contained with their member data within the Storage Object or as metadata-only Storage Objects referencing or referenced by other Storage Objects.">Protocol
-2.5</a> [Repository Collection] / [Repostory Object] relationships may
-be described using either exhaustive lists of members with a property
-such as the Portland Common Data Model <code>pcdm:hasMember</code>
-property or by referencing the containing Collection from another
-Collection or Repository Object using the equivalent
-<code>pcdm:memberOf</code>.</p>
+2.5</a>, [Repository Collection] / [Repostory Object] relationships
+might be described using either exhaustive lists of members with a
+property, such as the Portland Common Data Model
+<code>pcdm:hasMember</code> property, or by referencing the containing
+Collection from another Collection or Repository Object using the
+equivalent <code>pcdm:memberOf</code>.</p>
 <p>Fragmented objects can be linked back together using the for
 presentation and access (this is one of the strengths of Linked Data),
-for example, a recording and verbatim transcript may be stored together
-in an object available to a very limited cohort, while anonymised
-transcripts and audio may be in another object made broadly available –
-but these can be cross-linked and presented as a single entity to
-authorised users.</p>
+for example, a recording and verbatim transcript might be stored
+together in an object available to a very limited cohort, while
+anonymised transcripts and audio might be in another object made broadly
+available – but these can be cross-linked and presented as a single
+entity to authorised users.</p>
 <p>A variety of virtual collection-like aggregations of objects can be
-created via metadata indexes using user interface devices such as search
-facets, to comply with the 1 Data is Portable and 2. Data is Annotated;
-these should be designed so that the metadata on which they depend is
-stored with the data object, not solely in an application or workspace
-environment.</p>
+created via metadata indexes using user interface devices, such as
+search facets, to comply with <a href="./#1"
+title="Data is Portable: assets are not locked-in to a particular mode of storage, interface or service">Protocol
+1</a> and <a href="./#2"
+title="Data is Annotated: contents, structure, provenance and access and reuse permissions are comprehensively described with metadata and licenses">Protocol
+2</a>; these should be designed so that the metadata on which they
+depend is stored with the data object, not solely in an application or
+workspace environment.</p>
 <h3 id="governance">Governance</h3>
 <p>The specifics of good governance are out of scope for these
 protocols, so we confine ourselves to some notes:</p>
@@ -317,54 +335,69 @@ protocols, so we confine ourselves to some notes:</p>
 title="Deposit agreements are in place and documented setting out the rights needed for the Archival Repository as an organization to manage data">Protocol
 3.3</a> and <a href="./#3.4"
 title="Processes are in place for disposal/deaccessioning if appropriate to the purpose.">Protocol
-3.4</a> together means (at least) two things: robust appraisal or
-sentencing practices, and robust preservation processes have been
-established.</p>
-<p>The Digital Preservation Handbook [8] has detailed practical advice
-about preservation-focussed archival practice.</p>
+3.4</a> together mean (at least) two things:</p>
+<ol type="1">
+<li><p>robust appraisal or sentencing practices</p></li>
+<li><p>robust preservation processes have been established.</p></li>
+</ol>
+<p>The Digital Preservation Handbook (<span class="citation"
+data-cites="digitalpreservationcoalitionDigitalPreservationHandbook2015">Coalition
+(2015)</span>) has detailed practical advice about preservation-focussed
+archival practice.</p>
 <h2 id="compliant-metadata-specifications">Compliant Metadata
 Specifications</h2>
 <p>Research Object Crate (RO-Crate) (<span class="citation"
 data-cites="soiland-reyesPackagingResearchArtefacts2022">Soiland-Reyes
-et al. (2022)</span> is a linked-data metadata specification based on
+et al. (2022)</span>) is a linked-data metadata specification based on
 widely used Linked Data Open Specifications. RO-Crate was developed as a
 packaging method for describing datasets and their contents – which is a
 good match for describing Storage Objects, and is now being widely
 adopted in various research contexts. RO-Crate has been demonstrated to
 work at scale in the Language Data Commons of Australia and PARADISEC as
-the basis for archival-repositories.)</p>
-<p>RO-CRATE supports Principle 2.5 Represent collections, archival
-series or other organising entities as storage-level objects … via the
-inclusion of the Portland Common Data model; a schema for describing
-repositories with classes for Collections, Objects and Files (<span
-class="citation"
+the basis for archival-repositories.</p>
+<p>RO-CRATE supports <a href="./#2.5"
+title="Represent Repository Collections such as archival series or other organising entities as Storage Objects; either self-contained with their member data within the Storage Object or as metadata-only Storage Objects referencing or referenced by other Storage Objects.">Protocol
+2.5</a> via the inclusion of the Portland Common Data model, a schema
+for describing repositories with classes for Collections, Objects and
+Files (<span class="citation"
 data-cites="DuraspacePcdm"><span>“Duraspace/Pcdm”</span>
-(n.d.)</span>.)</p>
+(n.d.)</span>).</p>
 <p><em>RO-Crate is a compliant choice for the <a href="./#2"
 title="Data is Annotated: contents, structure, provenance and access and reuse permissions are comprehensively described with metadata and licenses">Protocol
-2</a> in a PILAR implementation, and is used in both PARADISEC and
-LDaCA</em></p>
+2</a> in a PILARS implementation, and is used in both PARADISEC and
+LDaCA.</em></p>
 <h2 id="software-implementation-approaches">Software Implementation
 Approaches</h2>
 <p>There are two important implementation approaches to storing metadata
 in storage systems, which are discussed in this <a
 href="https://bibwild.wordpress.com/2023/03/21/ocfl-and-source-of-truth-two-options/">blog
 post</a> (<span class="citation"
-data-cites="jrochkindOCFLSourceTruth2023">jrochkind (2023)</span>):
-either the metadata in the store is treated as the source of truth (this
-is the approach implemented in the set of tools used by LDaCA) or a
-catalogue application maintains metadata which is the source of truth
-and exports data to the data store, the approach taken by PARADISEC.</p>
+data-cites="jrochkindOCFLSourceTruth2023">jrochkind (2023)</span>):</p>
+<ol type="1">
+<li><p>the metadata in the store is treated as the source of truth (this
+is the approach implemented in the set of tools used by LDaCA)</p></li>
+<li><p>a catalogue application maintains metadata which is the source of
+truth and exports data to the data store (the approach taken by
+PARADISEC).</p></li>
+</ol>
 <p><a href="./#1.7"
 title="If data resides in systems, such as content management systems or database applications which do not inherently support all of the protocols 1 &amp; 2 then put processes in place to export data to a system that does.">Protocol
 1.7</a> deals with this; it is important for the overall goals of these
-protocols that there are systems in place to write well described
-(Annotated) data to commodity storage.</p>
+protocols that there are systems in place to write well-described
+(annotated) data to commodity storage.</p>
 <p>See the <a href="https://rkive.org/implementations">RRKive
 Implementations page</a> for a list of compliant software that
 implements the PILARS.</p>
+<p><br></p>
 <div id="refs" class="references csl-bib-body hanging-indent"
 data-entry-spacing="0" role="list">
+<div
+id="ref-digitalpreservationcoalitionDigitalPreservationHandbook2015"
+class="csl-entry" role="listitem">
+Coalition, Digital Preservation. 2015. <em>Digital <span>Preservation
+Handbook</span></em>. 2nd ed. <a
+href="https://www.dpconline.org/handbook">https://www.dpconline.org/handbook</a>.
+</div>
 <div id="ref-DuraspacePcdm" class="csl-entry" role="listitem">
 <span>“Duraspace/Pcdm.”</span> n.d. <em>GitHub</em>. Accessed May 16,
 2016. <a
