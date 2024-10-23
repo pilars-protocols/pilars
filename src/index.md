@@ -8,8 +8,10 @@ bibliography: ./src/PILARS.bib
 
 Persistent ID (will always link to the latest version): &lt;<a href="http://w3id.org/ldac/pilars">http://w3id.org/ldac/pilars</a>>
 
+To cite this document:  (pending a publication) please use this:
 
-
+Sefton, P., et al. (2024). Protocols for Implementing Long-term Archival Repositories Services (PILARS). Retrieved from <a href="http://w3id.org/ldac/pilars">http://w3id.org/ldac/pilars</a>
+  
 This is a working draft which has been created by the below contributors.
 
 We will be collecting feedback until the end of June 2024. <a href="https://github.com/Language-Research-Technology/pilars">Contribute at Github</a>
@@ -54,6 +56,8 @@ Ben Foley, b.foley@uq.edu.au, University of Queensland [0000-0003-0879-9251](htt
 Adam Bell, adam.bell@aarnet.edu.au AARNet, [0000-0003-2129-4776](https://orcid.org/0000-0003-2129-4776)
 
 Janet McDougall, janet.mcdougall@anu.edu.au, The Australian National University [0000-0002-2151-2190](https://orcid.org/0000-0002-2151-2190)
+
+Michael Haugh, michael.haugh@uq.edu.au, University of Queensland, [0000-0003-4870-0850](https://orcid.org/0000-0003-4870-0850)
 
 ## Overview
 
@@ -139,7 +143,7 @@ These protocols could form the basis for design, evaluation or procurement of ar
 <dt id="2.2">2.2<dd >For [Protocol 2.1] use interoperable general-purpose linked-data metadata stored in a file format which has an Open Specification. This may be extended with domain-specific or ad hoc metadata (which may be in non linked-data formats) [FAIR-F1] [FAIR-F2] and may be stored in additional files.
 <dt id="2.3">2.3<dd >For each Storage Object, include at least one license document linked from the metadata using the appropriate  property for a  ‘license’  from the core vocabulary (eg http://schema.org/license), setting out in plain language how data may be used and/or redistributed and by whom ([CARE] & [FAIR-R1.1]).
 <dl>
-<dt id="2.3.1">2.3.1<dd >It is critical that data that does not have an Open Access or public domain license is not exposed via a portal without access controls and that confidential licenses themselves are not disseminated. Licensing may change, be withdrawn and new licenses added over time.
+<dt id="2.3.1">2.3.1<dd >Do not expose data, for example via a portal without access controls or disseminate confidential license or other governance information. Licensing may change, be withdrawn and new licenses added over time, note, however once data has been distributed under an Open Access license it may not be withdrawn from those who have downloaded it. 
 
 <dt id="2.3.2">2.3.2<dd >Documentation about licenses for deposit and archive-wide accession policies may also be stored with an object
 
