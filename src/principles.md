@@ -184,7 +184,7 @@ If we're going to observe the CARE principles, then A1.2 *an authentication and 
 >
 ><a name="FAIR-I1"> </a>
 >
->-  FAIR-I1: (Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation (see )
+>-  FAIR-I1: (Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation
 >
 ><a name="FAIR-I2"> </a>
 >
