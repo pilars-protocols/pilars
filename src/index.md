@@ -8,9 +8,9 @@ bibliography: ./src/PILARS.bib
 
 Persistent ID (will always link to the latest version): &lt;<a href="http://w3id.org/ldac/pilars">http://w3id.org/ldac/pilars</a>>
 
-To cite this document, (pending a publication) please use this:
+To cite this document (pending a publication), please use this:
 
-Sefton, P., et al. (2024). Protocols for Implementing Long-term Archival Repositories Services (PILARS). Retrieved from <a href="http://w3id.org/ldac/pilars">http://w3id.org/ldac/pilars</a>
+Sefton, P., et al. (2024). Protocols for Implementing Long-term Archival Repositories Services (PILARS). Retrieved from <a href="http://w3id.org/ldac/pilars">http://w3id.org/ldac/pilars</a>.
 
 This is a working draft which has been created by the below contributors.
 
@@ -62,17 +62,17 @@ Michael Haugh, [michael.haugh@uq.edu.au](mailto:michael.haugh@uq.edu.au), The Un
 
 This document sets out protocols for the design and implementation of sustainable [Archival Repository] services to achieve “CAREful FAIRness”, i.e. to support the [CARE]  (@carrollCAREPrinciplesIndigenous2020a) and [FAIR] (@wilkinsonFAIRGuidingPrinciples2016) principles.
 
-PILARS aims to guide the design and implementation of data storage services, referred to as Archival Repositories, for a range of purposes, including core use cases of:
+The PILARS aim to guide the design and implementation of data storage services, referred to as Archival Repositories, for a range of purposes, including core use cases of:
 
 -  supporting research that follows the [FAIR] (@wilkinsonFAIRGuidingPrinciples2016) principles in any discipline, and 
 
 -  archiving cultural heritage.
 
-These protocols are designed to work alongside the [CARE] principles (@carrollCAREPrinciplesIndigenous2020a) which operate at a governance level and the Reference Model for an Open Archival Information System (OAIS) (@OAISReferenceModel model.)
+These protocols are designed to work alongside the [CARE] principles (@carrollCAREPrinciplesIndigenous2020a), which operate at a governance level, and the Reference Model for an Open Archival Information System (OAIS) (@OAISReferenceModel model.)
 
-The high-level aims of these PILAR protocols are to maximise:
+The high-level aims of the PILARS are to maximize:
 
--  autonomy for data custodians/stewards
+-  autonomy for [Data Stewards or Custodians]
 
 -  return on investment in data and data infrastructure
 
@@ -84,11 +84,11 @@ The technical goals to support the aims are:
 
 -  Data can be stored and described in systems based on Open Specifications. 
 
--  Services such as authorised access interfaces, catalogues and finding aids can be built and rebuilt from data in a storage system using Open Source Software solutions, services and tools.
+-  Services such as authorized access interfaces, catalogues and finding aids can be built and rebuilt from data in a storage system using Open Source Software solutions, services and tools.
 
 ## Background
 
-This set of protocols is inspired by the continuing success of the technical approach taken over two decades by the PARADISEC (Pacific and Regional Archive for Digital Sources in Endangered Cultures) (@harrisResearchRecordsResponsibility2015), which houses cultural heritage material from more than 1,360 languages with standard metadata, with data stored in commodity services (initially files on disk, now objects in a cloud storage service), with metadata adjacent to the data, and from work by the Language Data Commons of Australia to generalise the PARADISEC approach to other disciplines.
+This set of protocols is inspired by the continuing success of the technical approach taken over two decades by the [PARADISEC](https://www.paradisec.org.au/) (Pacific and Regional Archive for Digital Sources in Endangered Cultures) (@harrisResearchRecordsResponsibility2015), which houses cultural heritage material from more than 1,360 languages with standard metadata, with data stored in commodity services (initially files on disk, now objects in a cloud storage service), with metadata adjacent to the data, and from work by the [Language Data Commons of Australia](https://www.ldaca.edu.au/) to generalize the PARADISEC approach to other disciplines.
 
 ## Audience
 
@@ -104,7 +104,7 @@ In a research context, it is important to be able to support the [FAIR] principl
 
 - Shared services with good governance are in place to store interoperable data, to make it findable and provide appropriate access controls.
 
-These protocols could form the basis for design, evaluation or procurement of archival repository services, but also allow for data custodians to begin organising data in a format ready for archiving and digital preservation by using a range of tools, as long as they have access to some kind of commodity storage.
+These protocols could form the basis for design, evaluation or procurement of [Archival Repository] services, but also allow for [Data Stewards or Custodians] to begin organizing data in a format ready for archiving and digital preservation by using a range of tools, as long as they have access to some kind of commodity storage.
 
 <br>
 
@@ -112,7 +112,7 @@ These protocols could form the basis for design, evaluation or procurement of ar
 
 <dl> 
 
-<dt id="1">1<dd >Data is Portable: assets are not locked-in to a particular mode of storage, interface or service.
+<dt id="1">1<dd >Data is Portable: Assets are not locked-in to a particular mode of storage, interface or service.
 <dl>
 <dt id="1.1">1.1<dd >Keep data in one or more general-purpose commodity IT storage systems.
 <dl>
@@ -122,17 +122,17 @@ These protocols could form the basis for design, evaluation or procurement of ar
 </dl>
 </dd>
 
-<dt id="1.2">1.2<dd >Divide up data files into [Storage Object]s that form meaningful units, of smallest practical size.
+<dt id="1.2">1.2<dd >Divide up data files into [Storage Objects] that form meaningful units, of smallest practical size.
 
 <dl>
 <dt id="1.2.2">1.2.2<dd >&nbsp;Each Storage Object is a directory (or storage object equivalent) containing the files, including metadata and administrative files such as checksums that make up an Object.
 
-<dt id="1.2.3">1.2.3<dd >&nbsp;Storage Objects can be located by inspecting the contents of the storage hierarchy by listing the paths (1.1.2), for example, by the presence of a file with a defined name in the hierarchy.
+<dt id="1.2.3">1.2.3<dd >&nbsp;Storage Objects can be located by inspecting the contents of the storage hierarchy by listing the paths ([Protocol 1.1.2]), for example, by the presence of a file with a defined name in the hierarchy.
 </dl>
 
 <dt id="1.3">1.3<dd >Document and implement an ID resolution mapping system to map IDs to storage locations [FAIR-F1].
 
-<dt id="1.4">1.4<dd >Store documentation about the conventions and standards, such as (1.3) used in a data store, within the root of the storage service itself.
+<dt id="1.4">1.4<dd >Store documentation about the conventions and standards, such as ([Protocol 1.3]) used in a data store, within the root of the storage service itself.
 
 <dt id="1.5">1.5<dd >Data storage of well-described data objects is considered separately from the current uses to which the data is put.
 
@@ -148,7 +148,7 @@ These protocols could form the basis for design, evaluation or procurement of ar
 
 <dt id="2.2">2.2<dd >For [Protocol 2.1], use interoperable general-purpose linked-data metadata stored in a file format which has an Open Specification. This may be extended with domain-specific or ad hoc metadata, which might be in non linked-data formats ([FAIR-F1] & [FAIR-F2]) and might be stored in additional files.
 
-<dt id="2.3">2.3<dd >For each Storage Object, include at least one license document linked from the metadata using the appropriate  property for a  ‘license’  from the core vocabulary (e.g. http://schema.org/license), setting out in plain language how data may be used and/or redistributed and by whom ([CARE] & [FAIR-R1.1]).
+<dt id="2.3">2.3<dd >For each Storage Object, include at least one license document linked from the metadata using the appropriate  property for a  ‘license’  from the core vocabulary (e.g. [http://schema.org/license](http://schema.org/license)), setting out in plain language how data may be used and/or redistributed and by whom ([CARE] & [FAIR-R1.1]).
 
 <dl>
 <dt id="2.3.1">2.3.1<dd >&nbsp;Do not expose data, for example via a portal, without access controls, or disseminate confidential license or other governance information. Licensing might change, be withdrawn and new licenses added over time. Note, however, once data has been distributed under an Open Access license, it may not be withdrawn from those who have downloaded it.
@@ -158,7 +158,7 @@ These protocols could form the basis for design, evaluation or procurement of ar
 
 <dt id="2.4">2.4<dd >Store checksum-metadata in a documented standard format alongside data files to help ensure data integrity.
 
-<dt id="2.5">2.5<dd >Represent Repository Collectionsm such as archival series or other organising entities, as Storage Objects; either self-contained with their member data within the Storage Object, or as metadata-only Storage Objects referencing or referenced by other Storage Objects.
+<dt id="2.5">2.5<dd >Represent [Repository Collections], such as archival series or other organizing entities, as Storage Objects; either self-contained with their member data within the Storage Object, or as metadata-only Storage Objects referencing or referenced by other Storage Objects.
 </dl>
 
 <dt id="3">3<dd >Governance is in place for each [Archival Repository].
@@ -166,7 +166,7 @@ These protocols could form the basis for design, evaluation or procurement of ar
 <dl>
 <dt id="3.1">3.1<dd >The purpose of the Archival Repository holding the data is articulated.
 <dt id="3.2">3.2<dd >Management systems are in place to sustain the Archival Repository.
-<dt id="3.3">3.3<dd >Deposit agreements are in place and documented, setting out the rights needed for the Archival Repository as an organisation to manage data.
+<dt id="3.3">3.3<dd >Deposit agreements are in place and documented, setting out the rights needed for the Archival Repository as an organization to manage data.
 <dt id="3.3">3.3<dd >Processes are in place for ensuring data persistence for the defined periods that meet the repository purpose (including indefinitely).
 <dt id="3.4">3.4<dd >Processes are in place for disposal/deaccessioning, if appropriate to the purpose.
 </dl>
@@ -176,21 +176,25 @@ These protocols could form the basis for design, evaluation or procurement of ar
 <br>
 
 # Definitions (glossary):
-The following terms (used in capitalised form) are defined.
+The following terms (used in capitalized form) are defined.
 
 <a name="archival-repository"> </a>
+<a name="archival-repositories"> </a>
 
 [Archival Repository]: #archival-repository "Archival Repository"
+[Archival Repositories]: #archival-repositories "Archival Repositories"
 ### Archival Repository
 
-Used to cover any system that is designed to keep data securely for a defined period of time (often forever), and to make it findable by and available to appropriate parties.  The terms Repository and Archive have different nuances and are used in a variety of ways in different communities, but here we want to emphasise the commonalities and focus on advice that is relevant to the audience of these protocols.
+Used to cover any system that is designed to keep data securely for a defined period of time (often forever), and to make it findable by and available to appropriate parties.  The terms Repository and Archive have different nuances and are used in a variety of ways in different communities, but here we want to emphasize the commonalities and focus on advice that is relevant to the audience of these protocols.
 
 <a name="data-steward"> </a>
+<a name="data-stewards"> </a>
 
 [Data Steward or Custodian]: #data-steward "Data Steward or Custodian"
+[Data Stewards or Custodians]: #data-stewards "Data Stewards or Custodians"
 ### Data Steward or Custodian
 
-An individual or organisation with the authority to make decisions regarding data under management. This decision-making process is assumed to take place with good governance, in line with the [CARE] principles.
+An individual or organization with the authority to make decisions regarding data under management. This decision-making process is assumed to take place with good governance, in line with the [CARE] principles.
 
 <a name="digital-preservation"> </a>
 
@@ -199,7 +203,7 @@ An individual or organisation with the authority to make decisions regarding dat
 
 The Digital Preservation Coalition page ["What is digital preservation?"](https://www.dpconline.org/digipres/what-is-digipres) defines Digital Preservation as:
 
-The series of managed activities necessary to ensure continued access to digital materials for as long as necessary, refers to all of the actions required to maintain access to digital materials beyond the limits of media failure or technological and organisational change.
+The series of managed activities necessary to ensure continued access to digital materials for as long as necessary, refers to all of the actions required to maintain access to digital materials beyond the limits of media failure or technological and organizational change.
 
 <a name="file"> </a>
 
@@ -215,18 +219,20 @@ A computer file is an aggregation of data on a storage device, identified by a n
 [File Format]: #file-format "File Format"
 ### File Format
 
-The organisational schema for a file — this might be formally defined in a specification or be ad hoc. File formats might be considered at various layers of specificity — for example, a text file might be plain text with a specific encoding, such as UTF-8, and also be an XML file conforming to a particular schema.
+The organizational schema for a file — this might be formally defined in a specification or be ad hoc. File formats might be considered at various layers of specificity — for example, a text file might be plain text with a specific encoding, such as UTF-8, and also be an XML file conforming to a particular schema.
 
 <a name="linked-data-metadata"> </a>
 
-[Linked data metadata]: #linked-data-metadata "Linked data metadata"
-### Linked data metadata
+[Linked data metadata]: #linked-data-metadata "Linked Data Metadata"
+### Linked Data Metadata
 
-Metadata is data that describes other metadata. Linked Data Metadata follows the principles set out by Tim Berners Lee for Linked data, so that all metadata and references to entities described are URIs (URLs). (@berners-leeLinkedData2006)
+Metadata is data that describes other metadata. Linked Data Metadata follows the principles set out by Tim Berners Lee for Linked data, so that all metadata and references to entities described are URIs (URLs) (@berners-leeLinkedData2006).
 
 <a name="open-specification"> </a>
+<a name="open-specifications"> </a>
 
 [Open Specification]: #open-specification "Open Specification"
+[Open Specifications]: #open-specifications "Open Specifications"
 ### Open Specification
 
 A versioned, published, openly available description of a set of precise requirements (e.g. for a format, system or protocol), which might or might not be endorsed by a standards authority.
@@ -243,42 +249,54 @@ Freely distributable software, according to the definition of the Open Software 
 [License]: #license "License"
 ### License
 
-The term License is used here inclusively to refer to a document which captures the terms under which data in an Archival-Repository may be shared, used, reused or deposited. This includes documents such as Data Sharing Agreements or other contracts which might be negotiated at various times, which give certain parties licence to use data in defined ways. 
+The term License is used here inclusively to refer to a document which captures the terms under which data in an [Archival Repository] may be shared, used, reused or deposited. This includes documents such as Data Sharing Agreements or other contracts which might be negotiated at various times, which give certain parties licence to use data in defined ways. 
 
 <a name="repository-collection"> </a>
+<a name="repository-collections"> </a>
 
 [Repository Collection]: #repository-collection "Repository Collection"
+[Repository Collections]: #repository-collections "Repository Collections"
 ### Repository Collection
 
 The term Repository Collection is used here to reference the Collection class from the Portland Common Data model (@DuraspacePcdm), which was conceived as an interchange format for repository and digital library interchange. The definition for a collection includes this:
 
-A Collection is a group of resources. Collections have descriptive metadata, access metadata, and may links (sic) to works and/or collections.
+"A Collection is a group of resources. Collections have descriptive metadata, access metadata, and may links (sic) to works and/or collections."
 
 <a name="repository-object"> </a>
 
 [Repository Object]: #repository-object "Repository Object"
 ### Repository Object
 
-The term Repository Object is used here in line with the Portland Common Data mode definition (@DuraspacePcdm), which refers to an abstract object.
+The term Repository Object is used here in line with the Portland Common Data model definition (@DuraspacePcdm), which refers to an abstract object:
 
-An Object is an intellectual entity, sometimes called a "work", "digital object", etc. Objects have descriptive metadata, access metadata and might contain files and other Objects as member "components". Each level of a work is therefore represented by an Object instance, and is capable of standing on its own, being linked to from Collections and other Objects.
+"An Object is an intellectual entity, sometimes called a 'work', 'digital object', etc. Objects have descriptive metadata, access metadata and might contain files and other Objects as member 'components'. Each level of a work is therefore represented by an Object instance, and is capable of standing on its own, being linked to from Collections and other Objects."
 
 <a name="standard"> </a>
 
 [Standard]: #standard "Standard"
 ### Standard
 
-A Specification published by a recognised standards body, such as the ISO or W3C. Standards are not always Open Access, so might have barriers to adoption.
+A Specification published by a recognized standards body, such as the ISO or W3C. Standards are not always Open Access, so might have barriers to adoption.
 
 <a name="storage-object"> </a>
+<a name="storage-objects"> </a>
 
 [Storage Object]: #storage-object "Storage Object"
+[Storage Objects]: #storage-objects "Storage Objects"
 ### Storage Object
 
-A discrete unit in a physical storage service. This might represent, for example, a Repository Object or a Repository Collection, which are abstract structural concepts. This concept is similar to an OCFL Object, and the concept of a Package in OAIS.
+A discrete unit in a physical storage service. This might represent, for example, a [Repository Object] or a [Repository Collection], which are abstract structural concepts. This concept is similar to an OCFL Object, and the concept of a Package in OAIS.
 
 <br>
 
-See the [notes](implementation-and-guidance.html) for more detail about implementing PILARS.
+See the [Notes and Guidance](implementation-and-guidance.html) for more detail about implementing the PILARS.
 
 <br>
+
+## References
+
+<div id="refs"></div>
+
+<br>
+
+[Return to top](#)

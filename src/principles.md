@@ -4,11 +4,11 @@ bibliography: ./src/PILARS.bib
 
 ---
 
-The [FAIR](https://www.nature.com/articles/sdata201618) (@wilkinsonFAIRGuidingPrinciples2016) and/or [CARE](https://static1.squarespace.com/static/5d3799de845604000199cd24/t/6397b363b502ff481fce6baf/1670886246948/CARE%2BPrinciples_One%2BPagers%2BFINAL_Oct_17_2019.pdf) (@carrollCAREPrinciplesIndigenous2020a) principles are frequently mandated in various contexts around the world, including for outputs of the Australian Research Data Commons (ARDC)
+The [CARE](https://static1.squarespace.com/static/5d3799de845604000199cd24/t/6397b363b502ff481fce6baf/1670886246948/CARE%2BPrinciples_One%2BPagers%2BFINAL_Oct_17_2019.pdf) (@carrollCAREPrinciplesIndigenous2020a) and/or [FAIR](https://www.nature.com/articles/sdata201618) (@wilkinsonFAIRGuidingPrinciples2016) principles are frequently mandated in various contexts around the world, including for outputs of the Australian Research Data Commons ([ARDC](https://ardc.edu.au/)).
 
-These principles are not a DIY manual that can be simply adopted by researchers — to implement a system that supports CARE and FAIR research requires development of infrastructure and governance frameworks. The RRKive principles and website are aimed at those undertaking these substantial tasks.
+These principles are not a DIY manual that can be simply adopted by researchers — to implement a system that supports CARE and FAIR research requires development of infrastructure and governance frameworks. The [RRKive principles and website](https://rrkive.org) are aimed at those undertaking these substantial tasks.
 
-This document contains a copy of each set of principles, with notes about how PILARS is designed to help implement them.
+This document contains a copy of each set of principles, with notes about how the [PILARS](./index.html) are designed to help implement them.
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://w3id.org/ldac/pilars">CARE and FAIR principles (Annotated for PILARS)</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://orcid.org/0000-0002-3545-944X ">Sefton et al.</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p> 
 
@@ -46,6 +46,8 @@ This document contains a copy of each set of principles, with notes about how PI
 >
 ><a name="CARE-A"> </a>
 >
+><br>
+>
 >###  CARE-A: Authority to Control
 >
 >Indigenous Peoples’ rights and interests in Indigenous data must be recognised and their authority to control such data be empowered. Indigenous data governance enables Indigenous Peoples and governing bodies to determine how Indigenous Peoples, as well as Indigenous lands, territories, resources, knowledges and geographical indicators, are represented and identified within data.
@@ -70,9 +72,11 @@ This document contains a copy of each set of principles, with notes about how PI
 >
 ><a name="CARE-R"> </a>
 >
+><br>
+>
 >###  CARE-R: Responsibility
 >
->Those working with Indigenous data have a responsibility to share how those data are used to support Indigenous Peoples’ selfdetermination and collective benefit. Accountability requires meaningful and openly available evidence of these efforts and the benefits accruing to Indigenous Peoples.
+>Those working with Indigenous data have a responsibility to share how those data are used to support Indigenous Peoples’ self-determination and collective benefit. Accountability requires meaningful and openly available evidence of these efforts and the benefits accruing to Indigenous Peoples.
 >
 ><a name="CARE-R1"> </a>
 >
@@ -94,6 +98,8 @@ This document contains a copy of each set of principles, with notes about how PI
 >
 ><a name="CARE-E"> </a>
 >
+><br>
+>
 >###  CARE-E: Ethics
 >
 >Indigenous Peoples’ rights and wellbeing should be the primary concern at all stages of the data life cycle and across the data ecosystem.
@@ -102,7 +108,7 @@ This document contains a copy of each set of principles, with notes about how PI
 >
 >-  CARE-E1:   For minimizing harm and maximizing benefit
 >
->    Ethical data are data that do not stigmatize or portray Indigenous Peoples, cultures, or knowledges in terms of deficit. Ethical data are collected and used in ways that align with Indigenous ethical frameworks and with rights affirmed in UNDRIP. Assessing ethical benefits and harms should be done from the perspective of the Indigenous Peoples, nations, or communities to whom the data relate.
+>    Ethical data are data that do not stigmatize or portray Indigenous Peoples, cultures, or knowledges in terms of deficit. Ethical data are collected and used in ways that align with Indigenous ethical frameworks and with rights affirmed in [UNDRIP](https://social.desa.un.org/issues/indigenous-peoples/united-nations-declaration-on-the-rights-of-indigenous-peoples). Assessing ethical benefits and harms should be done from the perspective of the Indigenous Peoples, nations, or communities to whom the data relate.
 >
 ><a name="CARE-E2"> </a>
 >
@@ -115,6 +121,7 @@ This document contains a copy of each set of principles, with notes about how PI
 >-  CARE-E3:   For future use
 >
 >    Data governance should take into account the potential future use and future harm based on ethical frameworks grounded in the values and principles of the relevant Indigenous community. Metadata should acknowledge the provenance and purpose and any limitations or obligations in secondary use inclusive of issues of consent.
+>
 
 <br>
 
@@ -134,7 +141,7 @@ This document contains a copy of each set of principles, with notes about how PI
 >
 ><a name="FAIR-F2"> </a>
 >
->-  FAIR-F2: Data are described with rich metadata (defined by R1 below)
+>-  FAIR-F2: Data are described with rich metadata (defined by [FAIR-R1] below)
 >
 ><a name="FAIR-F3"> </a>
 >
@@ -146,7 +153,9 @@ This document contains a copy of each set of principles, with notes about how PI
 
 #### Notes
 
-Yes, data and metadata should be assigned PIDs (Persistent IDs), but there are a lot of requirements that follow from this. Persistent identifiers require persistent availability, via Archival Repository infrastructure for storing well-described data. It is not a given that suitable Archival Repository infrastructure exists; hence, the PILARS protocols are aimed at those creating or procuring it. It is critical that discussions of FAIR implementations include discussions of these underlying implications, otherwise, there is a risk in focussing on easily-measured things like "which persistent ID scheme is used" or "how many persistent IDs have you issued", rather than first asking "where's the data and how are you making sure it is available over the long term?"
+Yes, data and metadata should be assigned PIDs (Persistent IDs), but there are a lot of requirements that follow from this. Persistent identifiers require persistent availability, via [Archival Repository](./index.html#archival-repository) infrastructure for storing well-described data. It is not a given that suitable Archival Repository infrastructure exists; hence, the PILARS are aimed at those creating or procuring it. It is critical that discussions of FAIR implementations include discussions of these underlying implications, otherwise, there is a risk in focussing on easily-measured things like "which persistent ID scheme is being used?" or "how many persistent IDs have you issued?", rather than first asking "where's the data and how are you making sure it is available over the long term?"
+
+<br>
 
 >
 ><a name="FAIR-A"> </a>
@@ -173,7 +182,9 @@ Yes, data and metadata should be assigned PIDs (Persistent IDs), but there are a
 
 #### Notes
 
-If we're going to observe the CARE principles, then A1.2 *an authentication and authorization procedure* is DEFINITELY needed — but this is not a trivial undertaking. While A1 can be implemented by using standard web protocols (chiefly HTTPS) with protocols and standards built on top it (linked data, metadata harvesting protocols, such as OAI-PMH), there is a lack of web-scale standardisation in mediating access to resources.
+If we're going to observe the [CARE] principles, then *an authentication and authorization procedure* ([FAIR-A1.2]) is DEFINITELY needed — but this is not a trivial undertaking. While [FAIR-A1] can be implemented by using standard web protocols (chiefly HTTPS) with protocols and standards built on top it (linked data, metadata harvesting protocols, such as OAI-PMH), there is a lack of web-scale standardisation in mediating access to resources.
+
+<br>
 
 >
 ><a name="FAIR-I"> </a>
@@ -188,7 +199,7 @@ If we're going to observe the CARE principles, then A1.2 *an authentication and 
 >
 ><a name="FAIR-I2"> </a>
 >
->-  FAIR-I2: (Meta)data use vocabularies that follow FAIR principles
+>-  FAIR-I2: (Meta)data use vocabularies that follow [FAIR] principles
 >
 ><a name="FAIR-I3"> </a>
 >
@@ -196,6 +207,9 @@ If we're going to observe the CARE principles, then A1.2 *an authentication and 
 >
 ><a name="FAIR-R"> </a>
 >
+
+<br>
+
 >### FAIR-R: Reusable
 >
 >To be Reusable:
@@ -217,3 +231,11 @@ If we're going to observe the CARE principles, then A1.2 *an authentication and 
 >  -  FAIR-R1.3: (Meta)data meet domain-relevant community standards
 
 <br>
+
+## References
+
+<div id="refs"></div>
+
+<br>
+
+[Return to top](#)
