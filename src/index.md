@@ -14,7 +14,7 @@ Sefton, P., et al. (2024). Protocols for Implementing Long-term Archival Reposit
 
 This is a working draft which has been created by the below contributors.
 
-We will be collecting feedback until the end of June 2024. <a href="https://github.com/Language-Research-Technology/pilars">Contribute at Github</a>
+We collected feedback until the end of June 2024 at <a href="https://github.com/Language-Research-Technology/pilars">Github</a>.
 
 More information and background is available at <a href="https://rrkive.org">(RRKive.org)</a>
 
