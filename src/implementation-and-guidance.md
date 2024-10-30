@@ -26,8 +26,6 @@ Deciding on the granularity of objects, [Protocol 1.2] involves considering a nu
 
 -  If some content might need to be withdrawn or withheld for cultural, ethical or legal reasons, then objects should be packaged so that this can be done without having to create new versions of objects.
 
-<br>
-
 ### Applications notes
 
 Regarding [Protocol 1.7]: Ideally, this is something that should not be necessary, but if not, then work to bring systems into line with PILARS:
@@ -76,8 +74,6 @@ Linked Data allows:
 
 **Note:** Linked data is often conflated with Open Access; the phrase Linked Open Data is very common. But the Linked Data principles can be applied to non-open access-controlled materials. Non-open materials have some impact on how catalogues and indexes are implemented; for example, using linked-data graphs such as triple stores that contain multiple items might make access-control-safe queries impossible to implement for reasons of complexity and performance; the reasoning to work out whether a particular metadata statement can be seen by a particular user could be very computationally expensive.
 
-<br>
-
 ### Vocabularies and metadata profiles
 
 Communities can maintain schemas/vocabularies for specific domains ([FAIR-R1.3]) and to document metadata profiles.
@@ -102,8 +98,6 @@ For [Protocol 2.3.1], an access-control system might need to be put in place if 
 
 - manual offline access, with direct transfer of data to approved applicants.
 
-<br>
-
 ### Logical Structure: Collections
 
 The concept of a Collection is very commonly used in repositories and digital archives to represent the ‘backbone’ of the way resources, including sub-collections and Objects, are organised.
@@ -125,8 +119,6 @@ To comply with [Protocol 2.5], [Repository Collection](./index.html#repository-c
 Fragmented Objects can be linked back together using the for presentation and access (this is one of the strengths of Linked Data), for example, a recording and verbatim transcript might be stored together in an Object available to a very limited cohort, while anonymised transcripts and audio might be in another Object made broadly available – but these can be cross-linked and presented as a single entity to authorised users.
 
 A variety of virtual Collection-like aggregations of Objects can be created via metadata indexes using user interface devices, such as search facets, to comply with [Protocol 1] and [Protocol 2]; these should be designed so that the metadata on which they depend is stored with the data object, not solely in an application or workspace environment.
-
-<br>
 
 ### Governance
 
