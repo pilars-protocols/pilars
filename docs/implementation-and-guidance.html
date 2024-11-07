@@ -152,8 +152,10 @@ objects.</p></li>
 <h3 id="applications-notes">Applications notes</h3>
 <p>Regarding <a href="./index.html#1.7"
 title="If data resides in systems, such as content management systems or database applications which do not inherently support all of the protocols 1 &amp; 2 then put processes in place to export data to a system that does.">Protocol
-1.7</a>: Ideally, this is something that should not be necessary, but if
-not, then work to bring systems into line with PILARS:</p>
+1.7</a> (If data resides in systems, such as content management systems
+or database applications which do not inherently support all of the
+Protocols 1 and 2, then put processes in place to export data to a
+system that does.):</p>
 <ul>
 <li><p>Don’t design or build systems that don’t have this exit pathway
 designed from the start.</p></li>
@@ -298,6 +300,11 @@ PCDM was defined to facilitate interchange of data between repositories,
 and this makes sense to use as a core organizing principle for PILARS;
 describing an Archival Repository using PCDM means it is will be
 possible to move data to other systems in the future.</p>
+<p>These protocols assume than once storage is taken care of, with data
+divided into Storage Objects and well described then it will be made
+available for consumption via one or more <em>indexes</em> which could
+take the form of web portals, or discovery data bases, or be a as simple
+as a spreadsheet.</p>
 <p>To reduce confusion with the over-loading of the term “Object” in
 various stages, the RO-Crate standard renames PCDM Collection and Object
 as <a href="./index.html#repository-collection">Repository
@@ -343,10 +350,10 @@ the equivalent property <code>pcdm:memberOf</code>.</p>
 (fragmented) across multiple Storage Objects can be linked back together
 using an index for presentation and access (this is one of the strengths
 of Linked Data), for example, a recording and verbatim transcript might
-be stored together in an Object available to a very limited cohort,
-while anonymised transcripts and audio might be in another Object made
-broadly available – but these can be cross-linked and presented as a
-single entity to authorised users.</p>
+be stored together in an Storage Object available to a very limited
+cohort, while anonymised transcripts and audio might be in another
+Storage Object made broadly available – but these can be cross-linked
+and presented as a single entity to authorised users.</p>
 <p>A variety of virtual Collection-like aggregations of Objects can be
 created via metadata indexes using user interface devices, such as
 search facets, to comply with <a href="./index.html#1"
