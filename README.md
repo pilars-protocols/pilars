@@ -1,6 +1,6 @@
 # Protocols for Implementing Long-term Archival Repositories Services (PILARS)
 
-This respository is for the management of the PILARS Protocols.
+This respository is for the management of the PILARS.
 
 ## Audience
 
@@ -10,7 +10,7 @@ Others may comment or contribute using Github Issues.
 
 ## Repository Layout
 
-The organisation of the is repository is as follows:
+The organization of the repository is as follows:
 
 - [`src/`](./src) contains the source from which the repository is generated
   - `src/index.md` -- the Protocols document -- this has a persistent identifier <https://w3id.org/ldac/pilars>
