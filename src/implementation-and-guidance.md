@@ -27,8 +27,8 @@ Deciding on the granularity of objects, [Protocol 1.2] involves considering a nu
 -  If some content might need to be withdrawn or withheld for cultural, ethical or legal reasons, then objects should be packaged so that this can be done without having to create new versions of objects.
 
 ### Applications notes
-
-Regarding [Protocol 1.7]: Ideally, this is something that should not be necessary, but if not, then work to bring systems into line with PILARS:
+ 
+Regarding [Protocol 1.7] (If data resides in systems, such as content management systems or database applications which do not inherently support all of the Protocols 1 and 2, then put processes in place to export data to a system that does.): 
 
 -  Don’t design or build systems that don't have this exit pathway designed from the start.
 
@@ -100,11 +100,15 @@ For [Protocol 2.3.1], an access-control system might need to be put in place if 
 
 ### Logical Structure: Collections
 
-The concept of a Collection is very commonly used in repositories and digital archives to represent the ‘backbone’ of the way resources, including sub-collections and Objects, are organised.
+The concept of a Collection is very commonly used in repositories and digital archives to represent the ‘backbone’ of the way resources, including sub-collections and repository Objects, are organized. This structure is described by the Portland Common Data Model (PCDM) (@DuraspacePcdm). PCDM was defined to facilitate interchange of data between repositories, and this makes sense to use as a core organizing principle for PILARS; describing an Archival Repository using PCDM means it will be possible to move data to other systems in the future.
+
+These protocols assume that once storage is taken care of, with data divided into Storage Objects and well described then it will be made available for consumption via one or more *indexes* which could take the form of web portals, or discovery data bases, or be a as simple as a spreadsheet.
+
+To reduce confusion with the over-loading of the term "Object" in various stages, the RO-Crate standard renames PCDM Collection and Object as  [Repository Collection](./index.html#repository-collection) and [Repository Object](./index.html#repository-object)  respectively. A RepositoryCollection may be stored in a single [Storage Object](./index.html#storage-object) with it's member RepositoryObject, or each RepositoryObject may be stored in a separate [Storage Object](./index.html#storage-object) or in some cases be fragmented into multiple Storage Objects.
 
 The choice of whether to store Collections as a single [Storage Object](./index.html#storage-object) (e.g. a directory or directory-like node in a file hierarchy) or as a number of Storage Objects might be influenced by several factors:
 
--  the size of the object; finer granularity might be preferred to keep Storage Objects at a manageable size
+-  the size of the RepositoryObject; finer granularity might be preferred to keep Storage Objects at a manageable size
 
 -  how likely the content is to change or be withdrawn, for example, because a participant wishes to have content by or about them removed from an [Archival Repository](./index.html#archival-repository); a granularity of an Object per participant/creator or cohort might make withdrawing access more manageable, by updating a [License](./index.html#license)
 
@@ -114,9 +118,9 @@ The choice of whether to store Collections as a single [Storage Object](./index.
 
 -  licensing of objects; from an implementation point of view, it is much simpler to have a single reuse license per Object than to try to administer very granular permissions.
 
-To comply with [Protocol 2.5], [Repository Collection](./index.html#repository-collection) / [Repostory Object](./index.html#repository-object) relationships might be described using either exhaustive lists of members with a property, such as the Portland Common Data Model's `pcdm:hasMember` property, or by referencing the containing Collection from another Collection or Repository Object using the equivalent property `pcdm:memberOf`.
+To comply with [Protocol 2.5], [Repository Collection](./index.html#repository-collection) / [Repository Object](./index.html#repository-object) relationships might be described using either exhaustive lists of members with a property, such as the Portland Common Data Model's `pcdm:hasMember` property, or by referencing the containing Collection from sub-collections or a Repository Objects using the equivalent property `pcdm:memberOf`.
 
-Fragmented Objects can be linked back together using an index for presentation and access (this is one of the strengths of Linked Data), for example, a recording and verbatim transcript might be stored together in an Object available to a very limited cohort, while anonymised transcripts and audio might be in another Object made broadly available – but these can be cross-linked and presented as a single entity to authorised users.
+RepositoryCollections and RepositoryObjects which have been stored (fragmented) across multiple Storage Objects can be linked back together using an index for presentation and access (this is one of the strengths of Linked Data), for example, a recording and verbatim transcript might be stored together in an Storage Object available to a very limited cohort, while anonymised transcripts and audio might be in another Storage  Object made broadly available – but these can be cross-linked and presented as a single entity to authorised users.
 
 A variety of virtual Collection-like aggregations of Objects can be created via metadata indexes using user interface devices, such as search facets, to comply with [Protocol 1] and [Protocol 2]; these should be designed so that the metadata on which they depend is stored with the data object, not solely in an application or workspace environment.
 
