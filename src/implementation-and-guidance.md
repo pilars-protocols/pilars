@@ -104,6 +104,7 @@ The concept of a Collection is very commonly used in repositories and digital ar
 
 These protocols assume than once storage is taken care of, with data divided into [Storage Objects](./index.html#storage-objects) and well described, then it will be made available for consumption via one or more *indexes*, which could take the form of web portals, discovery databases or be as simple as a spreadsheet.
 
+
 To reduce confusion with the over-loading of the term "Object" in various stages, the RO-Crate standard renames PCDM Collection and Object as RepositoryObject and RepositoryCollection, respectively, for use in metadata documents. We will refer to them as [Repository Collection](./index.html#repository-collection) and [Repository Object](./index.html#repository-object) in the PILARS documents. A Repository Collection might be stored in a single Storage Object with its member Repository Object, or each Repository Object might be stored in a separate Storage Object or, in some cases, be fragmented into multiple Storage Objects.
 
 The choice of whether to store Collections as a single Storage Object (e.g. a directory or directory-like node in a file hierarchy) or as a number of Storage Objects might be influenced by several factors:
