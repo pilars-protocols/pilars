@@ -8,7 +8,7 @@ bibliography: ./src/PILARS.bib
 
 This document contains implementation notes and guidance on the [PILARS](./index.html).
 
- <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://w3id.org/ldac/pilars">PILARS implementation and guidance</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://orcid.org/0000-0002-3545-944X ">Sefton et al.</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p> 
+ <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://w3id.org/ldac/pilars">PILARS Implementation Notes and Guidance</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://orcid.org/0000-0002-3545-944X ">Sefton et al.</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
 
 <br>
 
@@ -28,7 +28,7 @@ Deciding on the granularity of objects, [Protocol 1.2] involves considering a nu
 
 ### Applications notes
  
-Regarding [Protocol 1.7] (If data resides in systems, such as content management systems or database applications which do not inherently support all of the Protocols 1 and 2, then put processes in place to export data to a system that does.): 
+Regarding [Protocol 1.7] (if data resides in systems, such as content management systems or database applications, which do not inherently support all of [Protocol 1] and [Protocol 2], then put processes in place to export data to a system that does): 
 
 -  Don’t design or build systems that don't have this exit pathway designed from the start.
 
@@ -100,15 +100,16 @@ For [Protocol 2.3.1], an access-control system might need to be put in place if 
 
 ### Logical Structure: Collections
 
-The concept of a Collection is very commonly used in repositories and digital archives to represent the ‘backbone’ of the way resources, including sub-collections and repository Objects, are organized. This structure is described by the Portland Common Data Model (PCDM) (@DuraspacePcdm). PCDM was defined to facilitate interchange of data between repositories, and this makes sense to use as a core organizing principle for PILARS; describing an Archival Repository using PCDM means it will be possible to move data to other systems in the future.
+The concept of a Collection is very commonly used in repositories and digital archives to represent the ‘backbone’ of the way resources, including sub-collections and repository Objects, are organized. This structure is described by the Portland Common Data Model (PCDM) (@DuraspacePcdm). PCDM was defined to facilitate interchange of data between repositories, and this makes sense to use as a core organizing principle for PILARS; describing an [Archival Repository](./index.html#archival-repository) using PCDM means it will be possible to move data to other systems in the future.
 
-These protocols assume that once storage is taken care of, with data divided into Storage Objects and well described then it will be made available for consumption via one or more *indexes* which could take the form of web portals, or discovery data bases, or be a as simple as a spreadsheet.
+These protocols assume than once storage is taken care of, with data divided into [Storage Objects](./index.html#storage-objects) and well described, then it will be made available for consumption via one or more *indexes*, which could take the form of web portals, discovery databases or be as simple as a spreadsheet.
 
-To reduce confusion with the over-loading of the term "Object" in various stages, the RO-Crate standard renames PCDM Collection and Object as  [Repository Collection](./index.html#repository-collection) and [Repository Object](./index.html#repository-object)  respectively. A RepositoryCollection may be stored in a single [Storage Object](./index.html#storage-object) with it's member RepositoryObject, or each RepositoryObject may be stored in a separate [Storage Object](./index.html#storage-object) or in some cases be fragmented into multiple Storage Objects.
 
-The choice of whether to store Collections as a single [Storage Object](./index.html#storage-object) (e.g. a directory or directory-like node in a file hierarchy) or as a number of Storage Objects might be influenced by several factors:
+To reduce confusion with the over-loading of the term "Object" in various stages, the RO-Crate standard renames PCDM Collection and Object as RepositoryObject and RepositoryCollection, respectively, for use in metadata documents. We will refer to them as [Repository Collection](./index.html#repository-collection) and [Repository Object](./index.html#repository-object) in the PILARS documents. A Repository Collection might be stored in a single Storage Object with its member Repository Object, or each Repository Object might be stored in a separate Storage Object or, in some cases, be fragmented into multiple Storage Objects.
 
--  the size of the RepositoryObject; finer granularity might be preferred to keep Storage Objects at a manageable size
+The choice of whether to store Collections as a single Storage Object (e.g. a directory or directory-like node in a file hierarchy) or as a number of Storage Objects might be influenced by several factors:
+
+-  the size of the Repository Object; finer granularity might be preferred to keep Storage Objects at a manageable size
 
 -  how likely the content is to change or be withdrawn, for example, because a participant wishes to have content by or about them removed from an [Archival Repository](./index.html#archival-repository); a granularity of an Object per participant/creator or cohort might make withdrawing access more manageable, by updating a [License](./index.html#license)
 
@@ -118,9 +119,9 @@ The choice of whether to store Collections as a single [Storage Object](./index.
 
 -  licensing of objects; from an implementation point of view, it is much simpler to have a single reuse license per Object than to try to administer very granular permissions.
 
-To comply with [Protocol 2.5], [Repository Collection](./index.html#repository-collection) / [Repository Object](./index.html#repository-object) relationships might be described using either exhaustive lists of members with a property, such as the Portland Common Data Model's `pcdm:hasMember` property, or by referencing the containing Collection from sub-collections or a Repository Objects using the equivalent property `pcdm:memberOf`.
+To comply with [Protocol 2.5], [Repository Collection](./index.html#repository-collection) / [Repository Object](./index.html#repository-object) relationships might be described using either exhaustive lists of members with a property, such as the Portland Common Data Model's `pcdm:hasMember` property, or by referencing the containing Collection from sub-collections or Repository Objects using the equivalent property `pcdm:memberOf`.
 
-RepositoryCollections and RepositoryObjects which have been stored (fragmented) across multiple Storage Objects can be linked back together using an index for presentation and access (this is one of the strengths of Linked Data), for example, a recording and verbatim transcript might be stored together in an Storage Object available to a very limited cohort, while anonymised transcripts and audio might be in another Storage  Object made broadly available – but these can be cross-linked and presented as a single entity to authorised users.
+Repository Collections and Repository Objects which have been stored (fragmented) across multiple Storage Objects can be linked back together using an index for presentation and access (this is one of the strengths of Linked Data), for example, a recording and verbatim transcript might be stored together in a Storage Object available to a very limited cohort, while anonymised transcripts and audio might be in another Storage Object made broadly available – but these can be cross-linked and presented as a single entity to authorised users.
 
 A variety of virtual Collection-like aggregations of Objects can be created via metadata indexes using user interface devices, such as search facets, to comply with [Protocol 1] and [Protocol 2]; these should be designed so that the metadata on which they depend is stored with the data object, not solely in an application or workspace environment.
 

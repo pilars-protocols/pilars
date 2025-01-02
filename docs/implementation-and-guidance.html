@@ -109,7 +109,7 @@
 href="./index.html">PILARS</a>.</p>
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
 <a property="dct:title" rel="cc:attributionURL" href="https://w3id.org/ldac/pilars">PILARS
-implementation and guidance</a> by
+Implementation Notes and Guidance</a> by
 <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://orcid.org/0000-0002-3545-944X ">Sefton
 et al.</a> is licensed under
 <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC
@@ -152,10 +152,14 @@ objects.</p></li>
 <h3 id="applications-notes">Applications notes</h3>
 <p>Regarding <a href="./index.html#1.7"
 title="If data resides in systems, such as content management systems or database applications which do not inherently support all of the protocols 1 &amp; 2 then put processes in place to export data to a system that does.">Protocol
-1.7</a> (If data resides in systems, such as content management systems
-or database applications which do not inherently support all of the
-Protocols 1 and 2, then put processes in place to export data to a
-system that does.):</p>
+1.7</a> (if data resides in systems, such as content management systems
+or database applications, which do not inherently support all of <a
+href="./index.html#1"
+title="Data is Portable: assets are not locked-in to a particular mode of storage, interface or service">Protocol
+1</a> and <a href="./index.html#2"
+title="Data is Annotated: contents, structure, provenance and access and reuse permissions are comprehensively described with metadata and licenses">Protocol
+2</a>, then put processes in place to export data to a system that
+does):</p>
 <ul>
 <li><p>Don’t design or build systems that don’t have this exit pathway
 designed from the start.</p></li>
@@ -298,28 +302,29 @@ class="citation"
 data-cites="DuraspacePcdm"><span>“Duraspace/Pcdm”</span> (n.d.)</span>).
 PCDM was defined to facilitate interchange of data between repositories,
 and this makes sense to use as a core organizing principle for PILARS;
-describing an Archival Repository using PCDM means it is will be
-possible to move data to other systems in the future.</p>
+describing an <a href="./index.html#archival-repository">Archival
+Repository</a> using PCDM means it will be possible to move data to
+other systems in the future.</p>
 <p>These protocols assume than once storage is taken care of, with data
-divided into Storage Objects and well described then it will be made
-available for consumption via one or more <em>indexes</em> which could
-take the form of web portals, or discovery data bases, or be a as simple
-as a spreadsheet.</p>
+divided into <a href="./index.html#storage-objects">Storage Objects</a>
+and well described, then it will be made available for consumption via
+one or more <em>indexes</em>, which could take the form of web portals,
+discovery databases or be as simple as a spreadsheet.</p>
 <p>To reduce confusion with the over-loading of the term “Object” in
 various stages, the RO-Crate standard renames PCDM Collection and Object
-as <a href="./index.html#repository-collection">Repository
-Collection</a> and <a href="./index.html#repository-object">Repository
-Object</a> respectively. A RepositoryCollection may be stored in a
-single <a href="./index.html#storage-object">Storage Object</a> with
-it’s member RepositoryObject, or each RepositoryObject may be stored in
-a separate <a href="./index.html#storage-object">Storage Object</a> or
-in some cases be fragmented into multiple Storage Objects.</p>
-<p>The choice of whether to store Collections as a single <a
-href="./index.html#storage-object">Storage Object</a> (e.g. a directory
-or directory-like node in a file hierarchy) or as a number of Storage
-Objects might be influenced by several factors:</p>
+as RepositoryObject and RepositoryCollection, respectively, for use in
+metadata documents. We will refer to them as <a
+href="./index.html#repository-collection">Repository Collection</a> and
+<a href="./index.html#repository-object">Repository Object</a> in the
+PILARS documents. A Repository Collection might be stored in a single
+Storage Object with its member Repository Object, or each Repository
+Object might be stored in a separate Storage Object or, in some cases,
+be fragmented into multiple Storage Objects.</p>
+<p>The choice of whether to store Collections as a single Storage Object
+(e.g. a directory or directory-like node in a file hierarchy) or as a
+number of Storage Objects might be influenced by several factors:</p>
 <ul>
-<li><p>the size of the RepositoryObject; finer granularity might be
+<li><p>the size of the Repository Object; finer granularity might be
 preferred to keep Storage Objects at a manageable size</p></li>
 <li><p>how likely the content is to change or be withdrawn, for example,
 because a participant wishes to have content by or about them removed
@@ -344,13 +349,13 @@ Collection</a> / <a href="./index.html#repository-object">Repository
 Object</a> relationships might be described using either exhaustive
 lists of members with a property, such as the Portland Common Data
 Model’s <code>pcdm:hasMember</code> property, or by referencing the
-containing Collection from sub-collections or a Repository Objects using
+containing Collection from sub-collections or Repository Objects using
 the equivalent property <code>pcdm:memberOf</code>.</p>
-<p>RepositoryCollections and RepositoryObjects which have been stored
+<p>Repository Collections and Repository Objects which have been stored
 (fragmented) across multiple Storage Objects can be linked back together
 using an index for presentation and access (this is one of the strengths
 of Linked Data), for example, a recording and verbatim transcript might
-be stored together in an Storage Object available to a very limited
+be stored together in a Storage Object available to a very limited
 cohort, while anonymised transcripts and audio might be in another
 Storage Object made broadly available – but these can be cross-linked
 and presented as a single entity to authorised users.</p>
