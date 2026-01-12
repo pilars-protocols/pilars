@@ -42,4 +42,4 @@ To add a reference, add it to the bibtex file `src/PILARS.bib` and use an @refer
 
 -  To preview the site view it from your local file system in a web browser
 
-- To Publish, do a pull request [TODO: Not sure how to describe this process properly]
+- To Publish, do a pull request to the main branch and update/sync the `published` branch [TODO: Not sure how to describe this process properly]
